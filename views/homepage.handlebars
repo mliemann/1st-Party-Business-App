@@ -1,0 +1,78 @@
+            <div class="container container-fluid mt-5">
+            <a
+              href="#"
+              class="nav-link filter-modal"
+              data-toggle="modal"
+              data-target=".bd-example-modal-lg"
+              style = "font-family: Georgia, 'Times New Roman', Times, serif;"
+            >Filter Results</a>
+
+            <div
+              class="modal fade bd-example-modal-lg filter-modal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myLargeModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                        <div class="form-group">
+        <fieldset class="large-5 cell filter-category">
+         <legend style = "font-family: Georgia, 'Times New Roman', Times, serif;" >Filter by Category:</legend>
+          <input
+            type="checkbox"
+            name="filter"
+            value="1"
+            class= "filtered"
+          /><label style = "font-family: Georgia, 'Times New Roman', Times, serif;" class="mr-1" for="breakfast">Breakfast</label>
+          <input
+            type="checkbox"
+            name="filter"
+            value="2"
+            class= "filtered"
+          /><label style = "font-family: Georgia, 'Times New Roman', Times, serif;" class="mr-1" for="lunch">Lunch</label>
+          <input
+            type="checkbox"
+            name="filter"
+            value="3"
+            class= "filtered"
+          /><label style = "font-family: Georgia, 'Times New Roman', Times, serif;" class="mr-1" for="dinner">Dinner</label>
+            <input
+            type="checkbox"
+            name="filter"
+            value="4"
+            class= "filtered"
+          /><label style = "font-family: Georgia, 'Times New Roman', Times, serif;" class="mr-1" for="dessert">Dessert</label>
+          <input
+            type="checkbox"
+            name="filter"
+            value="5"
+            class= "filtered"
+          /><label style = "font-family: Georgia, 'Times New Roman', Times, serif;" class="mr-1" for="snack">Snack</label>
+          </br>
+            <button style = "font-family: Georgia, 'Times New Roman', Times, serif;" class="btn btn-primary filterBtn">Find</button>
+        </fieldset>
+      </div>
+
+                </div>
+              </div>
+            </div>
+
+{{#each tables as |table| }}
+
+  <div class="card mb-3" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src={{table.url}} class="img-fluid rounded-start" alt="recipe image">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h2 class="card-title" style = "font-family: Georgia, 'Times New Roman', Times, serif;"><a href="/recipe/{{table.id}}">{{table.recipe_name}}</a></h2>
+        <p class="card-text"style = "font-family: Georgia, 'Times New Roman', Times, serif;">{{table.description}}</p>
+        <p class="card-text"style = "font-family: Georgia, 'Times New Roman', Times, serif;"><small class="text-muted">Uploaded by {{table.user.user_name}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
