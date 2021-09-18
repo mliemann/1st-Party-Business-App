@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cart from "./pages/Cart";
-import Landing from "./pages/landing/landing";
+import Landing from "./pages/Landing/landing";
 import Dashboard from "./pages/Dashboard";
 import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
