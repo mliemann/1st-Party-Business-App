@@ -1,0 +1,6 @@
+.main-content {
+  position: absolute;
+  top: 200px; /* Header Height */
+  bottom: 100px; /* Footer Height */
+  width: 100%;
+}

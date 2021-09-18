@@ -1,5 +1,6 @@
 module.exports = {
-    "env": {
+    "parser": "babel-eslint"
+    /*"env": {
         "browser": true,
         "commonjs": true,
         "es2021": true,
@@ -295,5 +296,5 @@ module.exports = {
         "wrap-regex": "error",
         "yield-star-spacing": "error",
         "yoda": "error"
-    }
+    } */
 };
