@@ -4,7 +4,10 @@ import "./style.css";
 function Header() {
   return (
     <div className="header">
-      <span>Header Wireframe</span>
+      <div>
+        <img></img>
+        <span>Header Wireframe</span>
+      </div>
     </div>
   );
 }
