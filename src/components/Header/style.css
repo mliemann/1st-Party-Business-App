@@ -1,4 +1,4 @@
-.header {
+/* .header {
     min-height: 200px;
     background: #c0b514;
     position: relative;
@@ -11,4 +11,21 @@
     right: 0;
     padding: 3px;
     background: #c0b514;
+  } */
+
+  .header {
+    z-index:-1;
+    /* height:0px;
+    width: 0px; */
+  }
+
+  /* #background {
+    height:300px;
+    width:100%;
+  } */
+
+  #logo {
+    position: relative;
+    z-index: 1;
+    top: -249px;
   }

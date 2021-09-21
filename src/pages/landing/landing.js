@@ -6,7 +6,7 @@ function Landing () {
         <div className="container">
             <div className="body">
                 <div className="cover">
-                    <img id="coverimg1" alt=""></img>
+                    <img id="coverimg1" src="https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-1.jpg" alt=""></img>
                     <div id="background1"></div>
                     <h1 id="viewmenu">VIEW MENU</h1>
                 </div>
