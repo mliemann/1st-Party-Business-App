@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Cart from "./pages/cart/cart";
+import Cart from "./pages/cart/cart";
 import Landing from "./pages/landing/landing";
 // import Dashboard from "./pages/stats/stats";
 // import Error404 from "./pages/Error404";
@@ -24,7 +24,7 @@ function App() {
           <Switch>
             {/* <Route exact path="/" component={Home} /> */}
             <Route exact path="/landing" component={Landing} />
-            {/* <Route exact path="/cart" component={Cart} /> */}
+            <Route exact path="/cart" component={Cart} />
             {/* <Route exact path="/dashboard" component={Dashboard} /> */}
             <Route exact path="/login" component={Login} />
             <Route exact path="/contact" component={Contact} />
