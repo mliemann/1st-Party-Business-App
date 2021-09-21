@@ -6,9 +6,9 @@ import Landing from "./pages/landing/landing";
 // import Home from "./pages/";
 import Login from "./pages/login/login";
 // import Menu from "./pages/menu/menu";
-// import Profile from "./pages/profile/profile";
-// import RestaurantSignup from "./pages/signuprest/signuprest";
-import Contact from "./pages/Contact/contact"
+import Profile from "./pages/profile/profile";
+import RestaurantSignup from "./pages/signuprest/signuprest";
+import Contact from "./pages/contact/contact"
 import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -29,8 +29,8 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/contact" component={Contact} />
             {/* <Route exact path="/menu" component={Menu} /> */}
-            {/* <Route exact path="/profile" component={Profile} /> */}
-            {/* <Route exact path="/restsignup" component={RestaurantSignup} /> */}
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/restaurant/signup" component={RestaurantSignup} /> 
             <Route exact path="/signup" component={SignUp} />
             {/* <Route component={Error404} /> */}
           </Switch>
