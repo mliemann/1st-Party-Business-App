@@ -3,7 +3,7 @@ import "./signuprest.css";
 
 function Signuprest () {
     return (
-        
+        <div></div>
     )
 }
 
