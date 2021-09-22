@@ -1,27 +1,34 @@
-.menu {
-    background-color: green;
+#menu {
+   background-image: url("../../assets/slate\ background.jpeg");
+   color:white;
+   display:flex;
+   justify-content:center;
+   align-items:start;
+   padding: 5% 0;
 }
 
+.item {
+    padding:2%;
+}
 .menuitem{
+}
+
+#dish {
+    font-size:25px;
+}
+
+#description {
 
 }
 
-.dish {
+#price {
 
 }
 
-.description {
+#moreInfoBtn {
 
 }
 
-.price {
-
-}
-
-.moreInfoBtn {
-
-}
-
-.addCartBtn {
+#addCartBtn {
 
 }
