@@ -18,9 +18,11 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <h3>418 address blvd processor, gb 11001</h3>
-      <button onClick={contactRoute}>Contact Us</button>
-      <button onClick={regRoute}>Register</button>
+      <h3 id="address">418 address blvd processor, gb 11001</h3>
+      <div id="whitespace">
+      <button className="btn" onClick={contactRoute}>Contact Us</button>
+      <button className="btn" onClick={regRoute}>Register</button>
+    </div>
     </footer>
   );
 }

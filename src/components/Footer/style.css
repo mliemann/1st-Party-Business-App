@@ -1,15 +1,20 @@
 .footer {
-    min-height: 100px;
-    background: #c0b514;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 3px;
-    background: #c0b514;
-  }
+  display:flex;
+  flex-direction:wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  height:150px;
+  background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-0.jpg");
+  background-size: cover;
+}
+
+#whitespace {
+  flex:2;
+  text-align: center;
+  align-self: center;
+}
+
+#address {
+  align-self: center;
+  margin-left: 7%;
+}

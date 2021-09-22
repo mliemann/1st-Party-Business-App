@@ -18,10 +18,10 @@ import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react'
 function App() {
   return (
     <Router>
-      <div>
+      
         
           <Header />
-          <div>
+         
           <Switch>
             {/* <Route exact path="/" component={Home} /> */}
             <Route exact path="/landing" component={Landing} />
@@ -35,9 +35,9 @@ function App() {
             <Route exact path="/signup" component={SignUp} />
             {/* <Route component={Error404} /> */}
           </Switch>
-          </div>
+          
           <Footer />
-      </div>
+      
     </Router>
   );
 }
