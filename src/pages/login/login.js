@@ -3,47 +3,51 @@ import { useHistory } from "react-router-dom";
 import "./login.css";
 
 function Login() {
-    const history = useHistory();
+  const history = useHistory();
 
-    const regRoute = () => {
-        history.push("/signup");
-    }
+  const regRoute = () => {
+    history.push("/signup");
+  };
   return (
-    <div>
-      <div>
+    <div className="log-container">
+      <div className="sub-form">
         <div>
-          <h2>Log In</h2>
+          <div id="title">
+            <h2>Log In</h2>
+          </div>
         </div>
-      </div>
 
-      <form>
-        <div>
-          <input
-            type="text"
-            id="email-login"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          ></input>
-        </div>
-        <div>
-          <input
-            type="password"
-            id="password-login"
-            placeholder="Password"
-          ></input>
-        </div>
-        <p>
-          Stay logged in<input type="checkbox"></input>
-        </p>
-        <div>
-          <button type="submit">Log In</button>
-          <button onClick={regRoute}>Register</button>
-          <button>
-            Guest Checkout
-          </button>
-          <button>Forgot Login</button>
-        </div>
-      </form>
+        <form>
+          <div>
+            <input
+              type="text"
+              id="email-login"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            ></input>
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password-login"
+              placeholder="Password"
+            ></input>
+          </div>
+          <p id="checkbox">
+            <input type="checkbox"></input> Keep me logged in
+          </p>
+          <div>
+            <button id="login" type="submit">
+              Log In
+            </button>
+            <button className="register" onClick={regRoute}>
+              Register
+            </button>
+            <button className="register1">Guest Checkout</button>
+            <button id="forgot">Forgot Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
