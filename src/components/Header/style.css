@@ -58,7 +58,7 @@
     letter-spacing: 4px;
     overflow: hidden;
     margin-right: 50px;
-    border-radius: 10%;
+    border-radius: 1rem;
    
 }
 .btn:hover{
