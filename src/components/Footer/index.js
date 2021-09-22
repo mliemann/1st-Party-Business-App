@@ -20,8 +20,8 @@ function Footer() {
     <footer className="footer">
       <h3 id="address">418 javascript blvd, processor, gb 11001</h3>
       <div id="whitespace">
-      <button className="btn" onClick={contactRoute}>contact us</button>
-      <button className="btn" onClick={regRoute}>register</button>
+      <button className="btnfooter" onClick={contactRoute}>contact us</button>
+      <button className="btnfooter" onClick={regRoute}>register</button>
     </div>
     </footer>
   );

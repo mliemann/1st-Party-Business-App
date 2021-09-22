@@ -1,5 +1,8 @@
-.menu {
-    background-color: green;
+#menu {
+   background-image: url("../../assets/slate\ background.jpeg");
+   color:white;
+   text-align: left;
+    justify-content: center;
 }
 
 .menuitem{
