@@ -4,9 +4,9 @@ import "./signuprest.css";
 function Signuprest () {
     return (
     <div>
-        <div id="form">
+        <div id="formsignupres">
             <div>
-            <h2 id="signup">Sign Up</h2>
+            <h2 id="signup">Sign Up!</h2>
             </div>
         <form>
             <div>
