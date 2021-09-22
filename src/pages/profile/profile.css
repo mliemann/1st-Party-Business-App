@@ -14,6 +14,7 @@
 
 #profile {
     font-size:40px;
+    letter-spacing: 4px;
 }
 
 .input {
@@ -23,7 +24,7 @@
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
     border-color: #26325a;
-    
+    letter-spacing: 3px;
 }
 
 .btnprofile {

@@ -13,7 +13,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     font-size:60px;
-
+    letter-spacing: 4px;
 }
 
 .input {
@@ -23,6 +23,7 @@
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
     border-color: #26325a;
+    letter-spacing: 3px;
     
 }
 
@@ -55,4 +56,8 @@
                 0 0 50px #26325a,
                 0 0 200px #26325a;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+#loggedin {
+    letter-spacing: 4px;
 }

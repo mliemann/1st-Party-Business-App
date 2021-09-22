@@ -20,7 +20,7 @@ function Contact() {
     <input className="input" type="text" id="lname" name="lastname" placeholder="    your email.."></input>
 
     <label className="title" for="subject">subject</label>
-    <textarea className="input" id="subject" name="subject" placeholder="                                               write something.." style={{height: "200px"}}></textarea>
+    <textarea className="input" id="subject" name="subject" placeholder="                    write something.." style={{height: "200px"}}></textarea>
 
     <input className="btnlogin" type="submit" value="submit"></input>
 
