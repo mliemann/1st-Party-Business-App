@@ -13,6 +13,7 @@ import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import './App.css';
+import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 function App() {
   return (
