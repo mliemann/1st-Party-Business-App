@@ -3,30 +3,38 @@ import "./signup.css";
 
 function Signup() {
   return (
-    <div>
-      <div>
+    <div id="form">
+
         <div>
-          <h2>Sign Up</h2>
+          <h2 id="signup">Sign Up</h2>
         </div>
-      </div>
+
+     
       <form>
+
         <div>
-          <input type="text" id="name-signup" placeholder="Enter name" />
+          <input type="text" className="input" id="name-signup" placeholder="    Enter name" />
         </div>
+
         <div>
-          <input type="text" id="email-signup" placeholder="Enter email" />
+          <input type="text" className="input" id="email-signup" placeholder="    Enter email" />
         </div>
+
         <div>
           <input
+            className="input"
             type="password"
             id="password-signup"
-            placeholder="Create password"
+            placeholder="    Create password"
           />
         </div>
+
         <div>
-          <button type="submit">Sign Up</button>
+          <button className="btnlogin" type="submit">sign up</button>
         </div>
+
       </form>
+
     </div>
   );
 }
