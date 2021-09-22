@@ -18,13 +18,14 @@ function Menu (props) {
 
         <div className="containermenu">
         <div id="menu">
-            <h1>platos</h1>
+            
             <div className="menuItem">
-                <div id="dish" >Dish</div>
-                <div id="description">rhgkrjh, oeuhfiweuh, woefhowufeh, owuefbwm, oweufweh, woufwb</div>
-                <div id="price">21</div>
-                <button id="moreInfoBtn">More details</button>
-                <button id="addCartBtn">Add to card</button>
+            <h1>platos</h1>
+                <div className="item" id="dish" >Dish</div>
+                <div className="item" id="description">rhgkrjh, oeuhfiweuh, woefhowufeh, owuefbwm, oweufweh, woufwb</div>
+                <div className="item" id="price">21</div>
+                <button className="item" id="moreInfoBtn">More details</button>
+                <button className="item" id="addCartBtn">Add to card</button>
             </div>
         </div>
     </div>
