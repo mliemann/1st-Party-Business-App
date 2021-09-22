@@ -3,12 +3,13 @@ import { useHistory } from "react-router-dom";
 import "./login.css";
 
 function Login() {
-    const history = useHistory();
+  const history = useHistory();
 
-    const regRoute = () => {
-        history.push("/signup");
-    }
+  const regRoute = () => {
+    history.push("/signup");
+  };
   return (
+
     <div id="formlogin">
 
     
@@ -51,6 +52,7 @@ function Login() {
         </div>
 
       </form>
+
 
     </div>
   );

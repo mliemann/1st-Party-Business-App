@@ -3,6 +3,7 @@ import "./signup.css";
 
 function Signup() {
   return (
+
     <div id="formsignup">
 
         <div>
@@ -34,6 +35,7 @@ function Signup() {
         </div>
 
       </form>
+
 
     </div>
   );

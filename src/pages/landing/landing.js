@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 import "./landing.css";
+
 
 function Landing () {
     return (
@@ -19,8 +20,21 @@ function Landing () {
                 </div>
                 
             </div>
+
         </div>
-    )
+        <div className="cover">
+          <div id="background2">
+            <h1 id="placeorder">PLACE YOUR ORDER</h1>
+            <img
+              id="coverimg2"
+              src="https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-5.jpg"
+              alt=""
+            ></img>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Landing;
