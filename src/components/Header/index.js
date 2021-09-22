@@ -35,29 +35,23 @@ function Header() {
   return (
     <div className="header">
       
-        <img id="background"
-            src="https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-0.jpg" 
-            alt="Wooden background"
-            width="100%"
-            height="300px"
-        ></img>
-        <div>
         <img id="logo"
             src="https://res.cloudinary.com/dl0hsgmfc/image/fetch/e_replace_color:3f85d9/https://bestteamproj2.s3.amazonaws.com/TacoTavern.png"
             alt="taco tavern logo"
             width="auto"
-            height="200"
+            height="175"
         ></img>
-        <button id="loginbtn" onClick={pageRoute1}>Login</button>
-        <button id="cartbtn" onClick="">Cart</button>
+        <div id="whitespace">
+        <button className="btn" id="loginbtn" onClick={pageRoute1}>Login</button>
+        <button className="btn" id="cartbtn" onClick="">Cart</button>
         {/* <button onClick={pageRoute2}>Cart</button> */}
         {/* <button onClick={pageRoute3}>Home</button> */}
-        <button id="landingbtn" onClick={pageRoute4}>Landing</button>
+        <button className="btn" id="landingbtn" onClick={pageRoute4}>Landing</button>
         {/* <button onClick={pageRoute5}>Dashboard</button> */}
         {/* <button onClick={pageRoute6}>Menu</button> */}
         {/* <button onClick={pageRoute7}>Profile</button> */}
         {/* <button onClick={pageRoute8}>Restaurant Signup</button> */}
-      </div>
+        </div>
     </div>
   );
 }
