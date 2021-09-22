@@ -5,7 +5,7 @@ function Profile () {
     return (
     <div id="profilecontainer">
             <div>
-                <h2 id="profile">Profile</h2>
+                <h2 id="profile">profile</h2>
             </div>
     
         <form>
@@ -14,7 +14,7 @@ function Profile () {
                 className="input"
                 type="text" 
                 id="email-change" 
-                placeholder="    Enter New Email" 
+                placeholder="    enter new email" 
                 />
                 <button className="btnprofile" type="submit">change email</button>
           
@@ -23,7 +23,7 @@ function Profile () {
                 className="input"
                 type="password" 
                 id="password-change" 
-                placeholder="    Enter New Password" 
+                placeholder="    enter new password" 
                 ></input>
             <button className="btnprofile" type="submit">change password</button>
             
@@ -31,7 +31,7 @@ function Profile () {
                 className="input"
                 type="text"
                 id="phone-change"
-                placeholder="    Enter New Phone Number"
+                placeholder="    enter new phone number"
                 />
                 <button className="btnprofile" type="submit">change phone number</button>
             

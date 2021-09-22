@@ -27,7 +27,7 @@
 }
 
 .btnprofile {
-    height:15px;
+    height:auto;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
     font: weight 700px;
@@ -44,6 +44,7 @@
     overflow: hidden;
     margin-right: 50px;
     border-radius: 1rem;
+    border-style: none;
    
 }
 .btnprofile:hover{

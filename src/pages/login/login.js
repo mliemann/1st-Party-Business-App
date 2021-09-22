@@ -24,7 +24,7 @@ function Login() {
             type="text"
             id="email-login"
             aria-describedby="emailHelp"
-            placeholder="    Enter email"
+            placeholder="    enter email"
           ></input>
         </div>
 
@@ -33,7 +33,7 @@ function Login() {
             className="input"
             type="password"
             id="password-login"
-            placeholder="    Password"
+            placeholder="    password"
           ></input>
         </div>
 

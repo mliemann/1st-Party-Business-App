@@ -6,18 +6,18 @@ function Signup() {
     <div id="formsignup">
 
         <div>
-          <h2 id="signup">Sign Up</h2>
+          <h2 id="signup">sign up</h2>
         </div>
 
      
       <form>
 
         <div>
-          <input type="text" className="input" id="name-signup" placeholder="    Enter name" />
+          <input type="text" className="input" id="name-signup" placeholder="    enter name" />
         </div>
 
         <div>
-          <input type="text" className="input" id="email-signup" placeholder="    Enter email" />
+          <input type="text" className="input" id="email-signup" placeholder="    enter email" />
         </div>
 
         <div>
@@ -25,7 +25,7 @@ function Signup() {
             className="input"
             type="password"
             id="password-signup"
-            placeholder="    Create password"
+            placeholder="    create password"
           />
         </div>
 
