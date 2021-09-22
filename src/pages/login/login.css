@@ -1,0 +1,53 @@
+.log-container {
+  background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-0.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.sub-form {
+  max-width: 40%;
+  padding-left: 0;
+  padding-right: 0;
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#title {
+  margin-bottom: 5%;
+}
+
+#email-login {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#password-login {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#checkbox {
+  margin-bottom: 5%;
+}
+
+#login {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.register {
+  margin-bottom: 5%;
+  width: 40%;
+  float: left;
+}
+
+.register1 {
+  margin-bottom: 5%;
+  width: 40%;
+  float: right;
+}
+
+#forgot {
+  width: 100%;
+}

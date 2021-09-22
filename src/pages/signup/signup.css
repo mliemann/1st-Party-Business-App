@@ -1,0 +1,33 @@
+.sign-container {
+  background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-0.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.log-form {
+  max-width: 40%;
+  padding-left: 0;
+  padding-right: 0;
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#sign-title {
+  margin-bottom: 5%;
+}
+
+#name-signup {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#email-signup {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#password-signup {
+  width: 100%;
+  margin-bottom: 5%;
+}
