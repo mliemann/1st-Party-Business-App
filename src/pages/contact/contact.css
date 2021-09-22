@@ -1,13 +1,15 @@
 
-
+.containercontact {
+    background-image: url("../../assets/food\ background.jpeg");
+    background-size:cover;
+    background-position: top;
+}
 
 #formcontact {
     text-align: center;
     align-self: center;
     color:#26325a;
-    background-image: url("../../assets/food\ background.jpeg");
-    background-size:cover;
-    background-position: top;
+    
     padding:80px;
     display: flex;
     flex-direction: column;
