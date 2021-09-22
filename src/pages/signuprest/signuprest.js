@@ -4,37 +4,40 @@ import "./signuprest.css";
 function Signuprest () {
     return (
     <div>
-        <div>
+        <div id="form">
             <div>
-            <h2>Sign Up</h2>
+            <h2 id="signup">Sign Up</h2>
             </div>
-        </div>
         <form>
             <div>
-            <input 
+            <input
+                className="input" 
                 type="text" 
                 id="name-signup" 
-                placeholder="Enter Name" 
+                placeholder="    Enter Name" 
             />
             </div>
             <div>
             <input 
+                className="input" 
                 type="text" 
                 id="email-signup" 
-                placeholder="Enter Email" 
+                placeholder="     Enter Email" 
             />
             </div>
             <div>
             <input
+                className="input" 
                 type="text"
                 id="phone-signup"
-                placeholder="Enter Phone Number"
+                placeholder="    Enter Phone Number"
             />
             </div>
             <div>
-            <button type="submit">Send Registration Email</button>
+            <button className="btnlogin" type="submit">Send Registration Email</button>
             </div>
         </form>
+        </div>
     </div>
     )
 }
