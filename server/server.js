@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const session = require('express-session');
 const routes = require('./controllers');
 const { generateUploadURL } = require("./s3.js")
@@ -24,6 +25,8 @@ app.get("/s3Url", async (req, res) => {
   const url = await generateUploadURL();
   res.send({ url });
 });
+
+app.use(cors());
 
 app.use(session(sess));
 

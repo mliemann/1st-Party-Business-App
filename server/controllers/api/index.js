@@ -3,7 +3,7 @@ const userRoutes = require("./userRoutes");
 const tableRoutes = require("./tableRoutes");
 
 
-router.use("/users", userRoutes);
+router.use("/user", userRoutes);
 router.use("/tables", tableRoutes);
 
 

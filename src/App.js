@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cart from "./pages/cart/cart";
 import Landing from "./pages/landing/landing";
@@ -15,7 +16,9 @@ import Header from "./components/Header";
 import './App.css';
 import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
+
 function App() {
+  const [user, setUser] = useState();
   return (
     <Router>
       
@@ -23,11 +26,11 @@ function App() {
           <Header />
          
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/" component={Landing} />
             <Route exact path="/landing" component={Landing} />
             <Route exact path="/cart" component={Cart} />
             {/* <Route exact path="/dashboard" component={Dashboard} /> */}
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/login" render={props => (<Login {...props} setUser={setUser}/>)}/>
             <Route exact path="/contact" component={Contact} />
             {/* <Route exact path="/menu" component={Menu} /> */}
             <Route exact path="/profile" component={Profile} />
