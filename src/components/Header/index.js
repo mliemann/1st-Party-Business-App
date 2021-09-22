@@ -36,17 +36,17 @@ function Header() {
     <div className="header">
       
         <img id="logo"
-            src="https://res.cloudinary.com/dl0hsgmfc/image/fetch/e_replace_color:3f85d9/https://bestteamproj2.s3.amazonaws.com/TacoTavern.png"
+            src="https://res.cloudinary.com/dl0hsgmfc/image/fetch/e_replace_color:0e1b47/https://bestteamproj2.s3.amazonaws.com/TacoTavern.png"
             alt="taco tavern logo"
             width="auto"
             height="175"
         ></img>
         <div id="whitespace">
-        <button className="btn" id="loginbtn" onClick={pageRoute1}>Login</button>
-        <button className="btn" id="cartbtn" onClick="">Cart</button>
+        <button className="btn" id="loginbtn" onClick={pageRoute1}>login</button>
+        <button className="btn" id="cartbtn" onClick="">cart</button>
         {/* <button onClick={pageRoute2}>Cart</button> */}
         {/* <button onClick={pageRoute3}>Home</button> */}
-        <button className="btn" id="landingbtn" onClick={pageRoute4}>Landing</button>
+        <button className="btn" id="landingbtn" onClick={pageRoute4}>landing</button>
         {/* <button onClick={pageRoute5}>Dashboard</button> */}
         {/* <button onClick={pageRoute6}>Menu</button> */}
         {/* <button onClick={pageRoute7}>Profile</button> */}
