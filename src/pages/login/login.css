@@ -1,53 +1,65 @@
-.log-container {
-  background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-0.jpg");
-  background-size: cover;
-  text-align: center;
-}
 
-.sub-form {
-  max-width: 40%;
-  padding-left: 0;
-  padding-right: 0;
-  align-content: center;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-#title {
-  margin-bottom: 5%;
-}
-
-#email-login {
-  width: 100%;
-  margin-bottom: 5%;
-}
-
-#password-login {
-  width: 100%;
-  margin-bottom: 5%;
-}
-
-#checkbox {
-  margin-bottom: 5%;
+#formlogin {
+    text-align: center;
+    align-self: center;
+    color:#26325a;
+    background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-5.jpg");
+    background-size:cover;
+    background-position: center;
+    padding:80px;
 }
 
 #login {
-  width: 100%;
-  margin-bottom: 5%;
+    margin:0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size:60px;
+    letter-spacing: 4px;
 }
 
-.register {
-  margin-bottom: 5%;
-  width: 40%;
-  float: left;
+.input {
+    height:40px;
+    width:400px;
+    margin-top:10px;
+    border-radius: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-color: #26325a;
+    letter-spacing: 3px;
+    
 }
 
-.register1 {
-  margin-bottom: 5%;
-  width: 40%;
-  float: right;
+.btnlogin {
+    height:auto;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font: weight 700px;
+    position: relative;
+    left:20px;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #fdfdfd;
+    background-color:#26325a;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border-radius: 1rem;
+    border-style: none;
+   
+}
+.btnlogin:hover{
+    background: #26325a;
+    color: white;
+    box-shadow: 0 0 5px #26325a,
+                0 0 25px #26325a,
+                0 0 50px #26325a,
+                0 0 200px #26325a;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
-#forgot {
-  width: 100%;
+#loggedin {
+    letter-spacing: 4px;
 }
+

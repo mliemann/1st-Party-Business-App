@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "dish":"EGGPLANT AL VAPOR",
+        "description":"steamed eggplant, queso caldera, smoked tomato salsa, tortillas",
+        "price":21
+    },
+    {
+        "id":2,
+        "dish":"AU POIVRE A LA MEXICANA",
+        "description":"oak grilled ribeye, mezcal chipotle au poivre, crispy potatoes, rajas, tortillas",
+        "price":70
+    },
+    {
+        "id":3,
+        "dish":"GRILLED PORK CHOP",
+        "description":"fennel-quesillo salsa, longaniza, pickled fennel, tortillas",
+        "price":34
+    },
+    {
+        "id":4,
+        "dish":"PESCADO ENCACAHUATADO",
+        "description":"pan-seared fluke, peanut mole, potato hashbrown, yogurt, fried herbs",
+        "price":27
+    },
+    {
+        "id":5,
+        "dish":"ALAMBRE",
+        "description":"marinated and grilled goat loin, salsa cruda, cilantro salad, tortillas",
+        "price":25
+    },
+    {
+        "id":6,
+        "dish":"HONGO ASADO",
+        "description":"chile smoked trumpet mushroom, mole de hongo, fried pickled mushrooms, tortillas",
+        "price":18
+    },
+    {
+        "id":7,
+        "dish":"ESQUITES EN CENIZA",
+        "description":"roasted sweet corn, requeson, corn nuts, masa ash, mole verde",
+        "price":20
+    },
+    {
+        "id":8,
+        "dish":"SUADERO TACOS",
+        "description":"confit brisket, black magic oil, avocado crudo, onion y cilantro",
+        "price":18
+    }
+]

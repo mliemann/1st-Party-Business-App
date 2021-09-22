@@ -46,7 +46,7 @@ function Header() {
         <button className="btn" id="cartbtn" onClick="">cart</button>
         {/* <button onClick={pageRoute2}>Cart</button> */}
         {/* <button onClick={pageRoute3}>Home</button> */}
-        <button className="btn" id="landingbtn" onClick={pageRoute4}>landing</button>
+        <button className="btn" id="landingbtn" onClick={pageRoute4}>home</button>
         {/* <button onClick={pageRoute5}>Dashboard</button> */}
         {/* <button onClick={pageRoute6}>Menu</button> */}
         {/* <button onClick={pageRoute7}>Profile</button> */}

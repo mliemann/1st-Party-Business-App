@@ -1,16 +1,17 @@
 import React from 'react';
 import "./menu.css";
+import "../../menu.json";
 
-function Menu () {
+function Menu (props) {
     return (
         <div className="container">
             <div id="menu">
                 <div className="menuItem">
-                    <h1 className="dish">Menu item</h1>
-                    <p1 className="description">Description</p1>
-                    <p1 className="price">Price</p1>
-                    <button className="moreInfoBtn">More details</button>
-                    <button className="addCartBtn">Add to card</button>
+                    <div id={"dish" + props.id} >{props.dish}</div>
+                    <div id={"description" + props.id}>{props.description}</div>
+                    <div id={"price" + props.id}>{props.price}</div>
+                    <button id="moreInfoBtn">More details</button>
+                    <button id="addCartBtn">Add to card</button>
                 </div>
             </div>
         </div>

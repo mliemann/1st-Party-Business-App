@@ -1,0 +1,11 @@
+#error {
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url("../../assets/4042.jpeg");
+    background-size:cover;
+    background-position: top;
+    color: #26325a;
+    font-size:500px;
+    margin: 0px;
+    padding-bottom: 400px;
+    text-align:center;
+}
