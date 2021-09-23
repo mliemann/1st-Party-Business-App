@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cart from "./pages/cart/cart";
 import Landing from "./pages/landing/landing";
@@ -15,7 +16,9 @@ import Header from "./components/Header";
 import Dish from "../src/menu.json";
 import './App.css';
 
+
 function App() {
+  const [user, setUser] = useState();
   return (
     <Router>
       
@@ -27,7 +30,7 @@ function App() {
             <Route exact path="/" component={Landing} />
             <Route exact path="/cart" component={Cart} />
             {/* <Route exact path="/dashboard" component={Dashboard} /> */}
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/login" render={props => (<Login {...props} setUser={setUser}/>)}/>
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/menu" component={Menu}
             // id={menu.id}

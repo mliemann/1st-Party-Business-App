@@ -1,9 +1,6 @@
 const User = require("./User");
-const Table = require("./Table");
-const Category = require("./Category");
-const Like = require("./Like");
 
-User.hasMany(Table, {
+/*User.hasMany(Table, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
@@ -30,10 +27,7 @@ User.hasMany(Like, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
-
+*/
 module.exports = {
   User,
-  Table,
-  Category,
-  Like,
 };

@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./login.css";
 
-function Login() {
-  const history = useHistory();
+async function loginUser(credentials) {
+  return fetch('http://localhost:3001/api/user/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+ }
 
-  const regRoute = () => {
-    history.push("/signup");
-  };
+function Login({setUser}) {
+    const history = useHistory();
+
+    const regRoute = () => {
+        history.push("/signup");
+    }
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+
+    const handleSubmit = async e => {
+      e.preventDefault();
+      const user = await loginUser({
+        email,
+        password
+      });
+      setUser(user);
+      history.push("/");
+    }    
+
   return (
 
     <div id="formlogin">
@@ -17,21 +41,22 @@ function Login() {
         <h2 id="login">log in</h2>
       </div>
 
-      <form>
-
+      <form onSubmit={handleSubmit}>
         <div>
-          <input 
+          <input
             className="input"
-            type="text"
-            id="email-login"
+            onChange={e => setEmail(e.target.value)}
+            type="text" 
+            id="email-login" 
             aria-describedby="emailHelp"
             placeholder="    enter email"
           ></input>
         </div>
 
         <div>
-          <input 
+          <input
             className="input"
+            onChange={e => setPassword(e.target.value)}
             type="password"
             id="password-login"
             placeholder="    password"
