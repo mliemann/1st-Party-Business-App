@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useUserContext, USER_LOGGED_OUT, } from "../../providers/user";
 import "./style.css";
 
 function Header() {
@@ -30,7 +31,16 @@ function Header() {
   //   history.push("/restsignup");
   // };
 
+  const [state, dispatch] = useUserContext();
 
+  const logUserOut = () => {
+
+    dispatch({
+      type: USER_LOGGED_OUT,
+    });
+
+    history.push("/");
+  }
 
   return (
     <div className="header">
@@ -42,7 +52,11 @@ function Header() {
             height="175"
         ></img>
         <div id="whitespace">
-        <button className="btn" id="loginbtn" onClick={pageRoute1}>login</button>
+        
+        { state.isLoggedIn ? 
+          <button className="btn" id="logoutbtn" onClick={logUserOut}>logout</button> : 
+          <button className="btn" id="loginbtn" onClick={pageRoute1}>login</button> }
+        
         <button className="btn" id="cartbtn"  onClick={pageRoute2}>Cart</button>
         {/* <button onClick={pageRoute3}>Home</button> */}
         <button className="btn" id="landingbtn" onClick={pageRoute4}>home</button>

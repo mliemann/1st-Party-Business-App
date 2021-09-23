@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useUserContext, USER_LOGGED_IN, } from "../../providers/user";
 import "./login.css";
 
 async function loginUser(credentials) {
@@ -13,7 +14,16 @@ async function loginUser(credentials) {
     .then(data => data.json())
  }
 
-function Login({setUser}) {
+function Login() {
+    const [state, dispatch] = useUserContext();
+    
+    const logUserIn = userData => {
+      dispatch({
+        type: USER_LOGGED_IN,
+        userData: userData
+      });
+    };
+
     const history = useHistory();
 
     const regRoute = () => {
@@ -28,7 +38,7 @@ function Login({setUser}) {
         email,
         password
       });
-      setUser(user);
+      logUserIn(user);
       history.push("/");
     }    
 
