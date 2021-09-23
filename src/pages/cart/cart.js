@@ -6,7 +6,7 @@ function Cart(props) {
   
   return (
     <div id="cart1">
-      <table className="table sortable" >
+      <table className="table sortable"  >
         <thead >
           <tr>
             <th scope="col">Product</th>
@@ -25,9 +25,9 @@ function Cart(props) {
           );
         })} */}
           <tr>
-            <td data-label="Product">Product1</td>
-            <td data-label="Quantity">Product1</td>
-            <td data-label="Price">Product1</td>
+            <td data-label="Product">Product Test</td>
+            <td data-label="Quantity">27</td>
+            <td data-label="Price">All the money in your wallet</td>
           </tr>
         </tbody>
       </table>

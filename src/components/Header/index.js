@@ -15,7 +15,7 @@ function Header() {
   //   history.push("/");
   // };
   const pageRoute4 = () => {
-    history.push("/landing");
+    history.push("/");
   };
   // const pageRoute5 = () => {
   //   history.push("/dashboard");
