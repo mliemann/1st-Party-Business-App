@@ -24,7 +24,7 @@ function App() {
          
           <Switch>
             {/* <Route exact path="/" component={Home} /> */}
-            <Route exact path="/landing" component={Landing} />
+            <Route exact path="/" component={Landing} />
             <Route exact path="/cart" component={Cart} />
             {/* <Route exact path="/dashboard" component={Dashboard} /> */}
             <Route exact path="/login" component={Login} />
