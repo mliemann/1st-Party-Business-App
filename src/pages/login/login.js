@@ -29,7 +29,7 @@ function Login({setUser}) {
         password
       });
       setUser(user);
-      history.push("/landing");
+      history.push("/");
     }    
 
   return (
