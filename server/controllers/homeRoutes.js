@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 var Sequelize = require('sequelize');
 var Op = Sequelize.Op;
 
-router.get('/', async (req, res) => {
+router.get('/products', async (req, res) => {
   try {
     console.log(req.session);
     if (req.session && req.session.logged_in) {
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 
 
 
-router.get('/recipe/:id', async (req, res) => {
+router.get('/products/:id', async (req, res) => {
   try {
     const tableData = await Table.findByPk(req.params.id, {
       include: [
@@ -193,6 +193,26 @@ router.get('/private', async (req, res) => {
 });
 
 router.post('/recipe/:id/like', async (req,res) => {
+  const action = req.body.action;
+  if (!req.session.logged_in){
+    res.status(500).end();
+    return; 
+  }
+
+  if (action === "like"){
+    Like.create({
+      recipe_id: req.params.id,
+      user_id: req.session.user_id
+    });
+  } else {
+    Like.destroy({
+      where: {[Op.and]:[{recipe_id: req.params.id}, {user_id: req.session.user_id}]}
+    });
+  }
+  res.status(200).end();
+})
+
+router.post('/signup', async (req,res) => {
   const action = req.body.action;
   if (!req.session.logged_in){
     res.status(500).end();
