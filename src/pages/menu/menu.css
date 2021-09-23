@@ -1,0 +1,36 @@
+#menu {
+   background-image: url("../../assets/slate\ background.jpeg");
+   color:white;
+   display:flex;
+   justify-content:center;
+   align-items:start;
+   padding: 5% 0;
+   border-color: white;
+   border: 20px dotted;
+}
+
+.item {
+    padding:2%;
+}
+.menuitem{
+}
+
+#dish {
+    font-size:25px;
+}
+
+#description {
+
+}
+
+#price {
+
+}
+
+#moreInfoBtn {
+
+}
+
+#addCartBtn {
+
+}

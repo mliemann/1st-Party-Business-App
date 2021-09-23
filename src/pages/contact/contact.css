@@ -1,0 +1,72 @@
+
+.containercontact {
+    background-image: url("../../assets/food\ background.jpeg");
+    background-size:cover;
+    background-position: top;
+}
+
+#formcontact {
+    text-align: center;
+    align-self: center;
+    color:#26325a;
+    
+    padding:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+
+#contact {
+    margin:0px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size:40px;
+}
+
+.title {
+    font-size:25px;
+    padding-top:10px;
+}
+
+.input {
+    height:30px;
+    width:400px;
+    margin-top:10px;
+    border-radius: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-color: #26325a;
+    
+}
+
+.btnlogin {
+    height:auto;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font: weight 700px;
+    position: relative;
+    left:20px;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #fdfdfd;
+    background-color:#26325a;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border-radius: 1rem;
+    border-style: none
+   
+}
+.btnlogin:hover{
+    background: #26325a;
+    color: white;
+    box-shadow: 0 0 5px #26325a,
+                0 0 25px #26325a,
+                0 0 50px #26325a,
+                0 0 200px #26325a;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
