@@ -8,14 +8,14 @@ function Header() {
   const pageRoute1 = () => {
     history.push("/login");
   };
-  // const pageRoute2 = () => {
-  //   history.push("/cart");
-  // };
+  const pageRoute2 = () => {
+    history.push("/cart");
+  };
   // const pageRoute3 = () => {
   //   history.push("/");
   // };
   const pageRoute4 = () => {
-    history.push("/landing");
+    history.push("/");
   };
   // const pageRoute5 = () => {
   //   history.push("/dashboard");
@@ -43,8 +43,7 @@ function Header() {
         ></img>
         <div id="whitespace">
         <button className="btn" id="loginbtn" onClick={pageRoute1}>login</button>
-        <button className="btn" id="cartbtn" onClick="">cart</button>
-        {/* <button onClick={pageRoute2}>Cart</button> */}
+        <button className="btn" id="cartbtn"  onClick={pageRoute2}>Cart</button>
         {/* <button onClick={pageRoute3}>Home</button> */}
         <button className="btn" id="landingbtn" onClick={pageRoute4}>home</button>
         {/* <button onClick={pageRoute5}>Dashboard</button> */}
