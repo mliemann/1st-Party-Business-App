@@ -3,47 +3,57 @@ import { useHistory } from "react-router-dom";
 import "./login.css";
 
 function Login() {
-    const history = useHistory();
+  const history = useHistory();
 
-    const regRoute = () => {
-        history.push("/signup");
-    }
+  const regRoute = () => {
+    history.push("/signup");
+  };
   return (
-    <div>
+
+    <div id="formlogin">
+
+    
       <div>
-        <div>
-          <h2>Log In</h2>
-        </div>
+        <h2 id="login">log in</h2>
       </div>
 
       <form>
+
         <div>
-          <input
+          <input 
+            className="input"
             type="text"
             id="email-login"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="    enter email"
           ></input>
         </div>
+
         <div>
-          <input
+          <input 
+            className="input"
             type="password"
             id="password-login"
-            placeholder="Password"
+            placeholder="    password"
           ></input>
         </div>
-        <p>
-          Stay logged in<input type="checkbox"></input>
+
+        <p id="loggedin">
+          stay logged in?<input type="checkbox"></input>
         </p>
+
         <div>
-          <button type="submit">Log In</button>
-          <button onClick={regRoute}>Register</button>
-          <button>
-            Guest Checkout
+          <button className="btnlogin" type="submit">log in</button>
+          <button className="btnlogin" onClick={regRoute}>register</button>
+          <button className="btnlogin">
+            guest checkout
           </button>
-          <button>Forgot Login</button>
+          <button className="btnlogin">forgot login</button>
         </div>
+
       </form>
+
+
     </div>
   );
 }

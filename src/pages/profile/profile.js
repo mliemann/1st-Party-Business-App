@@ -3,39 +3,40 @@ import "./profile.css";
 
 function Profile () {
     return (
-    <div>
-        <div>
+    <div id="profilecontainer">
             <div>
-                <h2>Sign Up</h2>
+                <h2 id="profile">profile</h2>
             </div>
-        </div>
+    
         <form>
-            <div>
+            
                 <input 
+                className="input"
                 type="text" 
                 id="email-change" 
-                placeholder="Enter New Email" 
+                placeholder="    enter new email" 
                 />
-                <button type="submit">Change Email</button>
-            </div>
-            <div>
+                <button className="btnprofile" type="submit">change email</button>
+          
+           
                 <input 
+                className="input"
                 type="password" 
                 id="password-change" 
-                placeholder="Enter New Password" 
-                />
-                <button type="submit">Change Password</button>
-            </div>
-            <div>
+                placeholder="    enter new password" 
+                ></input>
+            <button className="btnprofile" type="submit">change password</button>
+            
                 <input
+                className="input"
                 type="text"
                 id="phone-change"
-                placeholder="Enter New Phone Number"
+                placeholder="    enter new phone number"
                 />
-                <button type="submit">Change Phone Number</button>
-            </div>
+                <button className="btnprofile" type="submit">change phone number</button>
+            
             <div>
-                <button type="submit">View Analytics</button>
+                <button className="btnprofile" type="submit">view analytics</button>
             </div>
         </form>
     </div>

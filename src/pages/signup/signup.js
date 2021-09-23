@@ -54,31 +54,40 @@ function Signup() {
   //   }
 
   return (
-    <div>
-      <div>
+
+    <div id="formsignup">
+
         <div>
-          <h2>Sign Up</h2>
+          <h2 id="signup">sign up</h2>
         </div>
-      </div>
+
+     
       <form>
+
         <div>
-          {/* <input onChange={handleInputChange} type="text" id="name-signup" placeholder="Enter name" /> */}
+          <input type="text" className="input" id="name-signup" placeholder="    enter name" />
         </div>
+
         <div>
-          {/* <input onChange={handleInputChange} type="text" id="email-signup" placeholder="Enter email" /> */}
+          <input type="text" className="input" id="email-signup" placeholder="    enter email" />
         </div>
+
         <div>
-          {/* <input
-            onChange={handleInputChange}
+          <input
+            className="input"
             type="password"
             id="password-signup"
-            placeholder="Create password"
-          /> */}
+            placeholder="    create password"
+          />
         </div>
+
         <div>
-          {/* <button onClick={handleFormSubmit} type="submit">Sign Up</button> */}
+          <button className="btnlogin" type="submit">sign up</button>
         </div>
+
       </form>
+
+
     </div>
   );
 }
