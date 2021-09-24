@@ -3,6 +3,8 @@
   flex-direction: wrap;
   flex-wrap: wrap;
   width: 100%;
+  min-height: 50rem;
+  
 }
 
 .container {

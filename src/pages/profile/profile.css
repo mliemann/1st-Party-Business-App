@@ -10,8 +10,12 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    min-height: 50rem;
 }
 
+#profilepic{
+
+}
 #profile {
     font-size:40px;
     letter-spacing: 4px;
