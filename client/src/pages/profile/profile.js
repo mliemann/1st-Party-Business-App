@@ -9,7 +9,9 @@ function Profile () {
             </div>
     
         <form>
+      
             
+       
                 <input 
                 className="input"
                 type="text" 
@@ -35,9 +37,9 @@ function Profile () {
                 />
                 <button className="btnprofile" type="submit">change phone number</button>
             
-            <div>
+            {/* <div>
                 <button className="btnprofile" type="submit">view analytics</button>
-            </div>
+            </div> */}
         </form>
     </div>
     )
