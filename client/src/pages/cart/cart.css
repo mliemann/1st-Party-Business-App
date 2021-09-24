@@ -11,6 +11,7 @@
 
 .table{
     background-color: aliceblue;
+    border: 2px solid #26325a;
 }
 #producttable {
 
@@ -18,4 +19,31 @@
 
 #pricetable {
     float: right;
+}
+.checkoutbtn {
+    font-family: 'Ubuntu', sans-serif;
+    font: weight 700px;
+    position: relative;
+    left:20px;
+    display: inline-block;
+    padding: 15px 15px;
+    margin: 40px 0;
+    color: #FDFDFD;
+    background-color:#26325a;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border-radius: 1rem;
+    border-style: none;
+}
+.checkoutbtn:hover{
+background: #26325A;
+color: white;
+box-shadow: 0 0 5px #26325A,
+            0 0 25px #26325A,
+            0 0 50px #26325A,
+            0 0 200px #26325A;
+-webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }

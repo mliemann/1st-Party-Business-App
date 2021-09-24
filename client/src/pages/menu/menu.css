@@ -3,11 +3,11 @@
    color:white;
    display:flex;
    justify-content:center;
-   align-items:start;
+   align-items:flex-start;
    padding: 5% 0;
    border-color: white;
    border: 20px dotted;
-   min-height: 70rem;
+   /* min-height: 70rem; */
 }
 
 .item {

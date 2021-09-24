@@ -1,8 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cart.css";
 
 function Cart(props) {
+
+  const history = useHistory();
+
+  const pageRoute12 = () => {
+    history.push("/checkout");
+  };
   
   return (
     <div id="cart1">
@@ -49,6 +56,7 @@ function Cart(props) {
           </tr>
         </tbody>
         </table>
+        <button className="checkoutbtn" onClick={pageRoute12} >checkout</button>
         </div>
     </div>
   );

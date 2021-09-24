@@ -7,7 +7,7 @@
   height:150px;
   background-image: url("../../assets/brown.jpeg");
   background-size: cover;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   text-align: center;
