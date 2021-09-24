@@ -14,6 +14,7 @@ function onLikeRecipe(event) {
         numLikes.text( parseInt(numLikes.text()) + 1);
     } else {
         numLikes.text( parseInt(numLikes.text()) - 1);
+        
     }
     toggleLikeButton();
 }
