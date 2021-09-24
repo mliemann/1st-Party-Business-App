@@ -16,6 +16,10 @@
     font-family: 'Ubuntu', sans-serif;
   }
   
+  #profilepic{
+    float:right;
+    padding-right: 3%;
+  }
   .header {
     display:flex;
     flex-direction:wrap;
