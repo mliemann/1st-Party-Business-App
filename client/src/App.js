@@ -14,7 +14,7 @@ import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { UserProvider } from './providers/user';
-import Dish from "../src/menu.json";
+// import Dish from "../src/menu.json";
 import './App.css';
 
 

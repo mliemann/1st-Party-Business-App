@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 function onLikeRecipe(event) {
     const recipeId = event.target.dataset.recipeId;
     const action = event.target.textContent.trim().toLowerCase();
@@ -14,7 +16,7 @@ function onLikeRecipe(event) {
         numLikes.text( parseInt(numLikes.text()) + 1);
     } else {
         numLikes.text( parseInt(numLikes.text()) - 1);
-        
+
     }
     toggleLikeButton();
 }
