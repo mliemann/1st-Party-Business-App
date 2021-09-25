@@ -19,6 +19,16 @@
 #profile {
     font-size:40px;
     letter-spacing: 4px;
+    padding-bottom: 20px;
+}
+
+#formprofile {
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 
 .input {
