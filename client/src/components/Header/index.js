@@ -72,7 +72,7 @@ function Header() {
           <button className="btn" id="landingbtn" onClick={pageRoute4}>home</button>
           {/* <button onClick={pageRoute5}>Dashboard</button> */}
           {/* <button onClick={pageRoute6}>Menu</button> */}
-          <button className="btn" id="landingbtn" onClick={pageRoute7}>profile</button>
+          {/* <button className="btn" id="landingbtn" onClick={pageRoute7}>profile</button> */}
           {/* <button onClick={pageRoute8}>Restaurant Signup</button> */}</div>
           }
         

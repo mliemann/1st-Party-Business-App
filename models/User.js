@@ -33,6 +33,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    url: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
   },
 
   {
