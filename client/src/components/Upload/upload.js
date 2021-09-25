@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import S3 from "react-aws-s3";
+import "./upload.css";
 
 function Upload() {
   const fileInput = useRef();
@@ -30,11 +31,11 @@ function Upload() {
     <>
       <form className="upload-steps" onSubmit={handleClick}>
         <label>
-          Upload file:
-          <input type="file" ref={fileInput} />
+         
+          <input type="file" id="choosefile" ref={fileInput} />
         </label>
-        <br />
-        <button type="submit">Upload</button>
+       
+        <button type="submit" className="btnupload" >upload</button>
       </form>
     </>
   );
