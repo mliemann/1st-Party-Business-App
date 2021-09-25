@@ -9,7 +9,7 @@ function Profile() {
         <h2 id="profile">profile</h2>
       </div>
 
-      <form>
+      <form id="formprofile">
         <input
           className="input"
           type="text"
