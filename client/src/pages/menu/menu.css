@@ -6,8 +6,11 @@
    align-items:flex-start;
    padding: 5% 0;
    border-color: white;
-   border: 20px dotted;
+   /* border: 20px dotted; */
    /* min-height: 70rem; */
+}
+
+.containermenu {
 }
 
 .item {
