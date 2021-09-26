@@ -8,27 +8,35 @@ function Signup() {
   // const [users, setUser] = useState([])
   // const [formObject, setFormObject] = useState({})
 
-  // const signupFormHandler = async (event) => {
-  //   event.preventDefault();
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
   
-  //   const user_name = document.querySelector("#name-signup").value.trim();
-  //   const email = document.querySelector("#email-signup").value.trim();
-  //   const password = document.querySelector("#password-signup").value.trim();
+    const user_name = document.getElementById("name-signup").value.trim();
+    const email = document.getElementById("email-signup").value.trim();
+    const password = document.getElementById("password-signup").value.trim();
+
+    const userInfo = {
+      name: user_name,
+      email: email,
+      password: password
+    };
+
+    console.log(userInfo)
   
-  //   if (user_name && email && password) {
-  //     const response = await fetch("/api/users", {
-  //       method: "POST",
-  //       body: JSON.stringify({ user_name, email, password }),
-  //       headers: { "Content-Type": "application/json" },
-  //     });
+    if (user_name && email && password) {
+      const response = await fetch("http://localhost:3001/api/user", {
+        method: "POST",
+        body: JSON.stringify(userInfo),
+        headers: { "Content-Type": "application/json" },
+      });
   
-  //     if (response.ok) {
-  //       document.location.replace("/profile");
-  //     } else {
-  //       alert(response.statusText);
-  //     }
-  //   }
-  // };
+      if (response.ok) {
+        document.location.replace("/profile");
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
   
   // document
   //   .querySelector(".signup-form")
@@ -82,7 +90,7 @@ function Signup() {
         </div>
 
         <div>
-          <button className="btnlogin" type="submit">sign up</button>
+          <button className="btnlogin" type="submit" onClick={signupFormHandler}>sign up</button>
         </div>
 
       </form>
