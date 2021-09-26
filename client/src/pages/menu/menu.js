@@ -37,10 +37,10 @@ function Menu() {
                 </a>
               </div>
               <div className="item" id="description">
-                {product.description}
+                {product.ingredients}
               </div>
               <div className="item" id="price">
-                {product.price}
+                ${product.price}
               </div>
               {/* <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">

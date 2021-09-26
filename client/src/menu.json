@@ -2,48 +2,56 @@
     {
         "id":1,
         "dish":"EGGPLANT AL VAPOR",
+        "ingredients":"steamed eggplant, queso caldera, smoked tomato salsa, tortillas",
         "description":"Steamed eggplant, bathed in our exquisite seasoning. Served alongside our famous Queso Caldera, local smoked tomato salsa & handmade tortillas, made each morning. ",
         "price":21
     },
     {
         "id":2,
         "dish":"AU POIVRE A LA MEXICANA",
+        "ingredients":"oak grilled ribeye, mezcal chipotle au poivre, crispy potatoes, rajas, tortillas",
         "description":"Oak grilled ribeye. Susictly marrinated in Mezcal Chipotle au Poivre. Served with crispy red potatos, rajas & handmade tortillas, made each morning. ",
         "price":70
     },
     {
         "id":3,
         "dish":"GRILLED PORK CHOP",
+        "ingredients":"fennel-quesillo salsa, longaniza, pickled fennel, tortillas",
         "description":"Our exquisite mix of Fennel-Quesillo Salsa & Longaniza. Served with a pickled fennel & handmade tortillas, made each morning.",
         "price":34
     },
     {
         "id":4,
         "dish":"PESCADO ENCACAHUATADO",
+        "ingredients":"pan-seared fluke, peanut mole, potato hashbrown, yogurt, fried herbs",
         "description":"Pan-seared to perfection fluke, dressed in peanut Mole. Served alongside potato hashbrown & fried herbs. Includes, your choice of vanilla, strawberry or chocolate yogurt.",
         "price":27
     },
     {
         "id":5,
         "dish":"ALAMBRE",
+        "ingredients":"marinated and grilled goat loin, salsa cruda, cilantro salad, tortillas",
         "description":"24 hour marinated & grilled goat loin. Served with cilantro salad, salsa cruda & handmade tortillas, made each morning.",
         "price":25
     },
     {
         "id":6,
         "dish":"HONGO ASADO",
+        "ingredients":"chile smoked trumpet mushroom, mole de hongo, fried pickled mushrooms, tortillas",
         "description":"Chile smoked exquisitely trumpet mushroom, dressed in Mole de Hongo. Server with fried pickled mushrooms & handmade tortillas, made each morning.",
         "price":18
     },
     {
         "id":7,
         "dish":"ESQUITES EN CENIZA",
+        "ingredients":"roasted sweet corn, requeson, corn nuts, masa ash, mole verde",
         "description":"Hand-roasted sweet corn con Requeson. Served with corn nuts, masa ash & Mole verde.",
         "price":20
     },
     {
         "id":8,
         "dish":"SUADERO TACOS",
+        "ingredients":"confit brisket, black magic oil, avocado crudo, onion y cilantro",
         "description":"3 tacos with Confit brisket, Black Magic oil, avocado, onion y cilantro. Made with handmade tortillas, made each morning. ",
         "price":18
     }
