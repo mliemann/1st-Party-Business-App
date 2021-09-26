@@ -1,16 +1,29 @@
 #menu {
-   background-image: url("../../assets/slate\ background.jpeg");
    color:white;
    display:flex;
-   justify-content:center;
-   align-items:flex-start;
+   /* justify-content:center;
+   align-items:flex-start; */
    padding: 5% 0;
    border-color: white;
+   margin-left: 30%;
    /* border: 20px dotted; */
    /* min-height: 70rem; */
 }
 
+#menu-header {
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top: 3%;
+    /* max-width: 10%; */
+    color: white;
+    /* border-color: white;
+    border-bottom: 10px dotted; */
+}
+
 .containermenu {
+    background-image: url("../../assets/slate\ background.jpeg");
+
 }
 
 .item {
