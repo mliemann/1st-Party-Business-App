@@ -76,7 +76,7 @@ let subtotal = x + i++;
       <tbody >
         <tr>
           <th data-field="subtotal">subtotal</th>
-          <td>subtotal</td>
+          <td>{subtotal}</td>
         </tr>
         <tr>
           <th data-field="tax">tax</th>
@@ -94,45 +94,6 @@ let subtotal = x + i++;
 })}
 <button className="checkoutbtn" onClick={pageRoute12} >checkout</button>
 
-      <table className="table sortable">
-        <thead >
-          <tr>
-            <th scope="col">product</th>
-            <th scope="col">quantity</th>
-            <th scope="col">price</th>
-          </tr>
-        </thead>
-        <tbody>
-         
-          <tr>
-            <td data-label="Product">{product}</td>
-            <td data-label="Quantity">1</td>
-            <td data-label="Price">{price}</td>
-          </tr>
-        </tbody>
-      </table>
-      <div id= "pricetable"> 
-      <table className="table sortable" >
-        <tbody >
-          <tr>
-            <th data-field="subtotal">subtotal</th>
-            <td>{subtotal}</td>
-          </tr>
-
-          <tr>
-            <th data-field="tax">tax</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th data-field="total">total</th>
-            <td></td>
-          </tr>
-        </tbody>
-        </table>
-        <button className="checkoutbtn" onClick={pageRoute12} >checkout</button>
-        </div>
-    </div>
-  );
 
 }
 
