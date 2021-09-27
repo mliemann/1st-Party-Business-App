@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cart.css";
+import Menu from "../menu/menu.js";
 
 function Cart(props) {
 
@@ -10,6 +11,22 @@ function Cart(props) {
   const pageRoute12 = () => {
     history.push("/checkout");
   };
+
+  // const renderCart = () => {
+  //   const item = this.product.id;
+  //   let item = {
+  //     product: this.product.product,
+  //     quantity: this.p
+  //   }
+  // }
+
+  // Check browser support
+// if (typeof(Storage) !== "undefined") {
+//   // Retrieve
+//   document.getElementById("product").innerHTML = localStorage.getItem("programming");
+//   } else {
+//   document.getElementById("cart1").innerHTML = "Browser does not support Web Storage.";
+//   }
   
   return (
     <div id="cart1">

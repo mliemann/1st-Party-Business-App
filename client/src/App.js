@@ -13,6 +13,8 @@ import Contact from "./pages/contact/contact";
 import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+// import PaymentPage from "./components/Payment/PaymentPage";
+import Checkout from "./pages/checkout/checkout";
 import { UserProvider } from "./providers/user";
 // import Upload from './components/Upload/upload';
 // import Dish from "../src/menu.json";
@@ -43,6 +45,8 @@ function App() {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/restaurant/signup" component={RestaurantSignup} />
           <Route exact path="/signup" component={SignUp} />
+          {/* <Route exact path="/payment" component={Payment} /> */}
+          <Route exact path="/checkout" component={Checkout} />
           <Route component={Error} />
         </Switch>
 
