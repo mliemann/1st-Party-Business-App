@@ -2,8 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cart.css";
-import products from "../../menu.json";
-
+import Menu from "../menu/menu.js";
 
 function Cart(props) {
 
@@ -23,7 +22,7 @@ function Cart(props) {
 
   // let product = window.localStorage.getItem('dish')
 
-// DO NOT DELETE. THIS IS HOW WE'LL PUSH THE CORRECT MAPPING LATER....let products = JSON.parse(localStorage.getItem("product"));
+let products = JSON.parse(localStorage.getItem("product"));
 console.log(products);
 
 let product = products.dish;
@@ -37,6 +36,14 @@ var x = price;
 
 let subtotal = x + i++;
 
+var y = .0725 * subtotal;
+
+let total = subtotal + y;
+total = total.toFixed(2);
+
+let tax = total - subtotal;
+tax = tax.toFixed(2);
+
 
 // if (product !== null) {
 //   document.getElementsByTagName("td") = product
@@ -49,52 +56,49 @@ let subtotal = x + i++;
 // }
 
 
-// eslint-disable-next-line no-lone-blocks
-{products.map(() => {
-  return(
+{products.map(() => { 
+  return (
     <div id="cart1">
-
-    <table className="table sortable"  >
-      <thead >
-        <tr>
-          <th scope="col">product</th>
-          <th scope="col">quantity</th>
-          <th scope="col">price</th>
-        </tr>
-      </thead>
-      <tbody>
-       
-        <tr>
-          <td data-label="Product" id="ProductCart">{product}</td>
-          <td data-label="Quantity">1</td>
-          <td data-label="Price">{price}</td>
-        </tr>
-      </tbody>
-    </table>
-    <div id= "pricetable"> 
-    <table className="table sortable" >
-      <tbody >
-        <tr>
-          <th data-field="subtotal">subtotal</th>
-          <td>{subtotal}</td>
-        </tr>
-        <tr>
-          <th data-field="tax">tax</th>
-          <td>tax</td>
-        </tr>
-        <tr>
-          <th data-field="total">total</th>
-          <td>total</td>
-        </tr>
-      </tbody>
+      <table className="table sortable">
+        <thead >
+          <tr>
+            <th scope="col">product</th>
+            <th scope="col">quantity</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr>
+            <td data-label="Product">{product}</td>
+            <td data-label="Quantity">1</td>
+            <td data-label="Price">{price}</td>
+          </tr>
+        </tbody>
       </table>
-      </div>
-  </div>
-  )
-})}
-<button className="checkoutbtn" onClick={pageRoute12} >checkout</button>
+      <div id= "pricetable"> 
+      <table className="table sortable" >
+        <tbody >
+          <tr>
+            <th data-field="subtotal">subtotal</th>
+            <td>{subtotal}</td>
+          </tr>
 
-
+          <tr>
+            <th data-field="tax">tax</th>
+            <td>{tax}</td>
+          </tr>
+          <tr>
+            <th data-field="total">total</th>
+            <td>{total}</td>
+          </tr>
+        </tbody>
+        </table>
+        <button className="checkoutbtn" onClick={pageRoute12} >checkout</button>
+        </div>
+    </div>
+  );
+})};
 }
 
 export default Cart;
