@@ -68,12 +68,12 @@ function Menu() {
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
 
               <button className="item" id="addCartBtn" onClick={() => {
-    const info = product.id
+  
     let item = {
       dish: product.dish,
       price: product.price
     };
-    localStorage.setItem(info, JSON.stringify(item))
+    localStorage.setItem("product", JSON.stringify(item))
     // localStorage.setItem("dish", "price")
   }}>
                 Add to cart
