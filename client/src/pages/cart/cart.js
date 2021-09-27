@@ -22,11 +22,25 @@ function Cart(props) {
 
   // let product = window.localStorage.getItem('dish')
 
-let product = JSON.parse(localStorage.getItem("product"));
+let products = JSON.parse(localStorage.getItem("product"));
+console.log(products);
+
+let product = products.dish;
 console.log(product);
-if (product !== null) {
-  document.getElementById("ProductCart") = product.dish
-}
+
+let price = products.price;
+console.log(price);
+
+
+// if (product !== null) {
+//   document.getElementById("ProductCart") = product.dish
+// }
+
+// let product = JSON.parse(localStorage.getItem("product"));
+// console.log(product);
+// if (product !== null) {
+//   document.getElementById("ProductCart") = product.dish
+// }
 
 
   
@@ -45,7 +59,7 @@ if (product !== null) {
           <tr>
             <td data-label="Product" id="ProductCart"></td>
             <td data-label="Quantity">27</td>
-            <td data-label="Price">All the money in your wallet</td>
+            <td data-label="Price"></td>
           </tr>
         </tbody>
       </table>
