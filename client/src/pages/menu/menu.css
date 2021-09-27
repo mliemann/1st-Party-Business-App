@@ -5,7 +5,7 @@
    align-items:flex-start; */
    padding: 5% 0;
    border-color: white;
-   margin-left: 30%;
+   margin-left: 10%;
    /* border: 20px dotted; */
    /* min-height: 70rem; */
 }
@@ -15,10 +15,21 @@
     justify-content:center;
     align-items:flex-start;
     padding-top: 3%;
-    /* max-width: 10%; */
     color: white;
-    /* border-color: white;
-    border-bottom: 10px dotted; */
+    text-transform: lowercase;
+    font-size:40px;
+}
+
+.border {
+    padding: 4rem 8rem;
+    display: inline-block;
+    border: 3px solid white;
+    font-size: 2.5rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    background: white;
+    position: relative;
 }
 
 .containermenu {
@@ -26,36 +37,53 @@
 
 }
 
+
+
 .item {
     padding:2%;
-}
-.menuitem{
+    font-size:20px;
+    text-transform: lowercase;
 }
 
 #dish {
-    font-size:25px;
-}
-
-#description {
-
-}
-
-#price {
-
-}
-
-#moreInfoBtn {
-
+    font-size:30px;
+    text-transform: lowercase;
 }
 
 #addCartBtn {
+    font-family: 'Ubuntu', sans-serif;
+    font: weight 700px;
+    position: relative;
+    left:20px;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #fdfdfd;
+    background-color:#26325a;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border-radius: 1rem;
+    border-style: none;
+}
 
+#addCartBtn:hover{
+background: #26325a;
+color: white;
+box-shadow: 0 0 5px #26325a,
+            0 0 25px #26325a,
+            0 0 50px #26325a,
+            0 0 200px #26325a;
+-webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
 .ui-tooltip {
-    font-size: 12px;
+    font-size: 25px;
     color: white;
     vertical-align: text-top;
+    padding-left:5px;
 }
 
 .ui-tooltip:hover {
