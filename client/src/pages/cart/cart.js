@@ -33,7 +33,7 @@ console.log(price);
 
 
 // if (product !== null) {
-//   document.getElementById("ProductCart") = product.dish
+//   document.getElementsByTagName("td") = product
 // }
 
 // let product = JSON.parse(localStorage.getItem("product"));
@@ -57,9 +57,9 @@ console.log(price);
         <tbody>
          
           <tr>
-            <td data-label="Product" id="ProductCart"></td>
-            <td data-label="Quantity">27</td>
-            <td data-label="Price"></td>
+            <td data-label="Product" id="ProductCart">{product}</td>
+            <td data-label="Quantity">1</td>
+            <td data-label="Price">{price}</td>
           </tr>
         </tbody>
       </table>
