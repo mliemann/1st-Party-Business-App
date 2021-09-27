@@ -6,6 +6,19 @@ import products from "../../menu.json";
 // import Details from "../../components/Details/details"
 
 function Menu() {
+  
+
+  const addToCart = () => {
+    const info = this.product.id
+    let item = {
+      dish: this.product.dish,
+      ingredients: this.product.description,
+      price: this.product.price
+    };
+    localStorage.setItem(info, JSON.stringify(item))
+    // localStorage.setItem("dish", "price")
+  }
+
   return (
     // <div className="container">
     //     <div id="menu">
@@ -54,7 +67,16 @@ function Menu() {
 
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
 
-              <button className="item" id="addCartBtn">
+              <button className="item" id="addCartBtn" onClick={() => {
+    const info = product.id
+    let item = {
+      dish: product.dish,
+      ingredients: product.description,
+      price: product.price
+    };
+    localStorage.setItem(info, JSON.stringify(item))
+    // localStorage.setItem("dish", "price")
+  }}>
                 Add to card
               </button>
             </div>
