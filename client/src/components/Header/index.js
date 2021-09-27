@@ -58,7 +58,7 @@ function Header() {
     <button className="btn" id="landingbtn" onClick={pageRoute4}>home</button>
     {/* <button onClick={pageRoute5}>Dashboard</button> */}
     {/* <button onClick={pageRoute6}>Menu</button> */}
-    <button className="btn" id="landingbtn" onClick={pageRoute7}>profile</button>
+    <button className="btn" id="profilesbtn" onClick={pageRoute7}>profile</button>
     {/* <button onClick={pageRoute8}>Restaurant Signup</button> */}
     <img id="profilepic"
         src=" https://res.cloudinary.com/dl0hsgmfc/image/fetch/c_crop,g_face,h_200,w_200/c_scale,w_200/https://bestteamproj2.s3.amazonaws.com/images/Pictureofme.jpg"
