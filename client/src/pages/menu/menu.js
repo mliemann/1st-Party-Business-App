@@ -71,7 +71,6 @@ function Menu() {
     const info = product.id
     let item = {
       dish: product.dish,
-      ingredients: product.description,
       price: product.price
     };
     localStorage.setItem(info, JSON.stringify(item))
