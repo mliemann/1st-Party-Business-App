@@ -12,10 +12,9 @@
 .table{
     background-color: aliceblue;
     border: 2px solid #26325a;
+    color: #26325a;
 }
-#producttable {
 
-}
 
 #pricetable {
     float: right;

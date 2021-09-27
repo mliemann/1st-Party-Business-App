@@ -16,9 +16,9 @@ function Cart(props) {
       <table className="table sortable"  >
         <thead >
           <tr>
-            <th scope="col">Product</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Price</th>
+            <th scope="col">product</th>
+            <th scope="col">quantity</th>
+            <th scope="col">price</th>
           </tr>
         </thead>
         <tbody>
@@ -42,17 +42,17 @@ function Cart(props) {
       <table className="table sortable" >
         <tbody >
           <tr>
-            <th data-field="subtotal">Subtotal</th>
-            <td>Subtotal</td>
+            <th data-field="subtotal">subtotal</th>
+            <td>subtotal</td>
           </tr>
 
           <tr>
-            <th data-field="tax">Tax</th>
-            <td>Tax</td>
+            <th data-field="tax">tax</th>
+            <td>tax</td>
           </tr>
           <tr>
-            <th data-field="total">Total</th>
-            <td>Total</td>
+            <th data-field="total">total</th>
+            <td>total</td>
           </tr>
         </tbody>
         </table>

@@ -32,7 +32,7 @@ function Menu() {
     //     </div>
     // </div>
 
-    <div className="containermenu">
+    <div className="containermenu border">
       <h1 id="menu-header">platos</h1>
       {products.map((product) => {
         return (
@@ -77,7 +77,7 @@ function Menu() {
     localStorage.setItem(info, JSON.stringify(item))
     // localStorage.setItem("dish", "price")
   }}>
-                Add to card
+                Add to cart
               </button>
             </div>
           </div>
