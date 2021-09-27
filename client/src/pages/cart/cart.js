@@ -31,6 +31,11 @@ console.log(product);
 let price = products.price;
 console.log(price);
 
+var i = 0;
+var x = price;
+
+let subtotal = x + i++;
+
 
 // if (product !== null) {
 //   document.getElementsByTagName("td") = product
@@ -46,7 +51,7 @@ console.log(price);
   
   return (
     <div id="cart1">
-      <table className="table sortable"  >
+      <table className="table sortable">
         <thead >
           <tr>
             <th scope="col">product</th>
@@ -57,7 +62,7 @@ console.log(price);
         <tbody>
          
           <tr>
-            <td data-label="Product" id="ProductCart">{product}</td>
+            <td data-label="Product">{product}</td>
             <td data-label="Quantity">1</td>
             <td data-label="Price">{price}</td>
           </tr>
@@ -68,16 +73,16 @@ console.log(price);
         <tbody >
           <tr>
             <th data-field="subtotal">subtotal</th>
-            <td>subtotal</td>
+            <td>{subtotal}</td>
           </tr>
 
           <tr>
             <th data-field="tax">tax</th>
-            <td>tax</td>
+            <td></td>
           </tr>
           <tr>
             <th data-field="total">total</th>
-            <td>total</td>
+            <td></td>
           </tr>
         </tbody>
         </table>
