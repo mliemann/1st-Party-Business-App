@@ -56,7 +56,7 @@ tax = tax.toFixed(2);
 // }
 
 
-{products.map(() => { 
+
   return (
     <div id="cart1">
       <table className="table sortable">
@@ -98,7 +98,7 @@ tax = tax.toFixed(2);
         </div>
     </div>
   );
-})};
+
 }
 
 export default Cart;
