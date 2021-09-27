@@ -15,7 +15,7 @@ function Menu() {
       ingredients: this.product.description,
       price: this.product.price
     };
-    localStorage.setItem(info, JSON.stringify(item))
+    localStorage.setItem("product", JSON.stringify(item))
     // localStorage.setItem("dish", "price")
   }
 
