@@ -67,7 +67,7 @@ function Menu() {
 
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
 
-              <button className="item" id="addCartBtn" onClick={() => {
+              <button className="item" id="addCartBtn" onClick={addToCart =>  {
   
     let item = {
       dish: product.dish,
