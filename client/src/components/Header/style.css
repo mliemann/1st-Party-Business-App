@@ -76,3 +76,63 @@
                 0 0 200px #26325a;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
+
+@media screen and (max-width:915px) {
+
+  .btn {
+    left:5px;
+    margin-right: 10px;
+  }
+
+}
+
+@media screen and (max-width:795px) {
+    
+  .btn {
+    left:0px;
+    padding: 20px 15px;
+    display:list-item;
+    margin:10px;
+
+  }
+
+  #whitespace {
+    padding-left:opx;
+   
+  }
+}
+
+@media screen and (max-width:530px) {
+  
+  #logo {
+    position: relative;
+    z-index: 1;
+    top: 10%;
+    left: 5%;
+    height: 50%;
+    width:auto;  
+  }
+
+  #logoutbtn {
+    position: relative;
+  }
+
+  #landingbtn {
+    position:relative;
+  }
+
+  #profilesbtn {
+    position: relative;
+  }
+
+  #loginbtn {
+    position: relative;
+    top: 26px;
+  }
+
+  #cartbtn {
+    position: relative;
+    top: 26px;
+  }
+
+}
