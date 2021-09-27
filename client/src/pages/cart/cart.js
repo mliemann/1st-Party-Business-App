@@ -20,13 +20,15 @@ function Cart(props) {
   //   }
   // }
 
-  // Check browser support
-// if (typeof(Storage) !== "undefined") {
-//   // Retrieve
-//   document.getElementById("product").innerHTML = localStorage.getItem("programming");
-//   } else {
-//   document.getElementById("cart1").innerHTML = "Browser does not support Web Storage.";
-//   }
+  // let product = window.localStorage.getItem('dish')
+
+let product = JSON.parse(localStorage.getItem("product"));
+console.log(product);
+if (product !== null) {
+  document.getElementById("ProductCart") = product.dish
+}
+
+
   
   return (
     <div id="cart1">
@@ -39,17 +41,9 @@ function Cart(props) {
           </tr>
         </thead>
         <tbody>
-          {/* {props.users.map((user) => {
-          return (
-            <tr key={user.id}>
-              <td data-label="Product">{user.product}</td>
-              <td data-label="Quantity">{user.quantity}</td>
-              <td data-label="Price">{user.price}</td>
-            </tr>
-          );
-        })} */}
+         
           <tr>
-            <td data-label="Product">Product Test</td>
+            <td data-label="Product" id="ProductCart"></td>
             <td data-label="Quantity">27</td>
             <td data-label="Price">All the money in your wallet</td>
           </tr>
