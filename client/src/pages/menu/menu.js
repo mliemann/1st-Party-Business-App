@@ -5,7 +5,10 @@ import products from "../../menu.json";
 // import Dropdown from "react-bootstrap"
 // import Details from "../../components/Details/details"
 
-function Menu() {
+
+
+function menu(){
+  
   
 
   const addToCart = () => {
@@ -67,13 +70,14 @@ function Menu() {
 
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
 
-              <button className="item" id="addCartBtn" onClick={addToCart =>  {
+              <button className="item" id="addCartBtn" onClick={ () =>  {
   
     let item = {
       dish: product.dish,
       price: product.price
     };
-    localStorage.setItem("product", JSON.stringify(item))
+    localStorage.setItem(product.dish, JSON.stringify(item))
+   
     // localStorage.setItem("dish", "price")
   }}>
                 Add to cart
@@ -86,4 +90,5 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default menu
+
