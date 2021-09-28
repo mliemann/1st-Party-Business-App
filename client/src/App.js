@@ -6,7 +6,7 @@ import Landing from "./pages/landing/landing";
 import Error from "./pages/error/error";
 // import Home from "./pages/";
 import Login from "./pages/login/login";
-import Menu from "./pages/menu/menu";
+import menu from "./pages/menu/menu.js";
 import Profile from "./pages/profile/profile";
 import RestaurantSignup from "./pages/signuprest/signuprest";
 import Contact from "./pages/contact/contact";
@@ -36,7 +36,7 @@ function App() {
           <Route
             exact
             path="/menu"
-            component={Menu}
+            component={menu}
             // id={menu.id}
             // dish={dish.id}
             // description={description.id}
