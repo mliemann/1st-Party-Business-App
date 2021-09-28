@@ -14,11 +14,16 @@ import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 // import PaymentPage from "./components/Payment/PaymentPage";
-import Checkout from "./pages/checkout/checkout";
+// import Checkout from "./pages/checkout/checkout";
 import { UserProvider } from "./providers/user";
 // import Upload from './components/Upload/upload';
 // import Dish from "../src/menu.json";
 import "./App.css";
+import MyCheckoutForm from "./pages/checkout/checkout";
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51JejrXDEcxKa4yKXrkIpeNdOpboxcZ8C2NYz8RNZREHCyhk9tANRjpdFVAQu96v9jqGpEdnMbGF1fLaf96lBAe1500xntxIT0o');
 
 function App() {
   return (
@@ -46,7 +51,10 @@ function App() {
           <Route exact path="/restaurant/signup" component={RestaurantSignup} />
           <Route exact path="/signup" component={SignUp} />
           {/* <Route exact path="/payment" component={Payment} /> */}
-          <Route exact path="/checkout" component={Checkout} />
+          {/* <Route exact path="/checkout" component={Checkout} /> */}
+          <Elements stripe={stripePromise}>
+            <MyCheckoutForm />
+          </Elements>
           <Route component={Error} />
         </Switch>
 
