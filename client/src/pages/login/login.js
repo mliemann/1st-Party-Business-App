@@ -20,7 +20,7 @@ function Login() {
     const logUserIn = userData => {
       dispatch({
         type: USER_LOGGED_IN,
-        userData: userData
+        userData: userData.user
       });
     };
 

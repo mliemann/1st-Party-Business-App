@@ -1,7 +1,8 @@
 import React, { createContext, useReducer, useContext } from "react";
 import {
   USER_LOGGED_IN,
-  USER_LOGGED_OUT
+  USER_LOGGED_OUT,
+  USER_UPDATED
 } from "./actions";
 
 const UserContext = createContext();
@@ -23,6 +24,12 @@ const reducer = (state, action) => {
       isLoggedIn: false
     };
     
+  case USER_UPDATED:
+    return {
+      ...state,
+      userData: action.userData,
+      isLoggedIn: true
+    };  
   default:
     return state;
   }
@@ -45,5 +52,6 @@ export {
     UserProvider, 
     useUserContext,
     USER_LOGGED_IN,
-    USER_LOGGED_OUT
+    USER_LOGGED_OUT,
+    USER_UPDATED
  };

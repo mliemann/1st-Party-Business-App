@@ -1,10 +1,28 @@
 import React, { useRef } from "react";
 import S3 from "react-aws-s3";
+import { useUserContext, USER_UPDATED, } from "../../providers/user";
 import "./upload.css";
+
+async function updateProfilePic(userid, profileUrl) {
+  return fetch('http://localhost:3001/api/user/profile/' + userid, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({profileUrl: profileUrl})
+  })
+    .then(data => data.json())
+ }
 
 function Upload() {
   const fileInput = useRef();
-
+  const [state, dispatch] = useUserContext();
+  const updateUser = userData => {
+    dispatch({
+      type: USER_UPDATED,
+      userData: userData
+    });
+  };
   const handleClick = (event) => {
     event.preventDefault();
     let file = fileInput.current.files[0];
@@ -17,10 +35,13 @@ function Upload() {
       s3Url: "https://bestteamproj2.s3.amazonaws.com", /* without the suffix zone added */
     };
     const ReactS3Client = new S3(config);
-    ReactS3Client.uploadFile(file, newFileName).then((data) => {
-      console.log(data);
+    ReactS3Client.uploadFile(file, newFileName).then( async (data) => {
       if (data.status === 204) {
         console.log("success");
+        const updated = await updateProfilePic(state.userData.id, data.location);
+        var newUser = state.user;
+        newUser.profileUrl = updated.profileUrl;
+        updateUser(newUser);
       } else {
         console.log("fail");
       }

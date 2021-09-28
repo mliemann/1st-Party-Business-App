@@ -2,21 +2,25 @@
   {
     "name": "Tyler",
     "email": "tyler@hotmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "profileUrl": ""
   },
   {
     "name": "Marlon",
     "email": "marlon@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "profileUrl": ""
   },
   {
     "name": "Mike",
     "email": "mike0@aol.com",
-    "password": "password12345"
+    "password": "password12345",
+    "profileUrl": "https://bestteamproj2.s3.amazonaws.com/profile_large.png"
   },
   {
     "name": "Dauphine",
     "email": "dburns@yahoo.com",
-    "password": "password12345"
+    "password": "password12345",
+    "profileUrl":""
   }
 ]
