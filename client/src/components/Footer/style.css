@@ -74,7 +74,7 @@
 
   .btnfooter {
     padding: 20px 30px;
-    margin: 5px 5pxpx;
+    margin: 5px 5px;
   }
 
   #address {
@@ -84,6 +84,29 @@
 
   #whitespace {
     flex:0;
+   
+  }
+}
+
+@media screen and (max-width:530px) {
+    
+  .btnfooter {
+    padding: 10px 20px;
+    margin: 5px;
+    position: relative;
+    left: -9px;
+  }
+
+  #address {
+    color:white;
+    font-size:20px;
+    position: relative;
+    top: 14px;
+    left: -9px;
+  }
+
+  #whitespace {
+    flex:1;
    
   }
 }
