@@ -1,22 +1,11 @@
-/* eslint-disable no-lone-blocks */
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cart.css";
-// import contents from "../menu/menu.js";
+// import Menu from "../menu/menu.js";
 
-
-function Cart(props) {
-  var contents = [] 
+function Cart() {
   const history = useHistory();
-  const load = () => {
-  contents = []
-   for (var i = 0, len = localStorage.length; i < len; ++i) {
-     contents.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-   }
-  console.log(contents)
- }
-load()
 
   const pageRoute12 = () => {
     history.push("/checkout");
@@ -32,23 +21,21 @@ load()
 
   // let product = window.localStorage.getItem('dish')
 
-  // // let products = JSON.parse(localStorage.getItem("product"));
-  // console.log(products);
+  let products = JSON.parse(localStorage.getItem("cart")) || [];
+  console.log(products);
 
-  // // for (var i=0; i < products.length; i++) {
-  // //   var product = products[i]
-  // // }
+  // let product = products.dish;
+  // console.log(product);
 
-  // console.log(dish);
-
+  // let price = products.price;
   // console.log(price);
 
   // var i = 0;
-  // var x = contents.price;
+  // var x = price;
 
   // let subtotal = x + i++;
 
-  // var y = 0.0725 * subtotal;
+  // var y = .0725 * subtotal;
 
   // let total = subtotal + y;
   // total = total.toFixed(2);
@@ -56,9 +43,8 @@ load()
   // let tax = total - subtotal;
   // tax = tax.toFixed(2);
 
-  // if (contents == null) {
-  //   contents.price = "none selected";
-  //   contents.dish = "none selected";
+  // if (product !== null) {
+  //   document.getElementsByTagName("td") = product
   // }
 
   // let product = JSON.parse(localStorage.getItem("product"));
@@ -66,55 +52,51 @@ load()
   // if (product !== null) {
   //   document.getElementById("ProductCart") = product.dish
   // }
+
   return (
-    <div>
-      <div>
-        {contents.map((content) => {
+    <div id="cart1">
+      <table className="table sortable">
+        <thead>
+          <tr>
+            <th scope="col">product</th>
+            <th scope="col">quantity</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        {products.map((product) => {
           return (
-            <div id="cart1">
-              <table className="table sortable">
-                <thead>
-                  <tr>
-                    <th scope="col">product</th>
-                    <th scope="col">quantity</th>
-                    <th scope="col">price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-label="Product" id="ProductCart">
-                      {content.dish}
-                    </td>
-                    <td data-label="Quantity">1</td>
-                    <td data-label="Price">{content.price}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div id="pricetable">
-                <table className="table sortable">
-                  <tbody>
-                    <tr>
-                      <th data-field="subtotal">subtotal</th>
-                      {/* <td>{subtotal}</td> */}
-                    </tr>
-                    <tr>
-                      <th data-field="tax">tax</th>
-                      <td>tax</td>
-                    </tr>
-                    <tr>
-                      <th data-field="total">total</th>
-                      <td>total</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            <tbody key={product.id}>
+              <tr>
+                <td data-label="Product">{product.dish}</td>
+                <td data-label="Quantity">1</td>
+                <td data-label="Price">{product.price}</td>
+              </tr>
+            </tbody>
           );
         })}
+      </table>
+      <div id="pricetable">
+        <table className="table sortable">
+          <tbody>
+            <tr>
+              <th data-field="subtotal">subtotal</th>
+              {/* <td>{subtotal}</td> */}
+            </tr>
+
+            <tr>
+              <th data-field="tax">tax</th>
+              {/* <td>{tax}</td> */}
+            </tr>
+            <tr>
+              <th data-field="total">total</th>
+              {/* <td>{total}</td> */}
+            </tr>
+          </tbody>
+        </table>
+        <button className="checkoutbtn" onClick={pageRoute12}>
+          checkout
+        </button>
       </div>
-      <button className="checkoutbtn" onClick={pageRoute12}>
-        Checkout
-      </button>
     </div>
   );
 }
