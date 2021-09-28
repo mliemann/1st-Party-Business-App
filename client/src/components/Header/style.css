@@ -77,7 +77,7 @@
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
-@media screen and (max-width:915px) {
+@media screen and (max-width:1250px) {
 
   .btn {
     left:5px;
@@ -91,7 +91,7 @@
   .btn {
     left:0px;
     padding: 20px 15px;
-    display:list-item;
+    display:column;
     margin:10px;
 
   }
@@ -107,13 +107,17 @@
   #logo {
     position: relative;
     z-index: 1;
-    top: 10%;
-    left: 5%;
+    top: 19%;
+    left: -2%;
     height: 50%;
-    width:auto;  
+    width: auto;
   }
 
-  #logoutbtn {
+  .btn {
+    justify-content: center;
+  }
+
+  /* #logoutbtn {
     position: relative;
   }
 
@@ -133,6 +137,17 @@
   #cartbtn {
     position: relative;
     top: 26px;
-  }
+  } */
 
+}
+
+@media screen and (max-width:410px) {
+  #logo {
+    position: relative;
+    z-index: 1;
+    top: 5%;
+    left: 10%;
+    height: 50%;
+    width:auto;  
+  }
 }
