@@ -33,7 +33,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    url: {
+    profileUrl: {
       type: DataTypes.TEXT,
       allowNull: true,
     },

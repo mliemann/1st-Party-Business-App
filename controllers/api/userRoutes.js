@@ -31,12 +31,35 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password, please try again" });
       return;
     }
-
+    
     res.json({ user: userData, message: "You are now logged in!" });
 
   } catch (err) {
     res.status(400).json(err);
   }
 });
+
+router.put("/profile/:id", (req, res) => {
+  console.log(req);
+  User.update(
+    { 
+      profileUrl: req.body.profileUrl
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  ).then((didUpdate) => {
+    if (didUpdate) {
+      res.json({profileUrl: req.body.profileUrl});
+    } else {
+      req.status(500);
+    }
+  }) .catch((err) => {
+    req.status(500);
+  });
+
+})
 
 module.exports = router;

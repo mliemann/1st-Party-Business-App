@@ -41,7 +41,7 @@ function Header() {
 
     history.push("/");
   }
-
+console.log(state);
   return (
     <div className="header">
         <img id="logo"
@@ -61,8 +61,8 @@ function Header() {
     <button className="btn" id="profilesbtn" onClick={pageRoute7}>profile</button>
     {/* <button onClick={pageRoute8}>Restaurant Signup</button> */}
     <img id="profilepic"
-        src=" https://res.cloudinary.com/dl0hsgmfc/image/fetch/c_crop,g_face,h_200,w_200/c_scale,w_200/https://bestteamproj2.s3.amazonaws.com/images/Pictureofme.jpg"
-        alt="taco tavern logo"
+        src={state.userData.profileUrl} 
+        alt="profile image"
         width="auto"
         height="175"
     ></img> </div>
