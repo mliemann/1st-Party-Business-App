@@ -30,19 +30,32 @@ function Cart() {
   // let price = products.price;
   // console.log(price);
 
-  var i = 0;
-  var x = [i].price;
-  console.log([i].price);
+  var sum = 0;
 
-  let subtotal = x + i++;
+  for (let i = 0; i< products.length; i++) {
+   
+    var price = products[i].price;
+    //Price
+    sum += price
 
-  var y = .0725 * subtotal;
+  }
 
-  let total = subtotal + y;
-  total = total.toFixed(2);
+  // var y = .0725 * sum;
 
-  let tax = total - subtotal;
+  //Tax + Price
+  let tax = sum * .0725;
+  console.log(tax);
+
   tax = tax.toFixed(2);
+  console.log(tax);
+
+  //Total
+  let total =+ tax + sum;
+  total = total.toFixed(2);
+  
+  console.log(total);
+
+  
 
   // if (product !== null) {
   //   document.getElementsByTagName("td") = product
@@ -81,7 +94,7 @@ function Cart() {
           <tbody>
             <tr>
               <th data-field="subtotal">subtotal</th>
-              <td>{subtotal}</td>
+              <td>{sum}</td>
             </tr>
 
             <tr>
