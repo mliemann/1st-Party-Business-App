@@ -2,6 +2,8 @@ import React from "react";
 import "./checkout.css";
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 
+
+//stripe pulling 
 const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
