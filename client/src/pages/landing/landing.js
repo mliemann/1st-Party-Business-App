@@ -32,6 +32,7 @@ function Landing () {
                 
                 <div className="cover">
                     <div id="background2">
+                        <img id="coverimg3" src="https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-16.jpg" alt="Chicken and cilantro tacos."></img>
                         <h1 id="placeorder">place your order</h1>
                         <img id="coverimg2" src="https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-16.jpg" alt="Chicken and cilantro tacos."></img>
                     </div>
