@@ -3,38 +3,9 @@ import React from "react";
 import "./menu.css";
 import products from "../../menu.json";
 // import Dropdown from "react-bootstrap"
-// import Details from "../../components/Details/details"
 
-
-
-function menu(){
-  
-  
-
-  const addToCart = () => {
-    const info = this.product.id
-    let item = {
-      dish: this.product.dish,
-      ingredients: this.product.description,
-      price: this.product.price
-    };
-    localStorage.setItem("product", JSON.stringify(item))
-    // localStorage.setItem("dish", "price")
-  }
-
+function Menu() {
   return (
-    // <div className="container">
-    //     <div id="menu">
-    //         <div className="menuItem">
-    //             <div id={"dish" + props.id} >{props.dish}</div>
-    //             <div id={"description" + props.id}>{props.description}</div>
-    //             <div id={"price" + props.id}>{props.price}</div>
-    //             <button id="moreInfoBtn">More details</button>
-    //             <button id="addCartBtn">Add to card</button>
-    //         </div>
-    //     </div>
-    // </div>
-
     <div className="containermenu border">
       <h1 id="menu-header">platos</h1>
       {products.map((product) => {
@@ -43,10 +14,7 @@ function menu(){
             <div className="menuItem">
               <div className="item" id="dish">
                 {product.dish}
-                <a
-                  className="ui-tooltip"
-                  title={product.description}
-                >
+                <a className="ui-tooltip" title={product.description}>
                   <span style={{ cursor: "pointer" }}>
                     <i className="fas fa-info-circle"></i>
                   </span>
@@ -70,16 +38,21 @@ function menu(){
 
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
 
-              <button className="item" id="addCartBtn" onClick={ () =>  {
-  
-    let item = {
-      dish: product.dish,
-      price: product.price
-    };
-    localStorage.setItem(product.dish, JSON.stringify(item))
-   
-    // localStorage.setItem("dish", "price")
-  }}>
+              <button
+                className="item"
+                id="addCartBtn"
+                onClick={() => {
+                  var cart = [];
+                  var dish = {
+                    id: product.id,
+                    dish: product.dish,
+                    price: product.price,
+                  };
+                  cart = JSON.parse(localStorage.getItem("cart")) || [];
+                  cart.push(dish);
+                  localStorage.setItem("cart", JSON.stringify(cart));
+                }}
+              >
                 Add to cart
               </button>
             </div>
@@ -90,5 +63,4 @@ function menu(){
   );
 }
 
-export default menu
-
+export default Menu;
