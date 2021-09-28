@@ -30,18 +30,19 @@ function Cart() {
   // let price = products.price;
   // console.log(price);
 
-  // var i = 0;
-  // var x = price;
+  var i = 0;
+  var x = [i].price;
+  console.log([i].price);
 
-  // let subtotal = x + i++;
+  let subtotal = x + i++;
 
-  // var y = .0725 * subtotal;
+  var y = .0725 * subtotal;
 
-  // let total = subtotal + y;
-  // total = total.toFixed(2);
+  let total = subtotal + y;
+  total = total.toFixed(2);
 
-  // let tax = total - subtotal;
-  // tax = tax.toFixed(2);
+  let tax = total - subtotal;
+  tax = tax.toFixed(2);
 
   // if (product !== null) {
   //   document.getElementsByTagName("td") = product
@@ -80,16 +81,16 @@ function Cart() {
           <tbody>
             <tr>
               <th data-field="subtotal">subtotal</th>
-              {/* <td>{subtotal}</td> */}
+              <td>{subtotal}</td>
             </tr>
 
             <tr>
               <th data-field="tax">tax</th>
-              {/* <td>{tax}</td> */}
+              <td>{tax}</td>
             </tr>
             <tr>
               <th data-field="total">total</th>
-              {/* <td>{total}</td> */}
+              <td>{total}</td>
             </tr>
           </tbody>
         </table>
