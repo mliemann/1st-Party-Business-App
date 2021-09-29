@@ -55,7 +55,7 @@ function Login() {
       <form onSubmit={handleSubmit}>
         <div>
           <input
-            className="input"
+            className="inputLogin"
             onChange={e => setEmail(e.target.value)}
             type="text" 
             id="email-login" 
@@ -66,7 +66,7 @@ function Login() {
 
         <div>
           <input
-            className="input"
+            className="inputLogin"
             onChange={e => setPassword(e.target.value)}
             type="password"
             id="password-login"
@@ -79,12 +79,12 @@ function Login() {
         </p>
 
         <div>
-          <button className="btnlogin" type="submit">log in</button>
-          <button className="btnlogin" onClick={regRoute}>register</button>
-          <button className="btnlogin">
+          <button className="btnLogin" type="submit">log in</button>
+          <button className="btnLogin" onClick={regRoute}>register</button>
+          <button className="btnLogin">
             guest checkout
           </button>
-          <button className="btnlogin">forgot login</button>
+          <button className="btnLogin">forgot login</button>
         </div>
 
       </form>
