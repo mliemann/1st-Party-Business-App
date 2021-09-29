@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useUserContext, USER_LOGGED_IN, } from "../../providers/user";
 import "./login.css";
 
 async function loginUser(credentials) {
-  return fetch('/api/user/login', {
+  return fetch('http://localhost:3001/api/user/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

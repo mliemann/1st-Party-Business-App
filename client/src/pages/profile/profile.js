@@ -1,6 +1,6 @@
 import React from "react";
 import "./profile.css";
-import Upload from "../../components/Upload/upload"
+import Upload from "../../components/Upload/upload";
 
 function Profile() {
   return (
@@ -45,7 +45,6 @@ function Profile() {
             </div> */}
       </form>
       <Upload />
-
     </div>
   );
 }

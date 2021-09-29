@@ -40,7 +40,7 @@ function Upload() {
         console.log("success");
         const updated = await updateProfilePic(state.userData.id, data.location);
         var newUser = state.user;
-        newUser.profileUrl = updated.profileUrl;
+        newUser = updated.profileUrl;
         updateUser(newUser);
       } else {
         console.log("fail");

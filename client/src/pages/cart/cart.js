@@ -83,7 +83,7 @@ function Cart() {
               <tr>
                 <td data-label="Product">{product.dish}</td>
                 <td data-label="Quantity">1</td>
-                <td data-label="Price">{product.price}</td>
+                <td data-label="Price">${product.price}</td>
               </tr>
             </tbody>
           );
@@ -94,16 +94,16 @@ function Cart() {
           <tbody>
             <tr>
               <th data-field="subtotal">subtotal</th>
-              <td>{sum}</td>
+              <td>${sum}</td>
             </tr>
 
             <tr>
               <th data-field="tax">tax</th>
-              <td>{tax}</td>
+              <td>${tax}</td>
             </tr>
             <tr>
               <th data-field="total">total</th>
-              <td>{total}</td>
+              <td>${total}</td>
             </tr>
           </tbody>
         </table>
