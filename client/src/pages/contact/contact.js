@@ -49,7 +49,7 @@ function Contact() {
           className="inputContact"
           id="subject"
           name="subject"
-          placeholder="               write something..."
+          placeholder="     write something..."
           style={{ height: "200px" }}
         ></textarea>
 

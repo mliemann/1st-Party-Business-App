@@ -10,12 +10,11 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    min-height: 70rem;
 }
 
 
 
-#contact {
+#signupRest {
     margin:0px;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -24,7 +23,7 @@
 }
 
 
-.input {
+.inputRest {
     height:40px;
     width:400px;
     margin-top:10px;
@@ -35,7 +34,7 @@
     
 }
 
-.btnlogin {
+.btnloginRest {
     height:auto;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
@@ -55,7 +54,7 @@
     border-radius: 1rem;
     border-style: none;
 }
-.btnlogin:hover{
+.btnloginRest:hover{
     background: #26325a;
     color: white;
     box-shadow: 0 0 5px #26325a,
@@ -63,4 +62,20 @@
                 0 0 50px #26325a,
                 0 0 200px #26325a;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+@media screen and (max-width:530px) {
+
+    .inputRest {
+        width:300px;
+    }
+
+    #signupRest {
+        font-size: 40px;
+    }
+
+    .btnloginRest {
+        width:300px;
+        padding: 15px 20px;
+    }
 }
