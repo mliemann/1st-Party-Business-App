@@ -11,9 +11,6 @@ function ProfileLand() {
 
   return (
     <div>
-
-
-
       <button className="btn" id="landingbtn" onClick={editProfile}>
         edit profile
       </button>

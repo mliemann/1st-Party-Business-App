@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cart from "./pages/cart/cart";
 import Landing from "./pages/landing/landing";
-// import Dashboard from "./pages/stats/stats";
+import Dashboard from "./pages/stats/stats";
 import Error from "./pages/error/error";
 // import Home from "./pages/";
 import Login from "./pages/login/login";
@@ -20,10 +20,10 @@ import { UserProvider } from "./providers/user";
 // import Dish from "../src/menu.json";
 import "./App.css";
 import MyCheckoutForm from "./pages/checkout/checkout";
-import {Elements} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe('pk_test_51JejrXDEcxKa4yKXrkIpeNdOpboxcZ8C2NYz8RNZREHCyhk9tANRjpdFVAQu96v9jqGpEdnMbGF1fLaf96lBAe1500xntxIT0o');
+const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
 
 function App() {
   return (
@@ -35,18 +35,10 @@ function App() {
           {/* <Route exact path="/" component={Home} /> */}
           <Route exact path="/" component={Landing} />
           <Route exact path="/cart" component={Cart} />
-          {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/contact" component={Contact} />
-          <Route
-            exact
-            path="/menu"
-            component={menu}
-            // id={menu.id}
-            // dish={dish.id}
-            // description={description.id}
-            // price={price.id}
-          />
+          <Route exact path="/menu" component={menu} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/restaurant/signup" component={RestaurantSignup} />
           <Route exact path="/signup" component={SignUp} />

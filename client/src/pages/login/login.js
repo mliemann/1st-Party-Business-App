@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useUserContext, USER_LOGGED_IN, } from "../../providers/user";

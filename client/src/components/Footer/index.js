@@ -3,26 +3,27 @@ import { useHistory } from "react-router-dom";
 import "./style.css";
 
 function Footer() {
-
   const history = useHistory();
 
   const regRoute = () => {
-      history.push("/signup");
-  }
+    history.push("/signup");
+  };
 
   const contactRoute = () => {
     history.push("/contact");
-}
-
-
+  };
 
   return (
     <footer className="footer">
       <h3 id="address">418 javascript blvd, processor, gb 11001</h3>
       <div id="whitespace">
-      <button className="btnfooter" onClick={contactRoute}>contact us</button>
-      <button className="btnfooter" onClick={regRoute}>register</button>
-    </div>
+        <button className="btnfooter" onClick={contactRoute}>
+          contact us
+        </button>
+        <button className="btnfooter" onClick={regRoute}>
+          register
+        </button>
+      </div>
     </footer>
   );
 }

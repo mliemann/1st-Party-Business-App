@@ -50,3 +50,25 @@ box-shadow: 0 0 5px #26325A,
 #dishCart {
     text-transform: lowercase;
 }
+
+#deleteItemBtn {
+    background-color:transparent;
+    border-color:transparent;
+    color:#26325A;
+}
+
+.columnHeader {
+    font-size:18px;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width:530px) {
+
+    #cart1 {
+        padding: 0px;
+        padding-top: 15%;
+        
+    }
+
+
+}
