@@ -72,7 +72,7 @@ function Signup() {
         <div>
           <input
             type="text"
-            className="input"
+            className="inputSignup"
             id="name-signup"
             placeholder="    enter name"
           />
@@ -81,7 +81,7 @@ function Signup() {
         <div>
           <input
             type="text"
-            className="input"
+            className="inputSignup"
             id="email-signup"
             placeholder="    enter email"
           />
@@ -89,7 +89,7 @@ function Signup() {
 
         <div>
           <input
-            className="input"
+            className="inputSignup"
             type="password"
             id="password-signup"
             placeholder="    create password"

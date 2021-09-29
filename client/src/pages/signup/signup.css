@@ -18,7 +18,7 @@
     letter-spacing: 4px;
 }
 
-.input {
+.inputSignup {
     height:40px;
     width:400px;
     margin-top:10px;
@@ -56,4 +56,18 @@
                 0 0 50px #26325a,
                 0 0 200px #26325a;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+
+@media screen and (max-width:530px) {
+
+    .inputSignup {
+        width: 300px;
+        position: relative;
+        left: -24px;
+    }
+
+    #signup {
+        font-size:50px;
+    }
 }
