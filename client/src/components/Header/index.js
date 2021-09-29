@@ -18,9 +18,9 @@ function Header() {
   const pageRoute4 = () => {
     history.push("/");
   };
-  // const pageRoute5 = () => {
-  //   history.push("/dashboard");
-  // };
+  const pageRoute5 = () => {
+    history.push("/dashboard");
+  };
   // const pageRoute6 = () => {
   //   history.push("/menu");
   // };
@@ -64,7 +64,7 @@ function Header() {
             <button className="btn" id="landingbtn" onClick={pageRoute4}>
               home
             </button>
-            {/* <button onClick={pageRoute5}>Dashboard</button> */}
+            <button onClick={pageRoute5}>Dashboard</button>
             {/* <button onClick={pageRoute6}>Menu</button> */}
             <button className="btn" id="profilesbtn" onClick={pageRoute7}>
               profile
