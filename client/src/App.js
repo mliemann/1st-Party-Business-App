@@ -23,9 +23,7 @@ import MyCheckoutForm from "./pages/checkout/checkout";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe(
-  "pk_test_51JejrXDEcxKa4yKXrkIpeNdOpboxcZ8C2NYz8RNZREHCyhk9tANRjpdFVAQu96v9jqGpEdnMbGF1fLaf96lBAe1500xntxIT0o"
-);
+const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
 
 function App() {
   return (
