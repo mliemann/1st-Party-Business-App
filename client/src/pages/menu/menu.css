@@ -89,3 +89,28 @@ box-shadow: 0 0 5px #26325a,
 .ui-tooltip:hover {
     color: #26325a;
 }
+
+@media screen and (max-width:530px) {
+
+    #menu-header {
+        padding-top: 10%;
+    }
+
+    .border {
+        padding: 0rem 0rem;
+    }
+
+    #addCartBtn {
+        
+    position: relative;
+    width: 300px;
+    left: 16px;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    margin-right: 0px;
+      
+    }
+
+    
+}
