@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import S3 from "react-aws-s3";
 import { useUserContext, USER_UPDATED, } from "../../providers/user";
+import crypto from "crypto"
 import "./upload.css";
+
 
 async function updateProfilePic(userid, profileUrl) {
   return fetch('http://localhost:3001/api/user/profile/' + userid, {
@@ -23,10 +25,18 @@ function Upload() {
       userData: userData
     });
   };
+
+let test = crypto.randomBytes(12).toString('hex');
+console.log(test)
+
+
+
   const handleClick = (event) => {
     event.preventDefault();
     let file = fileInput.current.files[0];
-    let newFileName = fileInput.current.files[0].name.replace(/\..+$/, "");
+    // let newFileName = fileInput.current.files[0].name.replace(/\..+$/, "");
+    let newFileName = crypto.randomBytes(12).toString('hex');
+
     const config = {
       bucketName: "bestteamproj2",
       region: "us-east-1",
