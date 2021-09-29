@@ -6,12 +6,12 @@ function Signuprest () {
     <div>
         <div id="formsignupres">
             <div>
-            <h2 id="signup">sign up!</h2>
+            <h2 id="signupRest">sign up!</h2>
             </div>
         <form>
             <div>
             <input
-                className="input" 
+                className="inputRest" 
                 type="text" 
                 id="name-signup" 
                 placeholder="    enter name" 
@@ -19,7 +19,7 @@ function Signuprest () {
             </div>
             <div>
             <input 
-                className="input" 
+                className="inputRest" 
                 type="text" 
                 id="email-signup" 
                 placeholder="     enter email" 
@@ -27,14 +27,14 @@ function Signuprest () {
             </div>
             <div>
             <input
-                className="input" 
+                className="inputRest" 
                 type="text"
                 id="phone-signup"
                 placeholder="    enter phone number"
             />
             </div>
             <div>
-            <button className="btnlogin" type="submit">send registration email</button>
+            <button className="btnloginRest" type="submit">send registration email</button>
             </div>
         </form>
         </div>
