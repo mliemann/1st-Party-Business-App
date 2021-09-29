@@ -81,10 +81,10 @@ function Cart() {
         <thead>
           <tr>
             
-            <th scope="col">product</th>
-            <th scope="col">quantity</th>
-            <th scope="col">price</th>
-            <th scope="col">manage cart</th>
+            <th scope="col" className="columnHeader">product</th>
+            <th scope="col" className="columnHeader">quantity</th>
+            <th scope="col" className="columnHeader">price</th>
+            <th scope="col" className="columnHeader">manage cart</th>
           </tr>
         </thead>
         {products.map((product) => {

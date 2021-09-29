@@ -54,4 +54,10 @@ box-shadow: 0 0 5px #26325A,
 #deleteItemBtn {
     background-color:transparent;
     border-color:transparent;
+    color:#26325A;
+}
+
+.columnHeader {
+    font-size:18px;
+    letter-spacing: 3px;
 }
