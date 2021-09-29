@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cart from "./pages/cart/cart";
 import Landing from "./pages/landing/landing";
-// import Dashboard from "./pages/stats/stats";
+import Dashboard from "./pages/stats/stats";
 import Error from "./pages/error/error";
 // import Home from "./pages/";
 import Login from "./pages/login/login";
@@ -37,7 +37,7 @@ function App() {
           {/* <Route exact path="/" component={Home} /> */}
           <Route exact path="/" component={Landing} />
           <Route exact path="/cart" component={Cart} />
-          {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/menu" component={menu} />
