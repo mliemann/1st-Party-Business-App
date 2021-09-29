@@ -61,3 +61,14 @@ box-shadow: 0 0 5px #26325A,
     font-size:18px;
     letter-spacing: 3px;
 }
+
+@media screen and (max-width:530px) {
+
+    #cart1 {
+        padding: 0px;
+        padding-top: 15%;
+        
+    }
+
+
+}
