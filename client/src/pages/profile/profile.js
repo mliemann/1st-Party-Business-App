@@ -1,9 +1,21 @@
 import React from "react";
 import "./profile.css";
 import Upload from "../../components/Upload/upload";
+import { useUserContext } from "../../providers/user";
+import Login from "../login/login"
+
+
 
 function Profile() {
+
+
+  const [state] = useUserContext();
+
+
+
   return (
+    <div>
+    {state.isLoggedIn ? (
     <div id="profilecontainer">
       <div>
         <h2 id="profile">profile</h2>
@@ -46,6 +58,10 @@ function Profile() {
       </form>
       <Upload />
     </div>
+    ) : (
+      <Login />
+      )}
+      </div>
   );
 }
 
