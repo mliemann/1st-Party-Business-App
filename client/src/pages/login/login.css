@@ -19,20 +19,19 @@
 
 }
 
-.input {
+.inputLogin {
     height:40px;
     width:400px;
     margin-top:10px;
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
     border-color: #26325a;
-    letter-spacing: 3px;
-
-    
+    letter-spacing: 3px;   
 }
 
-.btnlogin {
+.btnLogin {
     height:auto;
+    width:300px;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
     font: weight 700px;
@@ -40,7 +39,7 @@
     left:20px;
     display: inline-block;
     padding: 25px 30px;
-    margin: 40px 0;
+    margin: 20px 0;
     color: #fdfdfd;
     background-color:#26325a;
     text-decoration: none;
@@ -49,10 +48,10 @@
     overflow: hidden;
     margin-right: 50px;
     border-radius: 1rem;
-    border-style: none;
-   
+    border-style: none; 
 }
-.btnlogin:hover{
+
+.btnLogin:hover{
     background: #26325a;
     color: white;
     box-shadow: 0 0 5px #26325a,
@@ -64,5 +63,25 @@
 
 #loggedin {
     letter-spacing: 4px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width:530px) {
+
+    .inputLogin {
+    width: 300px;
+    position: relative;
+    left: -24px;
+    }
+
+    .btnLogin {
+        position: relative;
+        left: -26px;
+       
+        padding: 15px 30px;
+        margin: 15px 0;
+     
+        
+    }
 }
 
