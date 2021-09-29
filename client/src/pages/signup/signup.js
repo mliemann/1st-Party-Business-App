@@ -3,14 +3,13 @@ import React from "react";
 import "./signup.css";
 
 function Signup() {
-
   // Setting our component's initial state
   // const [users, setUser] = useState([])
   // const [formObject, setFormObject] = useState({})
 
   const signupFormHandler = async (event) => {
     event.preventDefault();
-  
+
     const user_name = document.getElementById("name-signup").value.trim();
     const email = document.getElementById("email-signup").value.trim();
     const password = document.getElementById("password-signup").value.trim();
@@ -18,18 +17,20 @@ function Signup() {
     const userInfo = {
       name: user_name,
       email: email,
-      password: password
+      password: password,
+      profileUrl:
+        "https://static.wixstatic.com/media/79252d_03581aef9c324a42b48c22cd6fb9c9c7.jpg/v1/fill/w_388,h_382,al_c,lg_1,q_80/79252d_03581aef9c324a42b48c22cd6fb9c9c7.webp",
     };
 
-    console.log(userInfo)
-  
+    console.log(userInfo);
+
     if (user_name && email && password) {
       const response = await fetch("http://localhost:3001/api/user", {
         method: "POST",
         body: JSON.stringify(userInfo),
         headers: { "Content-Type": "application/json" },
       });
-  
+
       if (response.ok) {
         document.location.replace("/profile");
       } else {
@@ -37,14 +38,14 @@ function Signup() {
       }
     }
   };
-  
+
   // document
   //   .querySelector(".signup-form")
   //   .addEventListener("submit", signupFormHandler)
 
   // function loadUser(){
   //   API.getUser
-  //   .then(res => 
+  //   .then(res =>
   //     setUser(res.data)
   //   )
   //   .catch(err => console.log(err));
@@ -62,22 +63,28 @@ function Signup() {
   //   }
 
   return (
-
     <div id="formsignup">
+      <div>
+        <h2 id="signup">sign up</h2>
+      </div>
 
-        <div>
-          <h2 id="signup">sign up</h2>
-        </div>
-
-     
       <form>
-
         <div>
-          <input type="text" className="input" id="name-signup" placeholder="    enter name" />
+          <input
+            type="text"
+            className="input"
+            id="name-signup"
+            placeholder="    enter name"
+          />
         </div>
 
         <div>
-          <input type="text" className="input" id="email-signup" placeholder="    enter email" />
+          <input
+            type="text"
+            className="input"
+            id="email-signup"
+            placeholder="    enter email"
+          />
         </div>
 
         <div>
@@ -90,12 +97,15 @@ function Signup() {
         </div>
 
         <div>
-          <button className="btnlogin" type="submit" onClick={signupFormHandler}>sign up</button>
+          <button
+            className="btnlogin"
+            type="submit"
+            onClick={signupFormHandler}
+          >
+            sign up
+          </button>
         </div>
-
       </form>
-
-
     </div>
   );
 }
