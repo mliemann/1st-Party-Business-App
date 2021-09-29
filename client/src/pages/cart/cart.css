@@ -50,3 +50,8 @@ box-shadow: 0 0 5px #26325A,
 #dishCart {
     text-transform: lowercase;
 }
+
+#deleteItemBtn {
+    background-color:transparent;
+    border-color:transparent;
+}

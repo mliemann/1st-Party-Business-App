@@ -80,18 +80,22 @@ function Cart() {
       <table className="table sortable">
         <thead>
           <tr>
-            <th scope="col">manage cart</th>
+            
             <th scope="col">product</th>
             <th scope="col">quantity</th>
             <th scope="col">price</th>
+            <th scope="col">manage cart</th>
           </tr>
         </thead>
         {products.map((product) => {
           return (
             <tbody key={product.id}>
               <tr>
+                <td data-label="Product" id="dishCart">{product.dish}</td>
+                <td data-label="Quantity">1</td>
+                <td data-label="Price">${product.price}</td>
                 <td>
-                  <button
+                  <button id="deleteItemBtn" 
                     onClick={() => {
                       const cart = products;
                       const newCart = cart.filter(
@@ -101,12 +105,9 @@ function Cart() {
                       refreshCart()
                     }}
                   >
-                    remove item
+                    <i class="fas fa-trash"></i>
                   </button>
                 </td>
-                <td data-label="Product">{product.dish}</td>
-                <td data-label="Quantity">1</td>
-                <td data-label="Price">${product.price}</td>
               </tr>
             </tbody>
           );
