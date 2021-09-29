@@ -11,7 +11,7 @@ function Profile() {
 
       <form id="formprofile">
         <input
-          className="input"
+          className="inputProfile"
           type="text"
           id="email-change"
           placeholder="    enter new email"
@@ -21,7 +21,7 @@ function Profile() {
         </button>
 
         <input
-          className="input"
+          className="inputProfile"
           type="password"
           id="password-change"
           placeholder="    enter new password"
@@ -31,7 +31,7 @@ function Profile() {
         </button>
 
         <input
-          className="input"
+          className="inputProfile"
           type="text"
           id="phone-change"
           placeholder="    enter new phone number"

@@ -31,7 +31,7 @@
     align-items: center;
 }
 
-.input {
+.inputProfile {
     height:35px;
     width:400px;
     margin-top:10px;
@@ -70,4 +70,19 @@
                 0 0 50px #26325a,
                 0 0 200px #26325a;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+@media screen and (max-width:530px) {
+
+    .inputProfile {
+    
+        width:300px;
+        margin-top:10px;
+    }
+
+    .btnprofile {
+    width: 300px;
+    padding: 15px 20px;
+    
+    }
 }
