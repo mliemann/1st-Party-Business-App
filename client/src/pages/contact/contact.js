@@ -13,7 +13,7 @@ function Contact() {
           first name
         </label>
         <input
-          className="input"
+          className="inputContact"
           type="text"
           id="fname"
           name="firstname"
@@ -24,7 +24,7 @@ function Contact() {
           last name
         </label>
         <input
-          className="input"
+          className="inputContact"
           type="text"
           id="lname"
           name="lastname"
@@ -35,7 +35,7 @@ function Contact() {
           email
         </label>
         <input
-          className="input"
+          className="inputContact"
           type="text"
           id="lname"
           name="lastname"
@@ -46,14 +46,14 @@ function Contact() {
           subject
         </label>
         <textarea
-          className="input"
+          className="inputContact"
           id="subject"
           name="subject"
           placeholder="               write something..."
           style={{ height: "200px" }}
         ></textarea>
 
-        <input className="btnlogin" type="submit" value="submit"></input>
+        <input className="btnSend" type="submit" value="submit"></input>
       </form>
     </div>
   );
