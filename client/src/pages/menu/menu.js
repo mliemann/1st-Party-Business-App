@@ -2,6 +2,7 @@
 import React from "react";
 import "./menu.css";
 import products from "../../menu.json";
+import crypto from "crypto";
 // import Dropdown from "react-bootstrap"
 
 function Menu() {
@@ -44,7 +45,7 @@ function Menu() {
                 onClick={() => {
                   var cart = [];
                   var dish = {
-                    id: product.id,
+                    id: crypto.randomBytes(2).toString("hex"),
                     dish: product.dish,
                     price: product.price,
                   };

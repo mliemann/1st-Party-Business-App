@@ -15,7 +15,6 @@ function Cart() {
     history.push("/cart");
   };
 
-
   // this assumes you know the product id you are removing
 
   // const renderCart = () => {
@@ -80,32 +79,57 @@ function Cart() {
       <table className="table sortable">
         <thead>
           <tr>
-            
-            <th scope="col" className="columnHeader">product</th>
-            <th scope="col" className="columnHeader">quantity</th>
-            <th scope="col" className="columnHeader">price</th>
-            <th scope="col" className="columnHeader">manage cart</th>
+            <th scope="col" className="columnHeader">
+              product
+            </th>
+            <th scope="col" className="columnHeader">
+              quantity
+            </th>
+            <th scope="col" className="columnHeader">
+              price
+            </th>
+            <th scope="col" className="columnHeader">
+              manage cart
+            </th>
           </tr>
         </thead>
         {products.map((product) => {
+          const removeItem = () => {
+            const cart = products;
+            const newCart = cart.filter((item) => item.id !== product.id);
+            localStorage.setItem("cart", JSON.stringify(newCart));
+            refreshCart();
+          };
+
+          // const increase = () => {
+          //   var element = document.getElementById(product.id);
+          //    value = element.innerHTML;
+
+          //   ++value;
+          //   document.getElementById(product.id).innerHTML = value;
+          // }
+
+          // const decrease = () => {
+          //   var element = document.getElementById(product.id);
+          //   value = element.innerHTML;
+
+          //   --value;
+          //   document.getElementById(product.id).innerHTML = value;
+          //   if (value === 0) {
+          //     return removeItem();
+          //   }
+          // }
           return (
             <tbody key={product.id}>
               <tr>
-                <td data-label="Product" id="dishCart">{product.dish}</td>
+                <td data-label="Product" id="dishCart">
+                  {product.dish}
+                </td>
                 <td data-label="Quantity">1</td>
                 <td data-label="Price">${product.price}</td>
                 <td>
-                  <button id="deleteItemBtn" 
-                    onClick={() => {
-                      const cart = products;
-                      const newCart = cart.filter(
-                        (item) => item.id !== product.id
-                      );
-                      localStorage.setItem("cart", JSON.stringify(newCart))
-                      refreshCart()
-                    }}
-                  >
-                    <i class="fas fa-trash"></i>
+                  <button id="deleteItemBtn" onClick={removeItem}>
+                    <i className="fas fa-trash"></i>
                   </button>
                 </td>
               </tr>
