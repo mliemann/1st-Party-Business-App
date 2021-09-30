@@ -48,7 +48,7 @@
     align-self: center;
   }
 
-  .btn {
+  .btnHeader {
     font-family: 'Ubuntu', sans-serif;
     font: weight 700px;
     position: relative;
@@ -67,7 +67,7 @@
     border-style: none;
    
 }
-.btn:hover{
+.btnHeader:hover{
     background: #26325a;
     color: white;
     box-shadow: 0 0 5px #26325a,
@@ -79,7 +79,7 @@
 
 @media screen and (max-width:1250px) {
 
-  .btn {
+  .btnHeader {
     left:5px;
     margin-right: 10px;
   }
@@ -88,17 +88,22 @@
 
 @media screen and (max-width:795px) {
     
-  .btn {
+  .btnHeader {
     left:0px;
-    padding: 20px 15px;
+    padding: none;
     display:column;
-    margin:10px;
+    margin:none;
 
   }
 
   #whitespace {
-    padding-left:opx;
+    padding-left:none;
    
+  }
+
+  #logo {
+    margin-top: 0%;
+    margin-left: 15%;
   }
 }
 
@@ -107,13 +112,13 @@
   #logo {
     position: relative;
     z-index: 1;
-    top: 19%;
+    top: 9%;
     left: -2%;
     height: 50%;
     width: auto;
   }
 
-  .btn {
+  .btnHeader {
     justify-content: center;
   }
 
@@ -141,7 +146,7 @@
 
 }
 
-@media screen and (max-width:410px) {
+/* @media screen and (max-width:410px) {
   #logo {
     position: relative;
     z-index: 1;
@@ -150,4 +155,4 @@
     height: 50%;
     width:auto;  
   }
-}
+} */

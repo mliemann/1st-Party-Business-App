@@ -14,18 +14,20 @@ import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 // import PaymentPage from "./components/Payment/PaymentPage";
-// import Checkout from "./pages/checkout/checkout";
+import Checkout from "./pages/checkout/checkout";
 import { UserProvider } from "./providers/user";
 // import Upload from './components/Upload/upload';
 // import Dish from "../src/menu.json";
 import "./App.css";
-import MyCheckoutForm from "./pages/checkout/checkout";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+import StripeContainer from '../src/components/stripe/StripeContainer';
+import { useState } from 'react';
 
-const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
+
+
+
 
 function App() {
+  // const [showItem, setShowItem] = useState(false)
   return (
     <Router>
       <UserProvider>
@@ -43,10 +45,8 @@ function App() {
           <Route exact path="/restaurant/signup" component={RestaurantSignup} />
           <Route exact path="/signup" component={SignUp} />
           {/* <Route exact path="/payment" component={Payment} /> */}
-          {/* <Route exact path="/checkout" component={Checkout} /> */}
-          <Elements stripe={stripePromise}>
-            <MyCheckoutForm />
-          </Elements>
+          <Route exact path="/checkout" component={StripeContainer} />
+          {/* <StripeContainer /> */}
           <Route component={Error} />
         </Switch>
 

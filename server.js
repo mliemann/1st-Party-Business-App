@@ -47,3 +47,42 @@ app.get("*", (req, res) => {
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+const app = express();
+require('dotenv').config()
+const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST)
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+
+
+app.post('/checkout', cors(), async (req, res) => {
+    let {amount, id} = req.body
+    try {
+        const payment = await stripe.paymentIntents.create({
+            amount,
+            currency: "USD",
+            description: "Food",
+            payment_method: id,
+            confirm: true
+        })
+
+        console.log("payment", payment)
+        res.json({
+            message: "payment successful",
+            success: true
+        })
+    } catch (error) {
+        console.log("error", error)
+        res.json({
+            message: "payment failed",
+            success: false
+        })
+    }
+} )
+
+app.listen(process.env.PORT || 3000, () => {
+    console.log("server is listening on 4000")
+})
