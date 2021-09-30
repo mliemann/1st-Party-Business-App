@@ -58,7 +58,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 
-app.post('/checkout', cors(), async (req, res) => {
+app.post('/payment', cors(), async (req, res) => {
     let {amount, id} = req.body
     try {
         const payment = await stripe.paymentIntents.create({
@@ -83,6 +83,6 @@ app.post('/checkout', cors(), async (req, res) => {
     }
 } )
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log("server is listening on 4000")
 })
