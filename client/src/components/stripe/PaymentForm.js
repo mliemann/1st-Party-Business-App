@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import './PaymentForm.css'
+// import {total} from '../../pages/cart/cart'
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
@@ -38,7 +39,7 @@ export default function PaymentForm () {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post('http://localhost:3000/checkout', {
+            const response = await axios.post('http://localhost:4000/payment', {
                 amount: 1000,
                 id
             })
@@ -62,7 +63,7 @@ export default function PaymentForm () {
             {!success ? 
             <form onSubmit={handleSubmit} id="checkoutForm">
                 <div>
-                    <h1 id="totalToPay">total is: </h1>
+                    <h1 id="totalToPay">total: $  </h1>
                 </div>
                 <fieldset className="FormGroupPay">
                     <div className="FormRowPay">
