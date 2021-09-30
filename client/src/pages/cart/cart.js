@@ -45,7 +45,7 @@ function Cart() {
   var sum = 0;
 
   for (let i = 0; i < products.length; i++) {
-    var price = products[i].price;
+    var price = Number(products[i].price);
     //Price
     sum += price;
   }
@@ -100,7 +100,11 @@ function Cart() {
                       const cart = products;
                       const newCart = cart.filter(
                         (item) => item.id !== product.id
-                      );
+                      ); 
+                      // re-number id's to match row in cart 
+                      for (var i = 0; i < newCart.length; i++ ) { 
+                        newCart[i].id = i;
+                      }
                       localStorage.setItem("cart", JSON.stringify(newCart))
                       refreshCart()
                     }}

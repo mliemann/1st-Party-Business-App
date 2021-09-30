@@ -1,25 +1,18 @@
 const User = require("./User");
+const Dish = require("./Dish");
+const Like = require("./Like");
 
-/*User.hasMany(Table, {
+User.hasMany(Dish, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
 
-Table.belongsTo(User, {
+Dish.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Category.hasMany(Table, {
-  foreignKey: "category_id",
-});
-
-Table.belongsTo(Category, {
-  foreignKey: "category_id",
-  onDelete: "CASCADE",
-});
-
-Table.hasMany(Like, {
-  foreignKey: "recipe_id",
+Dish.hasMany(Like, {
+  foreignKey: "dish_id",
   onDelete: "CASCADE",
 });
 
@@ -27,7 +20,9 @@ User.hasMany(Like, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
-*/
+
 module.exports = {
   User,
+  Dish,
+  Like
 };

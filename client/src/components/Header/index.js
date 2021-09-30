@@ -54,19 +54,19 @@ function Header() {
         {state.isLoggedIn ? (
           <div>
             {" "}
-            <button className="btn" id="logoutbtn" onClick={logUserOut}>
+            <button className="btnHeader" id="logoutbtn" onClick={logUserOut}>
               logout
             </button>
-            <button className="btn" id="cartbtn" onClick={pageRoute2}>
+            <button className="btnHeader" id="cartbtn" onClick={pageRoute2}>
               cart
             </button>
             {/* <button onClick={pageRoute3}>Home</button> */}
-            <button className="btn" id="landingbtn" onClick={pageRoute4}>
+            <button className="btnHeader" id="landingbtn" onClick={pageRoute4}>
               home
             </button>
             <button onClick={pageRoute5}>Dashboard</button>
             {/* <button onClick={pageRoute6}>Menu</button> */}
-            <button className="btn" id="profilesbtn" onClick={pageRoute7}>
+            <button className="btnHeader" id="profilesbtn" onClick={pageRoute7}>
               profile
             </button>
             {/* <button onClick={pageRoute8}>Restaurant Signup</button> */}
@@ -80,14 +80,14 @@ function Header() {
           </div>
         ) : (
           <div>
-            <button className="btn" id="loginbtn" onClick={pageRoute1}>
+            <button className="btnHeader" id="loginbtn" onClick={pageRoute1}>
               login
             </button>{" "}
-            <button className="btn" id="cartbtn" onClick={pageRoute2}>
+            <button className="btnHeader" id="cartbtn" onClick={pageRoute2}>
               cart
             </button>
             {/* <button onClick={pageRoute3}>Home</button> */}
-            <button className="btn" id="landingbtn" onClick={pageRoute4}>
+            <button className="btnHeader" id="landingbtn" onClick={pageRoute4}>
               home
             </button>
             {/* <button onClick={pageRoute5}>Dashboard</button> */}

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useUserContext, USER_LOGGED_IN, } from "../../providers/user";
+import API from "../../utils/API";
 import "./login.css";
 
 async function loginUser(credentials) {
@@ -35,11 +36,11 @@ function Login() {
 
     const handleSubmit = async e => {
       e.preventDefault();
-      const user = await loginUser({
+      const res = await API.loginUser({
         email,
         password
       });
-      logUserIn(user);
+      logUserIn(res.data);
       history.push("/");
     }    
 

@@ -1,10 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState, useEffect } from "react";
+import API from "../../utils/API";
 import "./menu.css";
-import products from "../../menu.json";
-// import Dropdown from "react-bootstrap"
 
 function Menu() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    API.getDishes().then((res) => {
+      setProducts(res.data);
+    });
+  }, []);
+  
   return (
     <div className="containermenu border">
       <h1 id="menu-header">platos</h1>
@@ -42,13 +49,13 @@ function Menu() {
                 className="item"
                 id="addCartBtn"
                 onClick={() => {
-                  var cart = [];
+                  var cart = JSON.parse(localStorage.getItem("cart")) || [];
                   var dish = {
-                    id: product.id,
+                    id: cart.length, // set id equal to row in cart
+                    product: product.id,
                     dish: product.dish,
                     price: product.price,
                   };
-                  cart = JSON.parse(localStorage.getItem("cart")) || [];
                   cart.push(dish);
                   const unique = Array.from(new Set(cart));
                   
