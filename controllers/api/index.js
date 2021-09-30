@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const userRoutes = require("./userRoutes");
-// const tableRoutes = require("./tableRoutes");
+const dishRoutes = require("./dishRoutes");
 
 
 router.use("/user", userRoutes);
-// router.use("/tables", tableRoutes);
+router.use("/dish", dishRoutes);
 
 
 module.exports = router;

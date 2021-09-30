@@ -45,7 +45,7 @@ function Cart() {
   var sum = 0;
 
   for (let i = 0; i < products.length; i++) {
-    var price = products[i].price;
+    var price = Number(products[i].price);
     //Price
     sum += price;
   }
