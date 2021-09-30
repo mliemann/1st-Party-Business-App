@@ -42,13 +42,13 @@ function Menu() {
                 className="item"
                 id="addCartBtn"
                 onClick={() => {
-                  var cart = [];
+                  var cart = JSON.parse(localStorage.getItem("cart")) || [];
                   var dish = {
-                    id: product.id,
+                    id: cart.length, // set id equal to row in cart
+                    product: product.id,
                     dish: product.dish,
                     price: product.price,
                   };
-                  cart = JSON.parse(localStorage.getItem("cart")) || [];
                   cart.push(dish);
                   localStorage.setItem("cart", JSON.stringify(cart));
                 }}
