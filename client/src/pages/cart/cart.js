@@ -100,7 +100,11 @@ function Cart() {
                       const cart = products;
                       const newCart = cart.filter(
                         (item) => item.id !== product.id
-                      );
+                      ); 
+                      // re-number id's to match row in cart 
+                      for (var i = 0; i < newCart.length; i++ ) { 
+                        newCart[i].id = i;
+                      }
                       localStorage.setItem("cart", JSON.stringify(newCart))
                       refreshCart()
                     }}
