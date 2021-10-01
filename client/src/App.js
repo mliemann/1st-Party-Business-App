@@ -43,8 +43,9 @@ function App() {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/restaurant/signup" component={RestaurantSignup} />
           <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/checkout" component={StripeContainer} />
           <Route path="*" component={Error} />
-          <StripeContainer />
+          
           
         </Switch>
 
