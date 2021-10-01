@@ -81,7 +81,7 @@ export default function PaymentForm () {
                 <h2 className="successful" id="successPayment">enjoy your meal!</h2>
                 <h4 className="successful" id="preparingOrder">preparing order</h4>
                 <i className="successful fas fa-pepper-hot" id="preparingIcon"></i>
-            <div className="dottie">
+            <div id="dottie">
                 <div className="loadingDots"></div>
                 <div className="loadingDots"></div>
                 <div className="loadingDots"></div>
