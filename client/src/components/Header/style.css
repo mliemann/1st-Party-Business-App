@@ -32,6 +32,24 @@
     flex:2;
     text-align: center;
     align-self: center;
+    flex-direction: row;
+  }
+
+  /* #whitespace2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 363px;
+    top: 84px;
+  } */
+
+  #idkwork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 12px;
   }
 
   .btnHeader {
@@ -66,7 +84,7 @@
   position: relative;
   display: inline-block;
   padding: 15px 20px;
-  margin: 5% 1%;
+  margin: 10px;
   color: #fdfdfd;
   background-color:#26325a;
   text-decoration: none;
