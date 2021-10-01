@@ -13,8 +13,8 @@
   text-align: center;
 }
 
-#whitespace {
-  /* flex:2; */
+#whitespaceFooter {
+  flex:2;
   text-align: center;
   align-self: center;
 }
@@ -75,28 +75,6 @@
   }
 }
 
-@media screen and (max-width:770px) {
-
-  .btnfooter {
-    padding: 10px 20px;
-    margin: 5px 5px;
-    position: relative;
-    left: -10px;
-  }
-
-  #address {
-    color:white;
-    font-size:20px;
-  }
-
-  #whitespace {
-    flex:0;
-  }
-
-
-
-}
-
 @media screen and (max-width:530px) {
 
   .footer {
@@ -116,8 +94,8 @@
     margin:20px;
   }
 
-  #whitespace {
-    flex:1;
+  #whitespaceFooter {
+   font-size: 20px;
   }
 
  
