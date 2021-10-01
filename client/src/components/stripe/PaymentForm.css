@@ -95,8 +95,8 @@
 }
 
 #preparingIcon {
-
     font-size: 200px;
+	margin-left: 40%;
 }
 
 @keyframes scaling {
