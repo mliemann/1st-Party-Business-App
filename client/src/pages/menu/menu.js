@@ -16,7 +16,7 @@ function Menu() {
   }, []);
 
   const pageRoute24 = () => {
-    history.push("/checkout");
+    history.push("/cart");
   };
   
   return (
