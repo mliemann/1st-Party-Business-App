@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import './PaymentForm.css'
+// import CartContext from '../CartContext';
 
-// import {total} from '../../pages/cart/cart'
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
@@ -42,7 +42,7 @@ export default function PaymentForm () {
         try {
             const {id} = paymentMethod
             const response = await axios.post('/api/payment', {
-                amount: total * 100,
+                amount: total,
                 id
             })
 
