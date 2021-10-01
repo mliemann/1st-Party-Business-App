@@ -10,7 +10,7 @@ function Header() {
     history.push("/login");
   };
   const pageRoute2 = () => {
-    history.push("/cart");
+    history.push("/menu");
   };
   // const pageRoute3 = () => {
   //   history.push("/");
@@ -49,6 +49,7 @@ function Header() {
         alt="taco tavern logo"
         width="auto"
         height="175"
+        onClick={pageRoute4}
       ></img>
       <div id="whitespace">
         {state.isLoggedIn ? (
@@ -58,7 +59,7 @@ function Header() {
               logout
             </button>
             <button className="btnHeader" id="cartbtn" onClick={pageRoute2}>
-              cart
+              menu
             </button>
             {/* <button onClick={pageRoute3}>Home</button> */}
             <button className="btnHeader" id="landingbtn" onClick={pageRoute4}>
