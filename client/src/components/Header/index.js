@@ -81,12 +81,14 @@ function Header() {
                 </div>
               ) : (
                 <div className="whitespace2">
+                  <div id="idkwork">
                   <button className="btnHeaderLogin" id="loginbtn" onClick={pageRoute1}>
                     login
-                  </button>{" "}
+                  </button>
                   <button className="btnHeaderLogin" id="cartbtn" onClick={pageRoute2}>
                     menu
                   </button>
+                  </div>
                   
                     {/* <h1 id="comment">taste buds ready</h1> */}
                   

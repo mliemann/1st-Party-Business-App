@@ -62,8 +62,8 @@ function Cart() {
                   localStorage.removeItem("cart");
                   refreshCart();
                 }}
-              >
-                empty cart
+                id="emptyCartBtn">
+                empty cart <i class="fas fa-trash"></i>
               </button>
             </th>
           </tr>

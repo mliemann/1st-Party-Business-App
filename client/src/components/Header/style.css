@@ -32,6 +32,23 @@
     flex:2;
     text-align: center;
     align-self: center;
+    flex-direction: row;
+  }
+
+  /* #whitespace2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 363px;
+    top: 84px;
+  } */
+
+  #idkwork {
+    display: flex;
+    position: relative;
+    top: 79px;
+    left: 492px;
   }
 
   .btnHeader {
@@ -66,7 +83,7 @@
   position: relative;
   display: inline-block;
   padding: 15px 20px;
-  margin: 5% 1%;
+  margin: 10px;
   color: #fdfdfd;
   background-color:#26325a;
   text-decoration: none;
@@ -95,32 +112,42 @@
     margin-right: 10px;
   }
 
-}
-
-@media screen and (max-width:1050px) {
-    
-  .btnHeader {
-    left:0px;
-    padding: none;
-    display:column;
-    margin:none;
-
-  }
-
-  #whitespace {
-    padding-left:50%;
-
-   
-  }
-
-  #logo {
-   
-    margin-top: 5%;
-    margin-left: -2%;
-  }
 } */
 
+@media screen and (max-width:1150px) {
+
+
+  #idkwork {
+    display: flex;
+    position: relative;
+    top: 79px;
+    left: 322px;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+
+
+  #idkwork {
+    display: flex;
+    position: relative;
+    top: 79px;
+    left: 83px;
+  }
+
+}
+
 @media screen and (max-width:530px) {
+
+  
+  #idkwork {
+    display: flex;
+    position: none;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+  }
 
   .header{
     height:444px;
