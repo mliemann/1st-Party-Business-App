@@ -25,7 +25,7 @@ function Signup() {
     console.log(userInfo);
 
     if (user_name && email && password) {
-      const response = await fetch("http://localhost:3001/api/user", {
+      const response = await fetch("/api/user", {
         method: "POST",
         body: JSON.stringify(userInfo),
         headers: { "Content-Type": "application/json" },
