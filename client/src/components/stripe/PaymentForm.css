@@ -99,24 +99,30 @@
     font-size: 200px;
 }
 
-.loadingDots{
-	height: 40px;
-	width:40px;
-	border-radius: 50%;
-	background-color: white;
-	display:inline-block;
-	margin: .5rem;
-	animation: scaling 2.5s ease-in-out infinte;
-}
-
 @keyframes scaling {
 	0%, 100%{
 		transform:scale(0.2);
+	}
+	40%{
+		transform: scale(1);
 	}
 	50%{
 		transform:scale(1);
 	}
 }
+
+.loadingDots{
+	height: 40px;
+	width:40px;
+	border-radius: 50%;
+	transform: scale(0);
+	background-color: white;
+	animation: scaling 2.5s ease-in-out infinite;
+	display:inline-block;
+	margin: .5rem;
+}
+
+
 
 .loadingDots:nth-child(0){
 	animation-delay:0s;
