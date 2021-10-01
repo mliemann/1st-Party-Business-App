@@ -10,6 +10,36 @@
    /* min-height: 70rem; */
 }
 
+/* #goToCheckoutBtn {
+    font-family: 'Ubuntu', sans-serif;
+    font: weight 700px;
+    position: fixed;
+    left: 75%;
+    top: 78%;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 40px 0;
+    color: #fdfdfd;
+    background-color:#26325a;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border-radius: 1rem;
+    border-style: none;
+}
+
+#goToCheckoutBtn:hover{
+    background: #26325a;
+    color: white;
+    box-shadow: 0 0 5px #26325a,
+                0 0 25px #26325a,
+                0 0 50px #26325a,
+                0 0 200px #26325a;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    } */
+
 #menu-header {
     display:flex;
     justify-content:center;
