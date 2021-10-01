@@ -85,7 +85,7 @@ function Header() {
               login
             </button>{" "}
             <button className="btnHeader" id="cartbtn" onClick={pageRoute2}>
-              cart
+              menu
             </button>
             {/* <button onClick={pageRoute3}>Home</button> */}
             <button className="btnHeader" id="landingbtn" onClick={pageRoute4}>
