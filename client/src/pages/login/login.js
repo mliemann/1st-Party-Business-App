@@ -82,9 +82,9 @@ function Login() {
         <div>
           <button className="btnLogin" type="submit">log in</button>
           <button className="btnLogin" onClick={regRoute}>register</button>
-          <button className="btnLogin">
+          {/* <button className="btnLogin">
             guest checkout
-          </button>
+          </button> */}
           <button className="btnLogin">forgot login</button>
         </div>
 
