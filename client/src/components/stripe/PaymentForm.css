@@ -1,6 +1,6 @@
 #checkoutPage {
     background-image: url("../../assets/slate\ background.jpeg");
-    height:500px;
+    height:750px;
 }
 
 #checkoutForm {
@@ -78,6 +78,11 @@
     align-items: center;
 	color:white;
 	letter-spacing: 4px;
+}
+
+#dottie {
+	margin-top: 5%;
+    margin-left: 35%;
 }
 
 #successPayment {
