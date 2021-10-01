@@ -18,11 +18,19 @@ const CARD_OPTIONS = {
             fontSmoothing: "antialiased",
         },
         invalid: {
-            iconColor: "#ffc7ee",
-            color: "#ffc7ee"
+            iconColor: "red",
+            color: "red"
         }
     }
 }
+
+
+// const paymentIntent = await stripe.paymentIntents.create({
+//   amount: 1099,
+//   currency: 'usd',
+//   payment_method_types: ['card'],
+//   receipt_email: '',
+// });
 
 export default function PaymentForm () {
     const [success, setSuccess] = useState(false)
@@ -68,6 +76,30 @@ export default function PaymentForm () {
             <form onSubmit={handleSubmit} id="checkoutForm">
                 <div>
                     <h1 id="totalToPay">total: $ {total} </h1>
+                </div>
+
+                <div id="customerInfo">
+                    <input 
+                    type="text" 
+                    class="field" 
+                    id="checkoutInfo" 
+                    placeholder="first name">
+                    </input>
+                    <input 
+                    type="text" 
+                    class="field" 
+                    id="checkoutInfo" 
+                    placeholder="last name">
+                    </input>
+              
+                
+            
+                    <input 
+                    type="email" 
+                    class="field" 
+                    id="checkoutInfo" 
+                    placeholder="email">
+                    </input>
                 </div>
                 <fieldset className="FormGroupPay">
                     <div className="FormRowPay">
