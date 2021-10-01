@@ -1,11 +1,10 @@
-import {React, useContext }from "react";
+import { React, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cart.css";
 // import CartContext from "../../components/CartContext";
 
 function Cart() {
-
   // const {total} = useContext(CartContext);
   const history = useHistory();
 
@@ -17,7 +16,6 @@ function Cart() {
     history.push("/cart");
   };
 
-
   let products = JSON.parse(localStorage.getItem("cart")) || [];
   console.log(products);
 
@@ -28,7 +26,6 @@ function Cart() {
     //Price
     sum += price;
   }
-
 
   //Tax + Price
   let tax = sum * 0.0725;
@@ -45,40 +42,55 @@ function Cart() {
 
   console.log(total);
 
-
-
   return (
     <div id="cart1">
       <table className="table sortable">
         <thead>
           <tr>
-            
-            <th scope="col" className="columnHeader">product</th>
-            <th scope="col" className="columnHeader">quantity</th>
-            <th scope="col" className="columnHeader">price</th>
-            <th scope="col" className="columnHeader">manage cart</th>
+            <th scope="col" className="columnHeader">
+              product
+            </th>
+            <th scope="col" className="columnHeader">
+              quantity
+            </th>
+            <th scope="col" className="columnHeader">
+              price
+            </th>
+            <th scope="col" className="columnHeader">
+              <button
+                onClick={() => {
+                  localStorage.removeItem("cart");
+                  refreshCart();
+                }}
+              >
+                empty cart
+              </button>
+            </th>
           </tr>
         </thead>
         {products.map((product) => {
           return (
             <tbody key={product.id}>
               <tr>
-                <td data-label="Product" id="dishCart">{product.dish}</td>
+                <td data-label="Product" id="dishCart">
+                  {product.dish}
+                </td>
                 <td data-label="Quantity">1</td>
                 <td data-label="Price">${product.price}</td>
                 <td>
-                  <button id="deleteItemBtn" 
+                  <button
+                    id="deleteItemBtn"
                     onClick={() => {
                       const cart = products;
                       const newCart = cart.filter(
                         (item) => item.id !== product.id
-                      ); 
-                      // re-number id's to match row in cart 
-                      for (var i = 0; i < newCart.length; i++ ) { 
+                      );
+                      // re-number id's to match row in cart
+                      for (var i = 0; i < newCart.length; i++) {
                         newCart[i].id = i;
                       }
-                      localStorage.setItem("cart", JSON.stringify(newCart))
-                      refreshCart()
+                      localStorage.setItem("cart", JSON.stringify(newCart));
+                      refreshCart();
                     }}
                   >
                     <i class="fas fa-trash"></i>
