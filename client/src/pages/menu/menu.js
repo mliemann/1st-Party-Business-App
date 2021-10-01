@@ -58,7 +58,9 @@ function Menu() {
                     price: product.price,
                   };
                   cart.push(dish);
-                  localStorage.setItem("cart", JSON.stringify(cart));
+                  const unique = Array.from(new Set(cart));
+                  
+                  localStorage.setItem("cart", JSON.stringify(unique));
                 }}
               >
                 Add to cart
