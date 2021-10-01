@@ -74,11 +74,20 @@ export default function PaymentForm () {
                         <CardElement options={CARD_OPTIONS}/>
                     </div>
                 </fieldset>
-                <button id="buttonPay">Pay</button>
+                <button id="buttonPay">pay</button>
             </form>
             : 
-            <div>
-                <h2>Enjoy your meal</h2>
+            <div id="successful">
+                <h2 id="successPayment">enjoy your meal!</h2>
+                <h4 id="preparingOrder">preparing order</h4>
+                <i class="fas fa-pepper-hot" id="preparingIcon"></i>
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+                <h4 id="orderReady">your order should be ready in 15-20 minutes</h4>
+                <h4></h4>
             </div>
             }
         </div>
