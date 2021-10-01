@@ -38,54 +38,43 @@ export default function PaymentForm () {
         })
   
 
-    if(!error) {
-        try {
-            const {id} = paymentMethod
-<<<<<<< HEAD
-            const response = await axios.post('/payment/', {
-                amount: 1000,
-=======
-            const response = await axios.post('/payment', {
-                amount: total,
->>>>>>> 7e657daebc45628f15d3acd9b46867b9886c045c
-                id
-            })
-
-            if(response.data.success) {
-                console.log("successful payment")
-                setSuccess(true)
+        if(!error) {
+            try {
+                const {id} = paymentMethod
+                const response = await axios.post('/payment', {
+                    amount: total,
+                    id
+                })
+                if(response.data.success) {
+                    console.log("successful payment")
+                    setSuccess(true)
+                }
+            } catch (error) {
+                console.log(error.message)
             }
-        } catch (error) {
-            console.log(error.message)
+        } else {
+            console.log("error", )
         }
-    } else {
-        console.log("error", )
     }
-
-
-
-
-}
-
-    return (
-        <div id="checkoutPage">
-            {!success ? 
-            <form onSubmit={handleSubmit} id="checkoutForm">
-                <div>
-                    <h1 id="totalToPay">total: $ {total} </h1>
-                </div>
-                <fieldset className="FormGroupPay">
-                    <div className="FormRowPay">
-                        <CardElement options={CARD_OPTIONS}/>
+        return (
+            <div id="checkoutPage">
+                {!success ?
+                <form onSubmit={handleSubmit} id="checkoutForm">
+                    <div>
+                        <h1 id="totalToPay">total: $ {total} </h1>
                     </div>
-                </fieldset>
-                <button id="buttonPay">Pay</button>
-            </form>
-            : 
-            <div>
-                <h2>Enjoy your meal</h2>
+                    <fieldset className="FormGroupPay">
+                        <div className="FormRowPay">
+                            <CardElement options={CARD_OPTIONS}/>
+                        </div>
+                    </fieldset>
+                    <button id="buttonPay">Pay</button>
+                </form>
+                :
+                <div>
+                    <h2>Enjoy your meal</h2>
+                </div>
+                }
             </div>
-            }
-        </div>
-    )
-}
+        )
+    }
