@@ -4,6 +4,9 @@ const cors = require('cors');
 const session = require('express-session');
 const routes = require('./controllers');
 const { generateUploadURL } = require("./s3.js")
+require('dotenv').config()
+const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST)
+const bodyParser = require('body-parser');
 
 const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -39,24 +42,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(routes);
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"))
-})
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
-
-
-const app = express();
-require('dotenv').config()
-const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST)
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.urlencoded({extended: true}))
-app.use(bodyParser.json())
-
 
 app.post('/payment', cors(), async (req, res) => {
     let {amount, id} = req.body
@@ -83,6 +68,16 @@ app.post('/payment', cors(), async (req, res) => {
     }
 } )
 
-app.listen(process.env.PORT || 4000, () => {
-    console.log("server is listening on 4000")
+app.use(routes);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"))
 })
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});
+
+
+// app.listen(process.env.PORT || 4000, () => {
+//     console.log("server is listening on 4000")
+// })

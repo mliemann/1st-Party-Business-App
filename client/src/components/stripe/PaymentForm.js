@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import './PaymentForm.css'
+
 // import {total} from '../../pages/cart/cart'
 
 const CARD_OPTIONS = {
@@ -27,6 +28,7 @@ export default function PaymentForm () {
     const [success, setSuccess] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
+    const [total, setTotal] = useState(parseFloat(localStorage.getItem("total")))
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -39,8 +41,8 @@ export default function PaymentForm () {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post('http://localhost:4000/payment', {
-                amount: 1000,
+            const response = await axios.post('/payment', {
+                amount: total,
                 id
             })
 
@@ -56,6 +58,8 @@ export default function PaymentForm () {
     }
 
 
+
+
 }
 
     return (
@@ -63,7 +67,7 @@ export default function PaymentForm () {
             {!success ? 
             <form onSubmit={handleSubmit} id="checkoutForm">
                 <div>
-                    <h1 id="totalToPay">total: $  </h1>
+                    <h1 id="totalToPay">total: $ {total} </h1>
                 </div>
                 <fieldset className="FormGroupPay">
                     <div className="FormRowPay">
