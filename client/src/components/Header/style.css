@@ -23,6 +23,7 @@
     position: relative;
     z-index: 1;
     margin-top: 3%;
+    cursor: pointer;
   }
 
   #whitespace {
