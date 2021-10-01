@@ -42,26 +42,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-<<<<<<< HEAD
-app.use(routes);
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"))
-})
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
-
-
-require('dotenv').config()
-const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST)
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.urlencoded({extended: true}))
-app.use(bodyParser.json())
-
-=======
->>>>>>> 7e657daebc45628f15d3acd9b46867b9886c045c
 
 app.post('/payment', cors(), async (req, res) => {
     let {amount, id} = req.body
@@ -88,8 +68,6 @@ app.post('/payment', cors(), async (req, res) => {
     }
 } )
 
-<<<<<<< HEAD
-=======
 app.use(routes);
 
 app.get("*", (req, res) => {
@@ -100,7 +78,6 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 
->>>>>>> 7e657daebc45628f15d3acd9b46867b9886c045c
 // app.listen(process.env.PORT || 4000, () => {
 //     console.log("server is listening on 4000")
 // })
