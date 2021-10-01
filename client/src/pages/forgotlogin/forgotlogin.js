@@ -4,8 +4,8 @@ import "./forgotlogin.css";
 function Forgot () {
 
     return (
-        <div>
-            <h1>forgot login</h1>
+        <div id="forgotContainer">
+            <h1 id="forgotlogin">forgot login</h1>
             <form id="formForgot">
                 <input
                 className="inputUserEmail"
@@ -13,9 +13,7 @@ function Forgot () {
                 id="user-email-change"
                 placeholder="enter email"
                 />
-                <button className="btnprofile" type="submit">
-                change email
-                </button>
+                <button className="btnprofile" type="submit">reset password</button>
             </form>
         </div>
     )
