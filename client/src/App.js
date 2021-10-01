@@ -13,6 +13,7 @@ import Contact from "./pages/contact/contact";
 import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+
 // import PaymentPage from "./components/Payment/PaymentPage";
 import { UserProvider } from "./providers/user";
 // import Upload from './components/Upload/upload';

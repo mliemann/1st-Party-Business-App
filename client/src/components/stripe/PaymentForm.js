@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import './PaymentForm.css'
+// import CartContext from '../CartContext';
 
-// import {total} from '../../pages/cart/cart'
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
