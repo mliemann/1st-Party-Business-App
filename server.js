@@ -14,6 +14,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+
+
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -24,51 +26,31 @@ const sess = {
   })
 };
 
-app.get("/s3Url", async (req, res) => {
-  const url = await generateUploadURL();
-  res.send({ url });
-});
-
-
-
 app.use(cors());
 
 app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.get("/s3Url", async (req, res) => {
+  const url = await generateUploadURL();
+  res.send({ url });
+});
+
+app.use(routes);
+
+
+
 // app.use(express.static(path.join(__dirname, 'public')));
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
 
-app.post('/payment', cors(), async (req, res) => {
-    let {amount, id} = req.body
-    try {
-        const payment = await stripe.paymentIntents.create({
-            amount,
-            currency: "USD",
-            description: "Food",
-            payment_method: id,
-            confirm: true
-        })
 
-        console.log("payment", payment)
-        res.json({
-            message: "payment successful",
-            success: true
-        })
-    } catch (error) {
-        console.log("error", error)
-        res.json({
-            message: "payment failed",
-            success: false
-        })
-    }
-} )
 
-app.use(routes);
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"))
