@@ -26,7 +26,8 @@
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
     border-color: #26325a;
-    letter-spacing: 3px;   
+    letter-spacing: 3px;
+    padding-left: 15px; 
 }
 
 .btnLogin {
