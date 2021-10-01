@@ -2,19 +2,27 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import "./menu.css";
+import { useHistory } from "react-router-dom";
 
 function Menu() {
   const [products, setProducts] = useState([]);
+
+  const history = useHistory();
 
   useEffect(() => {
     API.getDishes().then((res) => {
       setProducts(res.data);
     });
   }, []);
+
+  const pageRoute24 = () => {
+    history.push("/checkout");
+  };
   
   return (
     <div className="containermenu border">
       <h1 id="menu-header">platos</h1>
+      <button id="goToCheckoutBtn" onClick={pageRoute24}>checkout</button>
       {/* <button id="goToCheckoutBtn">checkout</button> */}
       {products.map((product) => {
         return (
