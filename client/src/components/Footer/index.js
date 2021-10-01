@@ -15,7 +15,7 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <div id="whitespace">
+      <div id="whitespaceFooter">
       <h3 id="address">418 javascript blvd, processor, gb 11001</h3>
       
         <button className="btnfooter" onClick={contactRoute}>
