@@ -30,6 +30,7 @@
   color: white;
   letter-spacing: 4px;
   font-size: 15px;
+  padding-top: 10px;
 }
 
 .btnfooter {
@@ -76,9 +77,13 @@
 
 @media screen and (max-width:770px) {
 
+  .footer {
+    height: 250px;
+  }
+
   .btnfooter {
     padding: 10px 20px;
-    margin: 5px 0px;
+    margin: 5px 5px;
     position: relative;
     left: -10px;
   }
@@ -90,11 +95,17 @@
 
   #whitespace {
     flex:0;
-   
   }
+
+
+
 }
 
 @media screen and (max-width:530px) {
+
+  .footer {
+    height: 200px;
+  }
     
   .btnfooter {
     padding: 10px 20px;
@@ -106,13 +117,12 @@
   #address {
     color:white;
     font-size:20px;
-    position: relative;
-    top: 14px;
-
+    margin:20px;
   }
 
   #whitespace {
     flex:1;
-   
   }
+
+ 
 }
