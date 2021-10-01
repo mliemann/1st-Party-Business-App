@@ -1,10 +1,12 @@
-import React from "react";
+import {React, useContext }from "react";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cart.css";
-// import Menu from "../menu/menu.js";
+// import CartContext from "../../components/CartContext";
 
 function Cart() {
+
+  // const {total} = useContext(CartContext);
   const history = useHistory();
 
   const pageRoute12 = () => {
@@ -16,31 +18,8 @@ function Cart() {
   };
 
 
-  // this assumes you know the product id you are removing
-
-  // const renderCart = () => {
-  //   const item = this.product.id;
-  //   let item = {
-  //     product: this.product.product,
-  //     quantity: this.p
-  //   }
-  // }
-
-  // let product = window.localStorage.getItem('dish')
-
   let products = JSON.parse(localStorage.getItem("cart")) || [];
   console.log(products);
-
-  // const removeItem = () => {
-  //   const cart = products;
-  //   const newCart = cart.filter((item) => item.id !== product.id);
-  // };
-
-  // let product = products.dish;
-  // console.log(product);
-
-  // let price = products.price;
-  // console.log(price);
 
   var sum = 0;
 
@@ -50,7 +29,6 @@ function Cart() {
     sum += price;
   }
 
-  // var y = .0725 * sum;
 
   //Tax + Price
   let tax = sum * 0.0725;
@@ -63,17 +41,11 @@ function Cart() {
   let total = +tax + sum;
   total = total.toFixed(2);
 
+  localStorage.setItem("total", total);
+
   console.log(total);
 
-  // if (product !== null) {
-  //   document.getElementsByTagName("td") = product
-  // }
 
-  // let product = JSON.parse(localStorage.getItem("product"));
-  // console.log(product);
-  // if (product !== null) {
-  //   document.getElementById("ProductCart") = product.dish
-  // }
 
   return (
     <div id="cart1">
