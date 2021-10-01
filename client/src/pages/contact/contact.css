@@ -38,6 +38,7 @@
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
     border-color: #26325a;
+    padding-left: 15px;
     
 }
 
@@ -70,6 +71,10 @@
                 0 0 50px #26325a,
                 0 0 200px #26325a;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+#subject {
+    padding-left: 20px;
 }
 
 @media screen and (max-width:530px) {

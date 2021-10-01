@@ -14,7 +14,7 @@ function Signuprest () {
                 className="inputRest" 
                 type="text" 
                 id="name-signup" 
-                placeholder="    enter name" 
+                placeholder="enter name" 
             />
             </div>
             <div>
@@ -22,7 +22,7 @@ function Signuprest () {
                 className="inputRest" 
                 type="text" 
                 id="email-signup" 
-                placeholder="     enter email" 
+                placeholder="enter email" 
             />
             </div>
             <div>
@@ -30,7 +30,7 @@ function Signuprest () {
                 className="inputRest" 
                 type="text"
                 id="phone-signup"
-                placeholder="    enter phone number"
+                placeholder="enter phone number"
             />
             </div>
             <div>

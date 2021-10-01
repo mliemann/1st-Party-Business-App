@@ -77,17 +77,17 @@ export default function PaymentForm () {
                 <button id="buttonPay">pay</button>
             </form>
             : 
-            <div id="successful">
-                <h2 id="successPayment">enjoy your meal!</h2>
-                <h4 id="preparingOrder">preparing order</h4>
-                <i class="fas fa-pepper-hot" id="preparingIcon"></i>
+            <div>
+                <h2 className="successful" id="successPayment">enjoy your meal!</h2>
+                <h4 className="successful" id="preparingOrder">preparing order</h4>
+                <i className="successful fas fa-pepper-hot" id="preparingIcon"></i>
                 <div className="loadingDots"></div>
                 <div className="loadingDots"></div>
                 <div className="loadingDots"></div>
                 <div className="loadingDots"></div>
                 <div className="loadingDots"></div>
-                <h4 id="orderReady">your order should be ready in 15-20 minutes</h4>
-                <h4></h4>
+                <h4 className="successful" id="orderReady">your order should be ready in 15-20 minutes</h4>
+
             </div>
             }
         </div>
