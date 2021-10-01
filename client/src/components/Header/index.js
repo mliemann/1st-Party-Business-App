@@ -55,6 +55,7 @@ function Header() {
               {state.isLoggedIn ? (
                 <div className="whitespace">
                   {" "}
+                  <div id="pleasework">
                   <button className="btnHeaderLogin" id="logoutbtn" onClick={logUserOut}>
                     logout
                   </button>
@@ -67,17 +68,19 @@ function Header() {
                   </button> */}
                   <button onClick={pageRoute5} className="btnHeaderLogin">dashboard</button>
                   {/* <button onClick={pageRoute6}>Menu</button> */}
-                  <button className="btnHeaderLogin" id="profilesbtn" onClick={pageRoute7}>
+                  {/* <button className="btnHeaderLogin" id="profilesbtn" onClick={pageRoute7}>
                     profile
-                  </button>
-                  {/* <button onClick={pageRoute8}>Restaurant Signup</button> */}
+                  </button> */}
+                  </div>
                   <img
+                  onClick={pageRoute7}
                     id="profilepic"
                     src={state.userData.profileUrl}
                     alt="user"
                     width="auto"
                     height="175"
                   ></img>
+                  
                 </div>
               ) : (
                 <div className="whitespace2">
