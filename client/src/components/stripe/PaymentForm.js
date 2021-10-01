@@ -38,6 +38,7 @@ export default function PaymentForm () {
         })
   
 
+<<<<<<< HEAD
         if(!error) {
             try {
                 const {id} = paymentMethod
@@ -51,6 +52,19 @@ export default function PaymentForm () {
                 }
             } catch (error) {
                 console.log(error.message)
+=======
+    if(!error) {
+        try {
+            const {id} = paymentMethod
+            const response = await axios.post('/api/payment', {
+                amount: total,
+                id
+            })
+
+            if(response.data.success) {
+                console.log("successful payment")
+                setSuccess(true)
+>>>>>>> 28684c3550d2badb2da1715a1c103d34c394ad4d
             }
         } else {
             console.log("error", )
