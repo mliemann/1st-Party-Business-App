@@ -38,57 +38,49 @@ export default function PaymentForm () {
         })
   
 
-<<<<<<< HEAD
-        if(!error) {
-            try {
-                const {id} = paymentMethod
-                const response = await axios.post('/payment', {
-                    amount: total,
-                    id
-                })
-                if(response.data.success) {
-                    console.log("successful payment")
-                    setSuccess(true)
-                }
-            } catch (error) {
-                console.log(error.message)
-=======
     if(!error) {
         try {
             const {id} = paymentMethod
             const response = await axios.post('/api/payment', {
-                amount: total,
+                amount: total * 100,
                 id
             })
 
             if(response.data.success) {
                 console.log("successful payment")
                 setSuccess(true)
->>>>>>> 28684c3550d2badb2da1715a1c103d34c394ad4d
             }
-        } else {
-            console.log("error", )
+        } catch (error) {
+            console.log(error.message)
         }
+    } else {
+        console.log("error", )
     }
-        return (
-            <div id="checkoutPage">
-                {!success ?
-                <form onSubmit={handleSubmit} id="checkoutForm">
-                    <div>
-                        <h1 id="totalToPay">total: $ {total} </h1>
-                    </div>
-                    <fieldset className="FormGroupPay">
-                        <div className="FormRowPay">
-                            <CardElement options={CARD_OPTIONS}/>
-                        </div>
-                    </fieldset>
-                    <button id="buttonPay">Pay</button>
-                </form>
-                :
+
+
+
+
+}
+
+    return (
+        <div id="checkoutPage">
+            {!success ? 
+            <form onSubmit={handleSubmit} id="checkoutForm">
                 <div>
-                    <h2>Enjoy your meal</h2>
+                    <h1 id="totalToPay">total: $ {total} </h1>
                 </div>
-                }
+                <fieldset className="FormGroupPay">
+                    <div className="FormRowPay">
+                        <CardElement options={CARD_OPTIONS}/>
+                    </div>
+                </fieldset>
+                <button id="buttonPay">Pay</button>
+            </form>
+            : 
+            <div>
+                <h2>Enjoy your meal</h2>
             </div>
-        )
-    }
+            }
+        </div>
+    )
+}
