@@ -5,8 +5,11 @@
   }
   
   #profilepic{
-    float:right;
-    padding-right: 3%;
+    position: relative;
+    left: 648px;
+    top: -162px;
+    height: 125px;
+    cursor: pointer;
   }
 
   .header {
@@ -33,6 +36,14 @@
     text-align: center;
     align-self: center;
     flex-direction: row;
+  }
+
+  #pleasework{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 21px;
+    left: 449px;
   }
 
   /* #whitespace2 {
@@ -124,6 +135,14 @@
     left: 322px;
   }
 
+  #whitespace {
+    padding-left:20px;
+    flex:2;
+    text-align: center;
+    align-self: center;
+    flex-direction: row;
+  }
+
 }
 
 @media screen and (max-width:800px) {
@@ -134,6 +153,14 @@
     position: relative;
     top: 79px;
     left: 83px;
+  }
+
+  #whitespace {
+    padding-left:20px;
+    flex:2;
+    text-align: center;
+    align-self: center;
+    flex-direction: row;
   }
 
 }
@@ -161,9 +188,9 @@
   }
   
   #logo {
-    /* margin-left: -18px; */
+    height: 160px;
     width: auto;
-    /* margin-left: -20px; */
+   
   }
 
   .btnHeaderLogin {
@@ -187,7 +214,10 @@
     display:flex;
     flex-direction: column;
     padding-left: 50px;
-  
+  }
+
+  #profilepic {
+    display:none;
   }
 
   /* #comment {
