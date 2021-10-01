@@ -13,9 +13,7 @@
     min-height: 70rem;
 }
 
-#profilepic{
 
-}
 #profile {
     font-size:40px;
     letter-spacing: 4px;
@@ -39,6 +37,7 @@
     font-family: 'Ubuntu', sans-serif;
     border-color: #26325a;
     letter-spacing: 3px;
+    padding-left: 15px;
 }
 
 .btnprofile {

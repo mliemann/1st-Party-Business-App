@@ -31,6 +31,11 @@ function Login() {
     const regRoute = () => {
         history.push("/signup");
     }
+
+    const pageRoute44 = () => {
+      history.push("/forgotlogin");
+    };
+
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -85,7 +90,7 @@ function Login() {
           {/* <button className="btnLogin">
             guest checkout
           </button> */}
-          <button className="btnLogin">forgot login</button>
+          <button className="btnLogin" onClick={pageRoute44}>forgot login</button>
         </div>
 
       </form>
