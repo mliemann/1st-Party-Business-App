@@ -71,16 +71,18 @@
 	transform: scale(0.99);
 }
 
-#successful {
+.successful {
 	display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 	color:white;
+	letter-spacing: 4px;
 }
 
 #successPayment {
 	padding-top: 10%;
+	
 } 
 
 #preparingOrder {

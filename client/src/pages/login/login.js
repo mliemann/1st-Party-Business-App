@@ -61,7 +61,7 @@ function Login() {
             type="text" 
             id="email-login" 
             aria-describedby="emailHelp"
-            placeholder="    enter email"
+            placeholder="enter email"
           ></input>
         </div>
 
@@ -71,7 +71,7 @@ function Login() {
             onChange={e => setPassword(e.target.value)}
             type="password"
             id="password-login"
-            placeholder="    password"
+            placeholder="password"
           ></input>
         </div>
 
