@@ -15,6 +15,7 @@ function Menu() {
   return (
     <div className="containermenu border">
       <h1 id="menu-header">platos</h1>
+      {/* <button id="goToCheckoutBtn">checkout</button> */}
       {products.map((product) => {
         return (
           <div key={product.id} id="menu">
@@ -44,7 +45,7 @@ function Menu() {
 </Dropdown> */}
 
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
-
+              
               <button
                 className="item"
                 id="addCartBtn"
@@ -57,7 +58,9 @@ function Menu() {
                     price: product.price,
                   };
                   cart.push(dish);
-                  localStorage.setItem("cart", JSON.stringify(cart));
+                  const unique = Array.from(new Set(cart));
+                  
+                  localStorage.setItem("cart", JSON.stringify(unique));
                 }}
               >
                 Add to cart

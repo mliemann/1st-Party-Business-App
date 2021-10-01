@@ -5,6 +5,17 @@ import { useUserContext, USER_LOGGED_IN, } from "../../providers/user";
 import API from "../../utils/API";
 import "./login.css";
 
+async function loginUser(credentials) {
+  return fetch('/api/user/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+ }
+
 function Login() {
     const [state, dispatch] = useUserContext();
     

@@ -33,7 +33,7 @@ function App() {
         <Header />
 
         <Switch>
-          {/* <Route exact path="/" component={Home} /> */}
+    
           <Route exact path="/" component={Landing} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/dashboard" component={Dashboard} />
@@ -43,11 +43,9 @@ function App() {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/restaurant/signup" component={RestaurantSignup} />
           <Route exact path="/signup" component={SignUp} />
-          {/* <Route exact path="/payment" component={Payment} /> */}
-          {/* <Route exact path="/checkout" component={StripeContainer} /> */}
-          
+          <Route path="*" component={Error} />
           <StripeContainer />
-          <Route component={Error} />
+          
         </Switch>
 
         <Footer />
