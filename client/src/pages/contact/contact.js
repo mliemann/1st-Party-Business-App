@@ -4,7 +4,7 @@ import "./contact.css";
 function Contact() {
   return (
     <div className="containercontact">
-      <form id="formcontact" action="action_page.php">
+      <form id="formcontact" action="mailto:burnsgirlphotos@gmail.com" method="post" enctype="text/plain">
         <div>
           <h2 id="contact">contact us:</h2>
         </div>
