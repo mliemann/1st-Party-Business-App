@@ -18,7 +18,7 @@ function Profile() {
     console.log(email);
 
     if (email) {
-      const response = await fetch("/api/user", {
+      const response = await fetch("/api/user/:id" , {
         method: "PUT",
         body: JSON.stringify(email),
         headers: { "Content-Type": "application/json" },
