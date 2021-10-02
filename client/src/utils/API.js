@@ -1,6 +1,6 @@
 import axios from "axios";
 const backend = axios.create({
-    baseURL: "http://localhost:3001"
+    baseURL: "/"
 });
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
