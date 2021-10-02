@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import './PaymentForm.css'
+// import CartContext from '../CartContext';
 
-// import {total} from '../../pages/cart/cart'
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
@@ -18,11 +18,19 @@ const CARD_OPTIONS = {
             fontSmoothing: "antialiased",
         },
         invalid: {
-            iconColor: "#ffc7ee",
-            color: "#ffc7ee"
+            iconColor: "red",
+            color: "red"
         }
     }
 }
+
+
+// const paymentIntent = await stripe.paymentIntents.create({
+//   amount: 1099,
+//   currency: 'usd',
+//   payment_method_types: ['card'],
+//   receipt_email: '',
+// });
 
 export default function PaymentForm () {
     const [success, setSuccess] = useState(false)
@@ -69,16 +77,51 @@ export default function PaymentForm () {
                 <div>
                     <h1 id="totalToPay">total: $ {total} </h1>
                 </div>
+
+                <div id="customerInfo">
+                    <input 
+                    type="text" 
+                    class="field" 
+                    id="checkoutInfo" 
+                    placeholder="first name">
+                    </input>
+                    <input 
+                    type="text" 
+                    class="field" 
+                    id="checkoutInfo" 
+                    placeholder="last name">
+                    </input>
+              
+                
+            
+                    <input 
+                    type="email" 
+                    class="field" 
+                    id="checkoutInfo" 
+                    placeholder="email">
+                    </input>
+                </div>
                 <fieldset className="FormGroupPay">
                     <div className="FormRowPay">
                         <CardElement options={CARD_OPTIONS}/>
                     </div>
                 </fieldset>
-                <button id="buttonPay">Pay</button>
+                <button id="buttonPay">pay</button>
             </form>
             : 
             <div>
-                <h2>Enjoy your meal</h2>
+                <h2 className="successful" id="successPayment">enjoy your meal!</h2>
+                <h4 className="successful" id="preparingOrder">preparing order</h4>
+                <i className="successful fas fa-pepper-hot" id="preparingIcon"></i>
+            <div id="dottie">
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+                <div className="loadingDots"></div>
+            </div>
+                <h4 className="successful" id="orderReady">your order should be ready in 15-20 minutes</h4>
+
             </div>
             }
         </div>

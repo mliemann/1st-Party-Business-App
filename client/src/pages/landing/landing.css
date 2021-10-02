@@ -30,6 +30,8 @@
     flex-direction: row;
     height:auto;
     background-color:#7d821e;
+    cursor: pointer;
+   
 
 }
 
@@ -46,7 +48,8 @@
 
     font-size: 50px;
     color:#26325a;
-    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     align-self: center;
     letter-spacing: 4px;
@@ -69,6 +72,7 @@
   width: 66%;
   height: auto;
 }
+
 
 @media screen and (max-width:530px) {
   
@@ -97,25 +101,21 @@
 
   #viewmenu {
 
-      font-size: 30px;
-      color:#26325a;
+      font-size: 20px;
+      
       flex: 1;
-      text-align: center;
-      align-self: center;
-      letter-spacing: 4px;
+      
       margin: 50px;
-      border-bottom: 15px dotted #26325a;
+    
   }
 
   #placeorder {
       font-size: 30px;
-      color:#26325a;
+
       flex: 1;
-      text-align: center;
-      align-self: center;
-      letter-spacing: 4px;
+    
       margin: 40px;
-      border-bottom: 15px dotted #26325a;
+   
   }
 
   #coverimg2 {

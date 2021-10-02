@@ -25,14 +25,14 @@ function Signup() {
     console.log(userInfo);
 
     if (user_name && email && password) {
-      const response = await fetch("http://localhost:3001/api/user", {
+      const response = await fetch("/api/user", {
         method: "POST",
         body: JSON.stringify(userInfo),
         headers: { "Content-Type": "application/json" },
       });
 
       if (response.ok) {
-        document.location.replace("/profile");
+        document.location.replace("/");
       } else {
         alert(response.statusText);
       }
@@ -74,7 +74,7 @@ function Signup() {
             type="text"
             className="inputSignup"
             id="name-signup"
-            placeholder="    enter name"
+            placeholder="enter name"
           />
         </div>
 
@@ -83,7 +83,7 @@ function Signup() {
             type="text"
             className="inputSignup"
             id="email-signup"
-            placeholder="    enter email"
+            placeholder="enter email"
           />
         </div>
 
@@ -92,7 +92,7 @@ function Signup() {
             className="inputSignup"
             type="password"
             id="password-signup"
-            placeholder="    create password"
+            placeholder="create password"
           />
         </div>
 

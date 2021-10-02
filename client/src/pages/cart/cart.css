@@ -15,6 +15,12 @@
     color: #26325a;
 }
 
+#emptyCartBtn {
+    background-color:transparent;
+    border: none;
+    color: #26325a;
+    letter-spacing: 2px;
+}
 
 #pricetable {
     float: right;

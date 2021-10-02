@@ -4,7 +4,7 @@ import "./contact.css";
 function Contact() {
   return (
     <div className="containercontact">
-      <form id="formcontact" action="action_page.php">
+      <form id="formcontact" action="mailto:burnsgirlphotos@gmail.com" method="post" enctype="text/plain">
         <div>
           <h2 id="contact">contact us:</h2>
         </div>
@@ -17,7 +17,7 @@ function Contact() {
           type="text"
           id="fname"
           name="firstname"
-          placeholder="    your name..."
+          placeholder="your name..."
         ></input>
 
         <label className="title" htmlFor="lname">
@@ -28,7 +28,7 @@ function Contact() {
           type="text"
           id="lname"
           name="lastname"
-          placeholder="    your last name..."
+          placeholder="your last name..."
         ></input>
 
         <label className="title" htmlFor="lname">
@@ -39,7 +39,7 @@ function Contact() {
           type="text"
           id="lname"
           name="lastname"
-          placeholder="    your email..."
+          placeholder="your email..."
         ></input>
 
         <label className="title" htmlFor="subject">
@@ -49,7 +49,7 @@ function Contact() {
           className="inputContact"
           id="subject"
           name="subject"
-          placeholder="     write something..."
+          placeholder="write something..."
           style={{ height: "200px" }}
         ></textarea>
 

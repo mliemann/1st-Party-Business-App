@@ -31,6 +31,11 @@ function Login() {
     const regRoute = () => {
         history.push("/signup");
     }
+
+    const pageRoute44 = () => {
+      history.push("/forgotlogin");
+    };
+
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -61,7 +66,7 @@ function Login() {
             type="text" 
             id="email-login" 
             aria-describedby="emailHelp"
-            placeholder="    enter email"
+            placeholder="enter email"
           ></input>
         </div>
 
@@ -71,7 +76,7 @@ function Login() {
             onChange={e => setPassword(e.target.value)}
             type="password"
             id="password-login"
-            placeholder="    password"
+            placeholder="password"
           ></input>
         </div>
 
@@ -82,10 +87,10 @@ function Login() {
         <div>
           <button className="btnLogin" type="submit">log in</button>
           <button className="btnLogin" onClick={regRoute}>register</button>
-          <button className="btnLogin">
+          {/* <button className="btnLogin">
             guest checkout
-          </button>
-          <button className="btnLogin">forgot login</button>
+          </button> */}
+          <button className="btnLogin" onClick={pageRoute44}>forgot login</button>
         </div>
 
       </form>

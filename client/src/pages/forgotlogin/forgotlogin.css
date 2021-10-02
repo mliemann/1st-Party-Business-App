@@ -1,0 +1,31 @@
+
+#forgotContainer {
+    text-align: center;
+    align-self: center;
+    color:#26325a;
+    background-image: url("../../assets/beets.jpeg");
+    background-size:cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    min-height: 25rem;
+}
+
+#forgotlogin {
+    font-size:40px;
+    letter-spacing: 4px;
+    padding-bottom: 20px;
+}
+
+#user-email-change {
+    height:40px;
+    width:400px;
+    margin-top:10px;
+    border-radius: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-color: #26325a;
+    letter-spacing: 3px;
+    padding-left: 15px; 
+}
