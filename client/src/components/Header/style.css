@@ -6,7 +6,7 @@
   
   #profilepic{
     position: relative;
-    left: 648px;
+    left: 615px;
     top: -162px;
     height: 125px;
     cursor: pointer;
@@ -43,7 +43,7 @@
     flex-direction: column;
     position: relative;
     top: 21px;
-    left: 449px;
+    left: 418px;
   }
 
   /* #whitespace2 {
@@ -125,7 +125,7 @@
 
 } */
 
-@media screen and (max-width:1150px) {
+@media screen and (min-width:1150px) {
 
 
   #idkwork {
@@ -145,15 +145,16 @@
 
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1150px) and (min-width: 800px){
 
 
   #idkwork {
-    display: flex;
-    position: relative;
-    top: 79px;
-    left: 83px;
+    left: 92px;
   }
+
+  #profilepic {
+    left: 267px;
+  } 
 
   #whitespace {
     padding-left:20px;
@@ -163,6 +164,45 @@
     flex-direction: row;
   }
 
+  #pleasework {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 21px;
+    left: 92px; 
+  }
+
+}
+/* 
+@media screen and (max-width:900px) and (min-width: 800px) {
+
+  #pleasework {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 21px;
+    left: 92px; 
+  }
+
+  #profilepic {
+    left: 267px;
+  } 
+
+} */
+
+@media screen and (max-width:799px) {
+  
+  #pleasework {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 21px;
+    left: 167px;
+  }
+
+  #profilepic {
+    display:none;
+  }
 }
 
 @media screen and (max-width:530px) {
@@ -220,11 +260,9 @@
     display:none;
   }
 
-  /* #comment {
-    color:#26325a;
-    text-align: center;
-    margin-top: 10px;
-
-  } */
+  #pleasework {
+    top: 47px;
+    left: -2px;
+  }
 
 }
