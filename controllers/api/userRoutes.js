@@ -73,4 +73,27 @@ router.put("/profile/:id", (req, res) => {
 
 })
 
+router.put("/profile/email/:id", (req, res) => {
+  console.log(req);
+  User.update(
+    { 
+      email: req.body.email
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  ).then((didUpdate) => {
+    if (didUpdate) {
+      res.json({email: req.body.email});
+    } else {
+      req.status(500);
+    }
+  }) .catch((err) => {
+    req.status(500);
+  });
+
+})
+
 module.exports = router;
