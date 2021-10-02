@@ -12,24 +12,15 @@ function Header() {
   const pageRoute2 = () => {
     history.push("/menu");
   };
-  // const pageRoute3 = () => {
-  //   history.push("/");
-  // };
   const pageRoute4 = () => {
     history.push("/");
   };
   const pageRoute5 = () => {
     history.push("/dashboard");
   };
-  // const pageRoute6 = () => {
-  //   history.push("/menu");
-  // };
   const pageRoute7 = () => {
     history.push("/profile");
   };
-  // const pageRoute8 = () => {
-  //   history.push("/restsignup");
-  // };
 
   const [state, dispatch] = useUserContext();
 
