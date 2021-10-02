@@ -26,7 +26,7 @@ function Profile() {
           className="inputProfile"
           type="text"
           id="email-change"
-          placeholder="    enter new email"
+          placeholder="enter new email"
         />
         <button className="btnprofile" type="submit">
           change email
@@ -36,7 +36,7 @@ function Profile() {
           className="inputProfile"
           type="password"
           id="password-change"
-          placeholder="    enter new password"
+          placeholder="enter new password"
         ></input>
         <button className="btnprofile" type="submit">
           change password
@@ -46,7 +46,7 @@ function Profile() {
           className="inputProfile"
           type="text"
           id="phone-change"
-          placeholder="    enter new phone number"
+          placeholder="enter new phone number"
         />
         <button className="btnprofile" type="submit">
           change phone number

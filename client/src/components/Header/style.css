@@ -5,9 +5,13 @@
   }
   
   #profilepic{
-    float:right;
-    padding-right: 3%;
+    position: relative;
+    left: 648px;
+    top: -162px;
+    height: 125px;
+    cursor: pointer;
   }
+
   .header {
     display:flex;
     flex-direction:wrap;
@@ -31,6 +35,31 @@
     flex:2;
     text-align: center;
     align-self: center;
+    flex-direction: row;
+  }
+
+  #pleasework{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 21px;
+    left: 449px;
+  }
+
+  /* #whitespace2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 363px;
+    top: 84px;
+  } */
+
+  #idkwork {
+    display: flex;
+    position: relative;
+    top: 79px;
+    left: 492px;
   }
 
   .btnHeader {
@@ -65,7 +94,7 @@
   position: relative;
   display: inline-block;
   padding: 15px 20px;
-  margin: 5% 1%;
+  margin: 10px;
   color: #fdfdfd;
   background-color:#26325a;
   text-decoration: none;
@@ -87,82 +116,115 @@
    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
-@media screen and (max-width:1250px) {
+/* @media screen and (max-width:1250px) {
 
   .btnHeader {
     left:5px;
     margin-right: 10px;
   }
 
-}
+} */
 
-@media screen and (max-width:795px) {
-    
-  .btnHeader {
-    left:0px;
-    padding: none;
-    display:column;
-    margin:none;
+@media screen and (max-width:1150px) {
 
+
+  #idkwork {
+    display: flex;
+    position: relative;
+    top: 79px;
+    left: 322px;
   }
 
   #whitespace {
-    padding-left:none;
-   
+    padding-left:20px;
+    flex:2;
+    text-align: center;
+    align-self: center;
+    flex-direction: row;
   }
 
-  #logo {
-    margin-top: 0%;
-    margin-left: 15%;
+}
+
+@media screen and (max-width:800px) {
+
+
+  #idkwork {
+    display: flex;
+    position: relative;
+    top: 79px;
+    left: 83px;
   }
+
+  #whitespace {
+    padding-left:20px;
+    flex:2;
+    text-align: center;
+    align-self: center;
+    flex-direction: row;
+  }
+
 }
 
 @media screen and (max-width:530px) {
+
+  
+  #idkwork {
+    display: flex;
+    position: none;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+  }
+
+  .header{
+    height:444px;
+  }
+
+  .whitespace {
+    display:flex;
+    flex-direction: column;
+    padding-left: 50px;
+    height:600px;
+  }
   
   #logo {
-    position: relative;
-    z-index: 1;
-    top: 9%;
-    left: -2%;
-    height: 50%;
+    height: 160px;
     width: auto;
+   
   }
 
-  .btnHeader {
-    justify-content: center;
-  }
-
-  /* #logoutbtn {
+  .btnHeaderLogin {
     position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 3% 1%;
+    height:auto;
+    width:300px;
   }
 
-  #landingbtn {
-    position:relative;
+  #profilepic {
+    align-self: center;
+    height: 130px;
+    padding-left: 25px;
+    float:none;
+    padding-right: 0%;
   }
 
-  #profilesbtn {
-    position: relative;
+  .whitespace2 {
+    display:flex;
+    flex-direction: column;
+    padding-left: 50px;
   }
 
-  #loginbtn {
-    position: relative;
-    top: 26px;
+  #profilepic {
+    display:none;
   }
 
-  #cartbtn {
-    position: relative;
-    top: 26px;
+  /* #comment {
+    color:#26325a;
+    text-align: center;
+    margin-top: 10px;
+
   } */
 
 }
-
-/* @media screen and (max-width:410px) {
-  #logo {
-    position: relative;
-    z-index: 1;
-    top: 5%;
-    left: 10%;
-    height: 50%;
-    width:auto;  
-  }
-} */

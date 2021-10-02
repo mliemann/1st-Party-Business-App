@@ -5,6 +5,21 @@ import "./menu.css";
 import { useHistory } from "react-router-dom";
 
 function Menu() {
+  const [count, setCount] = useState("");
+
+  const itemArray = () => {
+    var itemArr = JSON.parse(localStorage.getItem("cart")) || [];
+    var itemCount = itemArr.length;
+    return itemCount;
+  };
+
+  const cartBtnReload = () => {
+    setCount([itemArray()]);
+  };
+  useEffect(() => {
+    cartBtnReload(count);
+  }, []);
+
   const [products, setProducts] = useState([]);
 
   const history = useHistory();
@@ -18,11 +33,13 @@ function Menu() {
   const pageRoute24 = () => {
     history.push("/cart");
   };
-  
+
   return (
     <div className="containermenu border">
       <h1 id="menu-header">platos</h1>
-      <button id="goToCheckoutBtn" onClick={pageRoute24}>checkout</button>
+      <button id="goToCheckoutBtn" onClick={pageRoute24}>
+        checkout ({count})
+      </button>
       {/* <button id="goToCheckoutBtn">checkout</button> */}
       {products.map((product) => {
         return (
@@ -53,7 +70,7 @@ function Menu() {
 </Dropdown> */}
 
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
-              
+
               <button
                 className="item"
                 id="addCartBtn"
@@ -67,8 +84,9 @@ function Menu() {
                   };
                   cart.push(dish);
                   const unique = Array.from(new Set(cart));
-                  
+
                   localStorage.setItem("cart", JSON.stringify(unique));
+                  cartBtnReload();
                 }}
               >
                 Add to cart
