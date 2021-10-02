@@ -5,10 +5,12 @@
   }
   
   #profilepic{
+    border-radius: 50%;
     position: relative;
-    left: 615px;
-    top: -162px;
-    height: 125px;
+    left: 659px;
+    top: -197px;
+    height: auto;
+    width: 150px;
     cursor: pointer;
   }
 
