@@ -63,7 +63,7 @@ function Cart() {
                   refreshCart();
                 }}
                 id="emptyCartBtn">
-                empty cart <i class="fas fa-trash"></i>
+                empty cart <i className="fas fa-trash"></i>
               </button>
             </th>
           </tr>
@@ -93,7 +93,7 @@ function Cart() {
                       refreshCart();
                     }}
                   >
-                    <i class="fas fa-trash"></i>
+                    <i className="fas fa-trash"></i>
                   </button>
                 </td>
               </tr>
