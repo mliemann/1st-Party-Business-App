@@ -8,8 +8,8 @@ import Login from "../login/login"
 
 function Profile() {
 
-  const emailUpdate = async (event) => {
-    event.preventDefault();
+  const emailUpdate = async (userid) => {
+    userid.preventDefault();
 
   
     const email = document.getElementById("email-change").value.trim();
@@ -17,8 +17,8 @@ function Profile() {
 
     console.log(email);
 
-    if (email) {
-      const response = await fetch("/api/user/:id" , {
+    if (userid, email) {
+      const response = await fetch("/api/user/" + userid , {
         method: "PUT",
         body: JSON.stringify(email),
         headers: { "Content-Type": "application/json" },
@@ -51,7 +51,7 @@ function Profile() {
           id="email-change"
           placeholder="enter new email"
         />
-        <button className="btnprofile" type="submit" onClick={emailUpdate}>
+        <button className="btnprofile" type="submit" onClick={emailUpdate(state.userData.id)}>
           change email
         </button>
 
