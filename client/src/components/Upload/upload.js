@@ -6,7 +6,7 @@ import "./upload.css";
 
 
 async function updateProfilePic(userid, profileUrl) {
-  return fetch('http://localhost:3001/api/user/profile/' + userid, {
+  return fetch('/api/user/profile/' + userid, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
