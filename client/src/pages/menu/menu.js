@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import "./menu.css";
 import { useHistory } from "react-router-dom";
+import { useUserContext, } from "../../providers/user";
 
 function Menu() {
   const [count, setCount] = useState("");
@@ -22,11 +23,11 @@ function Menu() {
   }, []);
 
   const [products, setProducts] = useState([]);
-
+  const [state, dispatch] = useUserContext();
   const history = useHistory();
 
   useEffect(() => {
-    API.getDishes().then((res) => {
+    API.getDishes(state.isLoggedIn? state.userData.id: 0).then((res) => {
       setProducts(res.data);
     });
   }, []);
@@ -34,7 +35,24 @@ function Menu() {
   const pageRoute24 = () => {
     history.push("/cart");
   };
-
+  const handleLike = async e => {
+     const res = await API.doLike(e.target.dataset.dishId, e.target.dataset.userId, {
+     action: e.target.dataset.action
+    }); 
+    e.target.dataset.action = res.data.userLiked? "Unlike" : "Like";
+    var span = document.getElementById("num-likes-" + e.target.dataset.dishId);
+    if (span) {
+      span.innerHTML = res.data.likeCount;
+    } 
+    var Btn = document.getElementById("like-button-" + e.target.dataset.dishId);
+    if (Btn) {
+    
+    Btn.innerText = res.data.userLiked? "Unlike" : "Like";
+    }
+    //
+    console.log(res);
+    console.log(e);
+  }    
   return (
     <div className="containermenu border">
       <h1 id="menu-header">platos</h1>
@@ -71,7 +89,14 @@ function Menu() {
 </Dropdown> */}
 
               {/* <button className="item" id="moreInfoBtn">More details</button> */}
-
+            {state.isLoggedIn ? (
+              <div>
+                <span className = "num-likes" id = {"num-likes-" + product.id}>{product.likeCount}</span>
+                <button data-dish-id = {product.id} data-user-id = {state.userData.id} data-action = {product.userLiked? "Unlike": "Like" } id = {"like-button-" + product.id} onClick = {handleLike} className="btnLike"> {product.userLiked? ("Unlike"): ("Like")}</button>
+               </div>
+            ):(
+              <span className = "num-likes">{product.likeCount} Likes</span>
+            ) }
               <button
                 className="item"
                 id="addCartBtn"
