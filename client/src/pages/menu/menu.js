@@ -18,7 +18,7 @@ function Menu() {
   };
   useEffect(() => {
     cartBtnReload(count);
-  });
+  }, []);
 
   const [products, setProducts] = useState([]);
 
