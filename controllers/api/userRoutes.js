@@ -96,4 +96,28 @@ router.put("/profile/email/:id", (req, res) => {
 
 })
 
+router.put("/profile/password/:id", (req, res) => {
+  console.log(req);
+  User.update(
+    { 
+      password: req.body.password
+    },
+    {
+      where: {
+        id: req.params.id
+      },
+      individualHooks : true 
+    }
+  ).then((didUpdate) => {
+    if (didUpdate) {
+      res.json({password: req.body.password});
+    } else {
+      req.status(500);
+    }
+  }) .catch((err) => {
+    req.status(500);
+  });
+
+})
+
 module.exports = router;
