@@ -6,6 +6,7 @@ import Login from "../login/login"
 
 
 
+
 function Profile() {
 
   const emailUpdate = async (e, userid) => {
@@ -21,6 +22,31 @@ function Profile() {
       const response = await fetch("/api/user/profile/email/" + userid , {
         method: "PUT",
         body: JSON.stringify({email}),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.ok) {
+        document.location.replace("/profile");
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+
+  const passwordUpdate = async (e, userid) => {
+    e.preventDefault();
+
+  
+    const password = document.getElementById("password-change").value.trim()
+    
+
+    console.log(password);
+
+    if (userid, password) {
+      const response = await fetch("/api/user/profile/password/" + userid , {
+        method: "PUT",
+        body: JSON.stringify({password}),
+        
         headers: { "Content-Type": "application/json" },
       });
 
@@ -61,7 +87,7 @@ function Profile() {
           id="password-change"
           placeholder="enter new password"
         ></input>
-        <button className="btnprofile" type="submit">
+        <button className="btnprofile" type="submit" onClick={(e) => passwordUpdate(e, state.userData.id)}>
           change password
         </button>
 
