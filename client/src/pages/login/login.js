@@ -46,6 +46,7 @@ function Login() {
         password
       });
       logUserIn(res.data);
+      window.localStorage.setItem("user data", JSON.stringify(res.data))
       history.push("/");
     }    
 
@@ -80,9 +81,9 @@ function Login() {
           ></input>
         </div>
 
-        <p id="loggedin">
+        {/* <p id="loggedin">
           stay logged in?<input type="checkbox"></input>
-        </p>
+        </p> */}
 
         <div>
           <button className="btnLogin" type="submit">log in</button>
@@ -90,7 +91,7 @@ function Login() {
           {/* <button className="btnLogin">
             guest checkout
           </button> */}
-          <button className="btnLogin" onClick={pageRoute44}>forgot login</button>
+          {/* <button className="btnLogin" onClick={pageRoute44}>forgot login</button> */}
         </div>
 
       </form>

@@ -95,7 +95,7 @@ function Menu() {
                 <button data-dish-id = {product.id} data-user-id = {state.userData.id} data-action = {product.userLiked? "Unlike": "Like" } id = {"like-button-" + product.id} onClick = {handleLike} className="btnLike"> {product.userLiked? ("Unlike"): ("Like")}</button>
                </div>
             ):(
-              <span className = "num-likes">{product.likeCount} Likes</span>
+              <span className = "num-likes">{product.likeCount} <i className="far fa-thumbs-up like"></i></span>
             ) }
               <button
                 className="item"

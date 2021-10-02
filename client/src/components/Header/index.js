@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { useUserContext, USER_LOGGED_OUT } from "../../providers/user";
+import {
+  useUserContext,
+  USER_LOGGED_OUT,
+  USER_LOGGED_IN,
+} from "../../providers/user";
 import "./style.css";
 
 function Header() {
@@ -24,71 +28,100 @@ function Header() {
 
   const [state, dispatch] = useUserContext();
 
+  useEffect(() => {
+    try {
+      const userData = JSON.parse(window.localStorage.getItem("user data"));
+      if (userData.user) {
+        dispatch({
+          type: USER_LOGGED_IN,
+          userData: userData.user,
+        });
+      }
+    } catch {}
+  }, []);
+
   const logUserOut = () => {
     dispatch({
       type: USER_LOGGED_OUT,
     });
+    window.localStorage.setItem("user data", null)
 
     history.push("/");
   };
-  console.log(state);
+  // console.log(state);
   return (
     <div className="header">
-            <img
-              id="logo"
-              src="https://res.cloudinary.com/dl0hsgmfc/image/fetch/e_replace_color:0e1b47/https://bestteamproj2.s3.amazonaws.com/TacoTavern.png"
-              alt="taco tavern logo"
-              width="auto"
-              height="175"
-              onClick={pageRoute4}
-            ></img>
-            <div >
-              {state.isLoggedIn ? (
-                <div className="whitespace">
-                  {" "}
-                  <div id="pleasework">
-                  <button className="btnHeaderLogin" id="logoutbtn" onClick={logUserOut}>
-                    logout
-                  </button>
-                  <button className="btnHeaderLogin" id="cartbtn" onClick={pageRoute2}>
-                    menu
-                  </button>
-                  {/* <button onClick={pageRoute3}>Home</button> */}
-                  {/* <button className="btnHeader" id="landingbtn" onClick={pageRoute4}>
+      <img
+        id="logo"
+        src="https://res.cloudinary.com/dl0hsgmfc/image/fetch/e_replace_color:0e1b47/https://bestteamproj2.s3.amazonaws.com/TacoTavern.png"
+        alt="taco tavern logo"
+        width="auto"
+        height="175"
+        onClick={pageRoute4}
+      ></img>
+      <div>
+        {state.isLoggedIn ? (
+          <div className="whitespace">
+            {" "}
+            <div id="pleasework">
+              <button
+                className="btnHeaderLogin"
+                id="logoutbtn"
+                onClick={logUserOut}
+              >
+                logout
+              </button>
+              <button
+                className="btnHeaderLogin"
+                id="cartbtn"
+                onClick={pageRoute2}
+              >
+                menu
+              </button>
+              {/* <button onClick={pageRoute3}>Home</button> */}
+              {/* <button className="btnHeader" id="landingbtn" onClick={pageRoute4}>
                     home
                   </button> */}
-                  <button onClick={pageRoute5} className="btnHeaderLogin">dashboard</button>
-                  {/* <button onClick={pageRoute6}>Menu</button> */}
-                  {/* <button className="btnHeaderLogin" id="profilesbtn" onClick={pageRoute7}>
+              <button onClick={pageRoute5} className="btnHeaderLogin">
+                dashboard
+              </button>
+              {/* <button onClick={pageRoute6}>Menu</button> */}
+              {/* <button className="btnHeaderLogin" id="profilesbtn" onClick={pageRoute7}>
                     profile
                   </button> */}
-                  </div>
-                  <img
-                  onClick={pageRoute7}
-                    id="profilepic"
-                    src={state.userData.profileUrl}
-                    alt="user"
-                    width="auto"
-                    height="175"
-                  ></img>
-                  
-                </div>
-              ) : (
-                <div className="whitespace2">
-                  <div id="idkwork">
-                  <button className="btnHeaderLogin" id="loginbtn" onClick={pageRoute1}>
-                    login
-                  </button>
-                  <button className="btnHeaderLogin" id="cartbtn" onClick={pageRoute2}>
-                    menu
-                  </button>
-                  </div>
-                  
-                    {/* <h1 id="comment">taste buds ready</h1> */}
-                  
-                </div>
-              )}
             </div>
+            <img
+              onClick={pageRoute7}
+              id="profilepic"
+              src={state.userData.profileUrl}
+              alt="user"
+              width="auto"
+              height="175"
+            ></img>
+          </div>
+        ) : (
+          <div className="whitespace2">
+            <div id="idkwork">
+              <button
+                className="btnHeaderLogin"
+                id="loginbtn"
+                onClick={pageRoute1}
+              >
+                login
+              </button>
+              <button
+                className="btnHeaderLogin"
+                id="cartbtn"
+                onClick={pageRoute2}
+              >
+                menu
+              </button>
+            </div>
+
+            {/* <h1 id="comment">taste buds ready</h1> */}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
