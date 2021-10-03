@@ -26,11 +26,12 @@ function Profile() {
       });
 
       if (response.ok) {
-        document.location.replace("/profile");
+        document.location.replace("/login");
       } else {
         alert(response.statusText);
       }
     }
+    window.localStorage.setItem("user data", null);
   };
 
   const passwordUpdate = async (e, userid) => {
@@ -51,11 +52,12 @@ function Profile() {
       });
 
       if (response.ok) {
-        document.location.replace("/profile");
+        document.location.replace("/login");
       } else {
         alert(response.statusText);
       }
     }
+    window.localStorage.setItem("user data", null);
   };
 
   const [state] = useUserContext();
@@ -91,7 +93,7 @@ function Profile() {
           change password
         </button>
 
-        <input
+        {/* <input
           className="inputProfile"
           type="text"
           id="phone-change"
@@ -99,7 +101,7 @@ function Profile() {
         />
         <button className="btnprofile" type="submit">
           change phone number
-        </button>
+        </button> */}
 
         {/* <div>
                 <button className="btnprofile" type="submit">view analytics</button>
