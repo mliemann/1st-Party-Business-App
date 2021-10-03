@@ -38,7 +38,7 @@ function Header() {
         });
       }
     } catch {}
-  }, []);
+  }, [dispatch]);
 
   const logUserOut = () => {
     dispatch({
