@@ -3,16 +3,16 @@
     text-align: center;
     align-self: center;
     color:#26325a;
-    background-image: url("../../assets/avo.jpeg");
+    background-image: url("../../assets/signup.jpeg");
     background-size:cover;
     background-position: bottom center;
-    padding:80px;
-    height: 70rem;
+    padding-top: 200px;
+    height: 60rem;
 }
 
 #signup {
     margin:0px;
-    padding-top: 20px;
+
     padding-bottom: 20px;
     font-size:60px;
     letter-spacing: 4px;
@@ -59,13 +59,20 @@
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
+@media screen and (max-width:800px) {
+
+    #formsignup {
+        padding-top: 120px;
+        height: 40rem;
+    }
+
+}
+
 
 @media screen and (max-width:530px) {
 
     .inputSignup {
         width: 300px;
-        position: relative;
-        left: -24px;
     }
 
     #signup {
