@@ -44,7 +44,7 @@ function Stats(){
       <React.Fragment>
     <h3 id="chartHeader">favorite dishes</h3>
     <ResponsiveContainer width="100%" aspect={2}>
-     <BarChart data= {barChartData} margin={{left:50, right:50, top:80, bottom:80}}>
+     <BarChart data= {barChartData} id="barChartData">
        <CartesianGrid strokeDasharray="2 2"/>
        <Tooltip />
        <Bar dataKey="likes" fill="#25335a" />

@@ -1,8 +1,42 @@
 .chartcontainer {
     padding-top: 5%;
+    margin:0px;
+    min-height:60rem;
 }
 
 #chartHeader {
     color:#25335a;
     padding:3%;
+    text-align:center;
+}
+
+#barChartData {
+
+
+
+}
+
+@media screen and (max-width:800px) {
+
+    .chartcontainer {
+        min-height:40rem;
+    }
+
+    .chartcontainer {
+        width: 650px;
+    }
+    
+
+}
+
+@media screen and (max-width:530px) {
+
+    .chartcontainer {
+        min-height:20rem;
+    }
+
+    .chartcontainer {
+        width: 350px;
+    }
+
 }
