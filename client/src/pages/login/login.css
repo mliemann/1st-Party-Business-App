@@ -6,8 +6,8 @@
     background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-5.jpg");
     background-size:cover;
     background-position: center;
-    padding:80px;
-    min-height: 70rem;
+    min-height: 60rem;
+    padding-top: 200px;
 }
 
 #login {
@@ -69,20 +69,17 @@
 
 @media screen and (max-width:530px) {
 
+    #formlogin {
+        min-height: 40rem;
+        padding-top:100px;
+    }
+
     .inputLogin {
     width: 300px;
-    position: relative;
-    left: -24px;
     }
 
     .btnLogin {
-        position: relative;
-        left: -26px;
-       
         padding: 15px 30px;
-        margin: 15px 0;
-     
-        
     }
 }
 
