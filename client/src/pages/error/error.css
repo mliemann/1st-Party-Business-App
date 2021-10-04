@@ -8,5 +8,24 @@
     margin: 0px;
     padding-bottom: 400px;
     text-align:center;
-    min-height: 70rem;
+    min-height: 60rem;
+}
+
+@media screen and (max-width:800px) {
+
+    #error {
+        font-size:300px;
+        padding-bottom: 0px;
+        min-height: 40rem;
+    }
+
+}
+
+@media screen and (max-width:530px) {
+    
+    #error {
+        font-size: 150px;
+        min-height: 30rem;
+    }
+
 }
