@@ -43,7 +43,7 @@
     flex-direction: column;
     position: relative;
     top: 21px;
-    left: 418px;
+    left: 571px;
   }
 
   /* #whitespace2 {
@@ -125,14 +125,14 @@
 
 } */
 
-@media screen and (min-width:1150px) {
+@media screen and (min-width: 1200px) {
 
 
   #idkwork {
     display: flex;
     position: relative;
     top: 79px;
-    left: 322px;
+    left: 571px;
   }
 
   #whitespace {
@@ -145,11 +145,11 @@
 
 }
 
-@media screen and (max-width:1150px) and (min-width: 800px){
+@media screen and (min-width: 1020px) and (max-width: 1199px) {
 
 
   #idkwork {
-    left: 92px;
+    left: 315px;
   }
 
   #profilepic {
@@ -173,8 +173,12 @@
   }
 
 }
-/* 
-@media screen and (max-width:900px) and (min-width: 800px) {
+
+@media screen and (max-width:1049px) and (min-width: 801px) {
+
+  #idkwork {
+    left: 175px;
+  }
 
   #pleasework {
     display: flex;
@@ -188,9 +192,9 @@
     left: 267px;
   } 
 
-} */
+}
 
-@media screen and (max-width:799px) {
+@media screen and (max-width:800px) {
   
   #pleasework {
     display: flex;
@@ -236,6 +240,8 @@
   #logo {
     height: 160px;
     width: auto;
+    position: relative;
+    top: 20px;
    
   }
 

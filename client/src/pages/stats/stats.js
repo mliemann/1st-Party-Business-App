@@ -1,5 +1,6 @@
 import React from "react";
 import { ResponsiveContainer, XAxis, YAxis, CartesianGrid, Legend, Tooltip, BarChart, Bar} from "recharts";
+import './stats.css';
 
 
 const barChartData = [
@@ -30,7 +31,7 @@ const barChartData = [
     fees : 150
   },
   {
-    subject: "Python",
+    subject: "python",
     topics: 250,
     fees: 180
   }
@@ -39,7 +40,7 @@ function Stats(){
     return (
     <div className="chartcontainer" > 
       <React.Fragment>
-    <h3 style={{color:"blue", padding: "3%"}}>Like Button Stats</h3>
+    <h3 id="chartHeader">like button stats</h3>
     <ResponsiveContainer width="100%" aspect={2}>
      <BarChart data= {barChartData} margin={{left:50, right:50, top:80, bottom:80}}>
        <CartesianGrid strokeDasharray="2 2"/>
