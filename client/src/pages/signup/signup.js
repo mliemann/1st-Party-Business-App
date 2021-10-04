@@ -1,11 +1,9 @@
 import React from "react";
-// import API from "../../../server/utils/API";
 import "./signup.css";
 
 function Signup() {
   // Setting our component's initial state
-  // const [users, setUser] = useState([])
-  // const [formObject, setFormObject] = useState({})
+
 
   const signupFormHandler = async (event) => {
     event.preventDefault();

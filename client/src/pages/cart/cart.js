@@ -2,10 +2,10 @@ import { React, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cart.css";
-// import CartContext from "../../components/CartContext";
+
 
 function Cart() {
-  // const {total} = useContext(CartContext);
+  
   const history = useHistory();
 
   const pageRoute12 = () => {

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import './PaymentForm.css'
-// import CartContext from '../CartContext';
+
 
 
 const CARD_OPTIONS = {
@@ -24,13 +24,6 @@ const CARD_OPTIONS = {
     }
 }
 
-
-// const paymentIntent = await stripe.paymentIntents.create({
-//   amount: 1099,
-//   currency: 'usd',
-//   payment_method_types: ['card'],
-//   receipt_email: '',
-// });
 
 export default function PaymentForm () {
     const [success, setSuccess] = useState(false)

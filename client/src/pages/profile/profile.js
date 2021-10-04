@@ -74,7 +74,6 @@ function Profile() {
 
       <form id="formprofile">
 
-      {/* <h4>current email: {email} </h4> */}
         <input
           className="inputProfile"
           type="text"
@@ -96,19 +95,7 @@ function Profile() {
           change password
         </button>
 
-        {/* <input
-          className="inputProfile"
-          type="text"
-          id="phone-change"
-          placeholder="enter new phone number"
-        />
-        <button className="btnprofile" type="submit">
-          change phone number
-        </button> */}
-
-        {/* <div>
-                <button className="btnprofile" type="submit">view analytics</button>
-            </div> */}
+  
       </form>
       <Upload />
     </div>

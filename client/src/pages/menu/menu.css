@@ -1,13 +1,9 @@
 #menu {
    color:white;
    display:flex;
-   /* justify-content:center;
-   align-items:flex-start; */
    padding: 5% 0;
    border-color: white;
    margin-left: 10%;
-   /* border: 20px dotted; */
-   /* min-height: 70rem; */
 }
 
 #goToCheckoutBtn {
