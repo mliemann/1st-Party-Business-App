@@ -5,12 +5,10 @@
   }
   
   #profilepic{
-    border-radius: 50%;
     position: relative;
-    left: 659px;
-    top: -197px;
-    height: auto;
-    width: 150px;
+    left: 615px;
+    top: -162px;
+    height: 125px;
     cursor: pointer;
   }
 
@@ -20,8 +18,9 @@
     flex-wrap: wrap;
     width: 100%;
     height:250px;
-    background-image: url("../../assets/brown.jpeg");
+    background-image: url("../../assets/redback.jpeg");
     background-size: cover;
+border-bottom: 20px solid #25335a;
   
   }
 
@@ -205,6 +204,12 @@
   #profilepic {
     display:none;
   }
+
+  #idkwork {
+
+    top: 67px;
+    left: 89px;
+  }
 }
 
 @media screen and (max-width:530px) {
@@ -268,3 +273,4 @@
   }
 
 }
+
