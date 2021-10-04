@@ -13,11 +13,7 @@ import SignUp from "./pages/signup/signup";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Forgot from "./pages/forgotlogin/forgotlogin";
-
-// import PaymentPage from "./components/Payment/PaymentPage";
 import { UserProvider } from "./providers/user";
-// import Upload from './components/Upload/upload';
-// import Dish from "../src/menu.json";
 import "./App.css";
 import StripeContainer from '../src/components/stripe/StripeContainer';
 import { useState } from 'react';

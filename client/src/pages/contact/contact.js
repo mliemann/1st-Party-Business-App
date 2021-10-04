@@ -6,7 +6,7 @@ function Contact() {
     <div className="containercontact">
       <form id="formcontact" action="mailto:burnsgirlphotos@gmail.com" method="post" enctype="text/plain">
         <div>
-          <h2 id="contact">contact us:</h2>
+          <h2 id="contact">contact us</h2>
         </div>
 
         <label className="title" htmlFor="fname">

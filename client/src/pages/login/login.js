@@ -81,17 +81,9 @@ function Login() {
           ></input>
         </div>
 
-        {/* <p id="loggedin">
-          stay logged in?<input type="checkbox"></input>
-        </p> */}
-
         <div>
           <button className="btnLogin" type="submit">log in</button>
           <button className="btnLogin" onClick={regRoute}>register</button>
-          {/* <button className="btnLogin">
-            guest checkout
-          </button> */}
-          {/* <button className="btnLogin" onClick={pageRoute44}>forgot login</button> */}
         </div>
 
       </form>

@@ -34,7 +34,6 @@ console.log(test)
   const handleClick = (event) => {
     event.preventDefault();
     let file = fileInput.current.files[0];
-    // let newFileName = fileInput.current.files[0].name.replace(/\..+$/, "");
     let newFileName = crypto.randomBytes(12).toString('hex');
 
     const config = {

@@ -13,10 +13,6 @@ function Landing () {
         history.push("/menu");
       };
 
-    // const pageRoute11 = () => {
-    //     history.push("/cart");
-    // };
-
 
     return (
         <div className="container">

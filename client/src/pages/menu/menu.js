@@ -59,7 +59,6 @@ function Menu() {
       <button id="goToCheckoutBtn" onClick={pageRoute24}>
         checkout ({count})
       </button>
-      {/* <button id="goToCheckoutBtn">checkout</button> */}
       {products.map((product) => {
         return (
           <div key={product.id} id="menu">
@@ -78,17 +77,7 @@ function Menu() {
               <div className="item" id="price">
                 ${product.price}
               </div>
-              {/* <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    details
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item>{product.description}</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown> */}
-
-              {/* <button className="item" id="moreInfoBtn">More details</button> */}
+          
             {state.isLoggedIn ? (
               <div>
                 <span className = "num-likes" id = {"num-likes-" + product.id}>{product.likeCount}</span>

@@ -48,7 +48,7 @@ function Header() {
 
     history.push("/");
   };
-  // console.log(state);
+
   return (
     <div className="header">
       <img
@@ -69,7 +69,7 @@ function Header() {
                 id="logoutbtn"
                 onClick={logUserOut}
               >
-                logout
+                sign out
               </button>
               <button
                 className="btnHeaderLogin"
@@ -78,17 +78,11 @@ function Header() {
               >
                 menu
               </button>
-              {/* <button onClick={pageRoute3}>Home</button> */}
-              {/* <button className="btnHeader" id="landingbtn" onClick={pageRoute4}>
-                    home
-                  </button> */}
+         
               <button onClick={pageRoute5} className="btnHeaderLogin">
                 dashboard
               </button>
-              {/* <button onClick={pageRoute6}>Menu</button> */}
-              {/* <button className="btnHeaderLogin" id="profilesbtn" onClick={pageRoute7}>
-                    profile
-                  </button> */}
+          
             </div>
             <img
               onClick={pageRoute7}
@@ -107,7 +101,7 @@ function Header() {
                 id="loginbtn"
                 onClick={pageRoute1}
               >
-                login
+                log in
               </button>
               <button
                 className="btnHeaderLogin"
@@ -117,8 +111,7 @@ function Header() {
                 menu
               </button>
             </div>
-
-            {/* <h1 id="comment">taste buds ready</h1> */}
+            
           </div>
         )}
       </div>
