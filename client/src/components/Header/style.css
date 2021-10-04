@@ -5,12 +5,10 @@
   }
   
   #profilepic{
-    border-radius: 50%;
     position: relative;
-    left: 659px;
-    top: -197px;
-    height: auto;
-    width: 150px;
+    left: 780px;
+    top: -60px;
+    height: 125px;
     cursor: pointer;
   }
 
@@ -19,10 +17,10 @@
     flex-direction:wrap;
     flex-wrap: wrap;
     width: 100%;
-    height:250px;
-    background-image: url("../../assets/brown.jpeg");
+    height:260px;
+    background-image: url("../../assets/redback.jpeg");
     background-size: cover;
-  
+    border-bottom: 20px solid #25335a;
   }
 
   #logo {
@@ -42,10 +40,10 @@
 
   #pleasework{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
-    top: 21px;
-    left: 418px;
+    top: 144px;
+    left: 500px;
   }
 
   /* #whitespace2 {
@@ -61,7 +59,7 @@
     display: flex;
     position: relative;
     top: 79px;
-    left: 492px;
+    left: 571px;
   }
 
   .btnHeader {
@@ -127,35 +125,35 @@
 
 } */
 
-@media screen and (min-width:1150px) {
+@media screen and (min-width: 1200px) and (max-width:1350px) {
 
-
-  #idkwork {
+  #pleasework{
     display: flex;
+    flex-direction: row;
     position: relative;
-    top: 79px;
-    left: 322px;
+    top: 144px;
+    left: 370px;
   }
 
-  #whitespace {
-    padding-left:20px;
-    flex:2;
-    text-align: center;
-    align-self: center;
-    flex-direction: row;
+  #profilepic{
+    position: relative;
+    left: 649px;
+    top: -60px;
+    height: 125px;
+    cursor: pointer;
   }
 
 }
 
-@media screen and (max-width:1150px) and (min-width: 800px){
+@media screen and (min-width: 1051px) and (max-width: 1199px) {
 
 
   #idkwork {
-    left: 92px;
+    left: 315px;
   }
 
   #profilepic {
-    left: 267px;
+    left: 525px;
   } 
 
   #whitespace {
@@ -170,29 +168,34 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 21px;
-    left: 92px; 
+    top: 10px;
+    left: 350px; 
   }
 
 }
-/* 
-@media screen and (max-width:900px) and (min-width: 800px) {
+
+@media screen and (max-width:1049px) and (min-width: 801px) {
+
+  #idkwork {
+    left: 175px;
+  }
 
   #pleasework {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 21px;
-    left: 92px; 
+    top: 10px;
+    left: 262px; 
   }
 
   #profilepic {
-    left: 267px;
+    left: 470px;
+    top: -160px;
   } 
 
-} */
+}
 
-@media screen and (max-width:799px) {
+@media screen and (max-width:800px) {
   
   #pleasework {
     display: flex;
@@ -204,6 +207,12 @@
 
   #profilepic {
     display:none;
+  }
+
+  #idkwork {
+
+    top: 67px;
+    left: 89px;
   }
 }
 
@@ -232,6 +241,8 @@
   #logo {
     height: 160px;
     width: auto;
+    position: relative;
+    top: 20px;
    
   }
 
@@ -268,3 +279,4 @@
   }
 
 }
+

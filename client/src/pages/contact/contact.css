@@ -3,14 +3,13 @@
     background-image: url("../../assets/food\ background.jpeg");
     background-size:cover;
     background-position: top;
-    min-height: 70rem;
+    min-height: 60rem;
 }
 
 #formcontact {
     text-align: center;
     align-self: center;
     color:#26325a;
-    
     padding:80px;
     display: flex;
     flex-direction: column;
@@ -23,7 +22,7 @@
     margin:0px;
     padding-top: 20px;
     padding-bottom: 40px;
-    font-size:40px;
+    font-size:60px;
 }
 
 .title {
@@ -88,6 +87,6 @@
     }
 
     #contact {
-        font-size: 30px;
+        font-size: 40px;
     }
 }

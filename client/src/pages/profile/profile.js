@@ -73,6 +73,8 @@ function Profile() {
       </div>
 
       <form id="formprofile">
+
+      {/* <h4>current email: {email} </h4> */}
         <input
           className="inputProfile"
           type="text"
@@ -82,6 +84,7 @@ function Profile() {
         <button className="btnprofile" type="submit" onClick={(e) => emailUpdate(e, state.userData.id)}>
           change email
         </button>
+
 
         <input
           className="inputProfile"

@@ -6,7 +6,7 @@
     background-size:cover;
     background-position: center;
     padding:80px;
-    min-height: 70rem;
+    min-height: 60rem;
 }
 
 .table{
@@ -68,13 +68,22 @@ box-shadow: 0 0 5px #26325A,
     letter-spacing: 3px;
 }
 
-@media screen and (max-width:530px) {
+@media screen and (max-width:800px) {
 
     #cart1 {
         padding: 0px;
         padding-top: 15%;
-        
+        min-height: 0rem;
     }
+}
+
+@media screen and (max-width:530px) {
+
+    /* #cart1 {
+        padding: 0px;
+        padding-top: 15%;
+        min-height: 0rem;
+    } */
 
 
 }

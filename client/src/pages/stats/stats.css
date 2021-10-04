@@ -1,3 +1,8 @@
 .chartcontainer {
     padding-top: 5%;
 }
+
+#chartHeader {
+    color:#25335a;
+    padding:3%;
+}
