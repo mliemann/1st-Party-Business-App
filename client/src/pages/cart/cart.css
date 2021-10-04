@@ -2,7 +2,7 @@
     text-align: center;
     align-self: center;
     color:#26325a;
-    background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1632356676/tacotavern/background-cover-cart-2.jpg");
+    background-image: url("https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-12.jpg");
     background-size:cover;
     background-position: center;
     padding:80px;
@@ -73,17 +73,6 @@ box-shadow: 0 0 5px #26325A,
     #cart1 {
         padding: 0px;
         padding-top: 15%;
-        min-height: 0rem;
+        min-height: 50rem;
     }
-}
-
-@media screen and (max-width:530px) {
-
-    /* #cart1 {
-        padding: 0px;
-        padding-top: 15%;
-        min-height: 0rem;
-    } */
-
-
 }

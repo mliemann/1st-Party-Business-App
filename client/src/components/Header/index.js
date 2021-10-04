@@ -69,7 +69,7 @@ function Header() {
                 id="logoutbtn"
                 onClick={logUserOut}
               >
-                logout
+                sign out
               </button>
               <button
                 className="btnHeaderLogin"
@@ -107,7 +107,7 @@ function Header() {
                 id="loginbtn"
                 onClick={pageRoute1}
               >
-                login
+                log in
               </button>
               <button
                 className="btnHeaderLogin"
