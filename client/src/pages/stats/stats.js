@@ -39,6 +39,32 @@ const barChartData = [
   }
 ];
 function Stats(){
+
+  // const statCount = async (e, dish_id ,user_id) => {
+  //   e.preventDefault();
+
+  
+  //   const barChartData = 
+    
+
+  //   console.log(password);
+
+  //   if (userid, password) {
+  //     const response = await fetch(dish_id + "/like/" + user_id , {
+  //       method: "GET",
+  //       body: JSON.stringify({barChartData}),
+        
+  //       headers: { "Content-Type": "application/json" },
+  //     });
+
+  //     if (response.ok) {
+  //       document.location.replace("/login");
+  //     } else {
+  //       alert(response.statusText);
+  //     }
+  //   }
+  //   window.localStorage.setItem("user data", null);
+  // };
     return (
     <div className="chartcontainer" > 
       <React.Fragment>
