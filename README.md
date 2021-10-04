@@ -28,7 +28,7 @@ No installation needed.
 
 
 ## Technologies
-Technologies used: JavaScript, SQL, Express, Sequalize, HTML, CSS, Node.js, MySQL, AWS S3
+Technologies used: JavaScript, MySQL, Express, Sequalize, HTML, CSS, Node.js, MySQL, AWS S3, Cloudinary, Rechartjs, Heroku, Cloudflare, Google Domains
 
 ## License
 License: None
