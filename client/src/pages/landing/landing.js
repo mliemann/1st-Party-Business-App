@@ -26,7 +26,7 @@ function Landing () {
                 <div className="cover">
                     <div id="background1">
                         <img id="coverimg1" src="https://res.cloudinary.com/dl0hsgmfc/image/upload/v1631985686/tacotavern/taco-cover-1.jpg" alt="A bowl of onions, guacamole, and tomatoes." ></img>
-                        <h1 id="viewmenu">taste the authenticity</h1>
+                        <h1 id="viewmenu">taste the richness</h1>
                     </div>
                 </div>
                 

@@ -74,7 +74,7 @@ function Profile() {
 
       <form id="formprofile">
 
-      <h4>current email: </h4>
+      {/* <h4>current email: {email} </h4> */}
         <input
           className="inputProfile"
           type="text"
