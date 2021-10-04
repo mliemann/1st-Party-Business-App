@@ -1,6 +1,7 @@
 import React from "react";
 import { ResponsiveContainer, XAxis, YAxis, CartesianGrid, Legend, Tooltip, BarChart, Bar} from "recharts";
 import './stats.css';
+// const { Dish, Like } = require("../../../../models");
 
 
 const barChartData = [
@@ -40,31 +41,21 @@ const barChartData = [
 ];
 function Stats(){
 
-  // const statCount = async (e, dish_id ,user_id) => {
-  //   e.preventDefault();
-
-  
-  //   const barChartData = 
-    
-
-  //   console.log(password);
-
-  //   if (userid, password) {
-  //     const response = await fetch(dish_id + "/like/" + user_id , {
-  //       method: "GET",
-  //       body: JSON.stringify({barChartData}),
-        
-  //       headers: { "Content-Type": "application/json" },
-  //     });
-
-  //     if (response.ok) {
-  //       document.location.replace("/login");
-  //     } else {
-  //       alert(response.statusText);
-  //     }
-  //   }
-  //   window.localStorage.setItem("user data", null);
-  // };
+//   router.get(':id/like/:user_id', async (req,res) => {
+//     const likeCount = await Like.count({
+//         where: {
+//           dish_id: req.params.id,
+//         }
+//       });
+//       var userCount = 0;
+//       if(req.user_id){
+//         userCount = await Like.count({
+//           where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.params.user_id}]}
+//         });
+//       }
+//       res.status(200).json({likeCount: likeCount, userLiked: userCount >= 1})
+//     console.log(likeCount)
+// })
     return (
     <div className="chartcontainer" > 
       <React.Fragment>

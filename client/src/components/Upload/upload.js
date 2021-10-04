@@ -54,8 +54,8 @@ console.log(test)
       } else {
         console.log("fail");
       }
-      window.localStorage.setItem("user data", state);
     });
+    window.localStorage.setItem("user data", state);
   };
 
   return (
