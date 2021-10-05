@@ -42,19 +42,12 @@ import API from "../../utils/API";
 // ];
 
 const Stats= () => {
- const [barChartData, setBarChartData] = useState({});
+const [barChartData, setBarChartData] = useState({});
 
 useEffect(() => {
-   API.getDishes().then((res) => {
-     var chartData = [];
-     for (var i = 0; i < res.data.length; i++) {
-       chartData.push({
-         dish: res.data[i].dish,
-         likes: res.data[i].likeCount
-       })
-     }
-    setBarChartData(chartData);
-   });
+  API.getLike().then((res) => {
+    setBarChartData(res.data);
+  });
 }, []);
 
 console.log(barChartData)
@@ -64,11 +57,12 @@ console.log(barChartData)
     <div className="chartcontainer" > 
       <React.Fragment>
     <h3 id="chartHeader">favorite dishes</h3>
+    <p id="chartHeader2"> *make sure to hover to see dish names</p>
     <ResponsiveContainer width="100%" aspect={2}>
      <BarChart data= {barChartData} id="barChartData">
        <CartesianGrid strokeDasharray="2 2"/>
        <Tooltip />
-       <Bar dataKey="likes" fill="#25335a" />
+       <Bar dataKey="likeCount" fill="#25335a" />
        <XAxis dataKey ="dish"  interval="preserveStartEnd"/>
        <YAxis />
        <Legend />
