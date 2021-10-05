@@ -42,12 +42,19 @@ import API from "../../utils/API";
 // ];
 
 const Stats= () => {
-const [barChartData, setBarChartData] = useState({});
+ const [barChartData, setBarChartData] = useState({});
 
 useEffect(() => {
-  API.getLike().then((res) => {
-    setBarChartData(res.data);
-  });
+   API.getDishes().then((res) => {
+     var chartData = [];
+     for (var i = 0; i < res.data.length; i++) {
+       chartData.push({
+         dish: res.data[i].dish,
+         likes: res.data[i].likeCount
+       })
+     }
+    setBarChartData(chartData);
+   });
 }, []);
 
 console.log(barChartData)
