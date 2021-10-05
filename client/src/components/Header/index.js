@@ -61,30 +61,31 @@ function Header() {
       ></img>
       <div>
         {state.isLoggedIn ? (
-          <div className="whitespace">
+          <div>
             {" "}
             <div id="pleasework">
+             
               <button
-                className="btnHeaderLogin"
-                id="logoutbtn"
-                onClick={logUserOut}
-              >
-                sign out
-              </button>
-              <button
-                className="btnHeaderLogin"
+                className="btnHeaderLogin pleaseWorkBtn"
                 id="cartbtn"
                 onClick={pageRoute2}
               >
                 menu
               </button>
          
-              <button onClick={pageRoute5} className="btnHeaderLogin">
+              <button onClick={pageRoute5} className="btnHeaderLogin pleaseWorkBtn">
                 dashboard
               </button>
-          
-            </div>
-            <img
+
+              <button
+                className="btnHeaderLogin pleaseWorkBtn"
+                id="logoutbtn"
+                onClick={logUserOut}
+              >
+                sign out
+              </button>
+
+              <img
               onClick={pageRoute7}
               id="profilepic"
               src={state.userData.profileUrl}
@@ -92,20 +93,23 @@ function Header() {
               width="auto"
               height="175"
             ></img>
+          
+            </div>
+            
           </div>
         ) : (
-          <div className="whitespace2">
-            <div id="idkwork">
+          <div>
+            <div id="idkWork">
               <button
                 className="btnHeaderLogin"
-                id="loginbtn"
+                id="loginbtn idkWorkBtn"
                 onClick={pageRoute1}
               >
                 log in
               </button>
               <button
                 className="btnHeaderLogin"
-                id="cartbtn"
+                id="cartbtn idkWorkBtn"
                 onClick={pageRoute2}
               >
                 menu
