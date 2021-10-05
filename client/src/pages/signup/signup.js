@@ -2,9 +2,8 @@ import React from "react";
 import "./signup.css";
 
 function Signup() {
+
   // Setting our component's initial state
-
-
   const signupFormHandler = async (event) => {
     event.preventDefault();
 
@@ -37,43 +36,21 @@ function Signup() {
     }
   };
 
-  // document
-  //   .querySelector(".signup-form")
-  //   .addEventListener("submit", signupFormHandler)
-
-  // function loadUser(){
-  //   API.getUser
-  //   .then(res =>
-  //     setUser(res.data)
-  //   )
-  //   .catch(err => console.log(err));
-  // }
-  // function handleFormSubmit(event) {
-  //   event.preventDefault();
-  //   if (formObject.title && formObject.author) {
-  //     API.saveBook({
-  //       title: formObject.title,
-  //       author: formObject.author,
-  //       synopsis: formObject.synopsis
-  //     })
-  //       .then(res => loadBooks())
-  //       .catch(err => console.log(err));
-  //   }
-
   return (
     <div id="formsignup">
+
       <div>
         <h2 id="signup">sign up</h2>
       </div>
 
       <form>
+
         <div>
           <input
             type="text"
             className="inputSignup"
             id="name-signup"
-            placeholder="enter name"
-          />
+            placeholder="enter name"/>
         </div>
 
         <div>
@@ -81,8 +58,7 @@ function Signup() {
             type="text"
             className="inputSignup"
             id="email-signup"
-            placeholder="enter email"
-          />
+            placeholder="enter email"/>
         </div>
 
         <div>
@@ -90,20 +66,22 @@ function Signup() {
             className="inputSignup"
             type="password"
             id="password-signup"
-            placeholder="create password"
-          />
+            placeholder="create password"/>
         </div>
 
         <div>
+
           <button
             className="btnlogin"
             type="submit"
-            onClick={signupFormHandler}
-          >
+            onClick={signupFormHandler}>
             sign up
           </button>
+
         </div>
+
       </form>
+      
     </div>
   );
 }
