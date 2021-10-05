@@ -25,6 +25,7 @@
 #pricetable {
     float: right;
 }
+
 .checkoutbtn {
     font-family: 'Ubuntu', sans-serif;
     font: weight 700px;
@@ -43,6 +44,7 @@
     border-radius: 1rem;
     border-style: none;
 }
+
 .checkoutbtn:hover{
 background: #26325A;
 color: white;
