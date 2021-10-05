@@ -36,8 +36,9 @@ function Menu() {
     history.push("/cart");
   };
   const handleLike = async e => {
-     const res = await API.doLike(e.target.dataset.dishId, e.target.dataset.userId, {
-     action: e.target.dataset.action
+     const res = await API.doLike(e.target.dataset.dishId, {
+       user_id: e.target.dataset.userId,
+       action: e.target.dataset.action
     }); 
     e.target.dataset.action = res.data.userLiked? "Unlike" : "Like";
     var span = document.getElementById("num-likes-" + e.target.dataset.dishId);

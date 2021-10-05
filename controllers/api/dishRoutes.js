@@ -3,7 +3,7 @@ const { Dish, Like } = require("../../models");
 const sequelize = require("../../config/config.js");
 var Op = require("sequelize").Op;
 
-router.get("/:user_id", async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         var dishData = await Dish.findAll(); 
         for (var i = 0; i < dishData.length; i++) {
@@ -13,9 +13,9 @@ router.get("/:user_id", async (req, res) => {
                 }
               });
               var userCount = 0;
-              if(req.params.user_id){
+              if(req.body.user_id){
                 userCount = await Like.count({
-                  where: {[Op.and]:[{dish_id: dishData[i].dataValues.id}, {user_id: req.params.user_id}]}
+                  where: {[Op.and]:[{dish_id: dishData[i].dataValues.id}, {user_id: req.body.user_id}]}
                 });
               }
               dishData[i].dataValues.userLiked = userCount >= 1;
@@ -39,17 +39,17 @@ router.get("/:user_id", async (req, res) => {
     }
 });  
 
-router.post('/:id/like/:user_id', async (req,res) => {
+router.post('/:id/like/', async (req,res) => {
     const action = req.body.action;
   
     if (action === "Like"){
       await Like.create({
         dish_id: req.params.id,
-        user_id: req.params.user_id
+        user_id: req.body.user_id
       });
     } else {
       await Like.destroy({
-        where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.params.user_id}]}
+        where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.body.user_id}]}
       });
     }
         var likeCount = await Like.count({
@@ -58,28 +58,28 @@ router.post('/:id/like/:user_id', async (req,res) => {
         }
       });
       var userCount = 0;
-      if(req.params.user_id){
+      if(req.body.user_id){
         userCount = await Like.count({
-          where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.params.user_id}]}
+          where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.body.user_id}]}
         });
       }
     res.status(200).json({likeCount: likeCount, userLiked: userCount >= 1});
   })
 
-router.get(':id/like/:user_id', async (req,res) => {
-    const likeCount = await Like.count({
-        where: {
-          dish_id: req.params.id,
-        }
-      });
-      var userCount = 0;
-      if(req.user_id){
-        userCount = await Like.count({
-          where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.params.user_id}]}
-        });
-      }
-      res.status(200).json({likeCount: likeCount, userLiked: userCount >= 1})
-})
+// router.get(':id/like/:user_id', async (req,res) => {
+//     const likeCount = await Like.count({
+//         where: {
+//           dish_id: req.params.id,
+//         }
+//       });
+//       var userCount = 0;
+//       if(req.user_id){
+//         userCount = await Like.count({
+//           where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.params.user_id}]}
+//         });
+//       }
+//       res.status(200).json({likeCount: likeCount, userLiked: userCount >= 1})
+// })
 
 router.get('/like', async (req,res) => {
    try {
