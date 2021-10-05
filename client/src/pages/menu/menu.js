@@ -55,14 +55,19 @@ function Menu() {
   }    
   return (
     <div className="containermenu border">
+
       <h1 id="menu-header">platos</h1>
+
       <button id="goToCheckoutBtn" onClick={pageRoute24}>
         checkout ({count})
       </button>
+
       {products.map((product) => {
         return (
           <div key={product.id} id="menu">
+            
             <div className="menuItem">
+
               <div className="item" id="dish">
                 {product.dish}
                 <a className="ui-tooltip" title={product.description}>
@@ -71,9 +76,11 @@ function Menu() {
                   </span>
                 </a>
               </div>
+
               <div className="item" id="description">
                 {product.ingredients}
               </div>
+
               <div className="item" id="price">
                 ${product.price}
               </div>
@@ -86,6 +93,7 @@ function Menu() {
             ):(
               <span className = "num-likes">{product.likeCount} <i className="far fa-thumbs-up like"></i></span>
             ) }
+
               <button
                 className="item"
                 id="addCartBtn"
@@ -102,11 +110,12 @@ function Menu() {
 
                   localStorage.setItem("cart", JSON.stringify(unique));
                   cartBtnReload();
-                }}
-              >
+                }}>
                 Add to cart
               </button>
+
             </div>
+
           </div>
         );
       })}

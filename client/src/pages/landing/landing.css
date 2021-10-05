@@ -5,7 +5,6 @@
   
 }
 
-
 .body {
   display: flex;
   flex-direction: wrap;
@@ -14,9 +13,7 @@
   position: relative;
 }
 
-
 #background1 {
-
     width: 100%;
     display:flex;
     flex-direction:row;
@@ -31,8 +28,6 @@
     height:auto;
     background-color:#7d821e;
     cursor: pointer;
-   
-
 }
 
 #coverimg1 {
@@ -45,7 +40,6 @@
 }
 
 #viewmenu {
-
     font-size: 50px;
     color:#26325a;
     display: flex;
@@ -82,14 +76,13 @@
 
   #placeorder {
     font-size: 40px;
-}
+  }
 
 }
 
 @media screen and (max-width:530px) {
   
   #background1 {
-
     width: 100%;
     display:flex;
     flex-direction:column;
@@ -103,7 +96,6 @@
       flex-direction: column;
       height:auto;
       background-color:#7d821e;
-
   }
 
   #coverimg1 {

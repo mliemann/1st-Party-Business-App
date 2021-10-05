@@ -44,8 +44,11 @@ function Cart() {
 
   return (
     <div id="cart1">
+
       <table className="table sortable">
+
         <thead>
+
           <tr>
             <th scope="col" className="columnHeader">
               product
@@ -57,6 +60,7 @@ function Cart() {
               price
             </th>
             <th scope="col" className="columnHeader">
+
               <button
                 onClick={() => {
                   localStorage.removeItem("cart");
@@ -65,12 +69,15 @@ function Cart() {
                 id="emptyCartBtn">
                 empty cart <i className="fas fa-trash"></i>
               </button>
+
             </th>
           </tr>
+
         </thead>
         {products.map((product) => {
           return (
             <tbody key={product.id}>
+
               <tr>
                 <td data-label="Product" id="dishCart">
                   {product.dish}
@@ -78,6 +85,7 @@ function Cart() {
                 <td data-label="Quantity">1</td>
                 <td data-label="Price">${product.price}</td>
                 <td>
+
                   <button
                     id="deleteItemBtn"
                     onClick={() => {
@@ -91,18 +99,22 @@ function Cart() {
                       }
                       localStorage.setItem("cart", JSON.stringify(newCart));
                       refreshCart();
-                    }}
-                  >
+                    }}>
                     <i className="fas fa-trash"></i>
                   </button>
+
                 </td>
               </tr>
+
             </tbody>
           );
         })}
       </table>
+
       <div id="pricetable">
+
         <table className="table sortable">
+
           <tbody>
             <tr>
               <th data-field="subtotal">subtotal</th>
@@ -113,15 +125,19 @@ function Cart() {
               <th data-field="tax">tax</th>
               <td>${tax}</td>
             </tr>
+
             <tr>
               <th data-field="total">total</th>
               <td>${total}</td>
             </tr>
           </tbody>
+
         </table>
+
         <button className="checkoutbtn" onClick={pageRoute12}>
           checkout
         </button>
+
       </div>
     </div>
   );

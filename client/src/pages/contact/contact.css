@@ -37,8 +37,7 @@
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
     border-color: #26325a;
-    padding-left: 15px;
-    
+    padding-left: 15px;   
 }
 
 .btnSend {
@@ -59,9 +58,9 @@
     overflow: hidden;
     margin-right: 50px;
     border-radius: 1rem;
-    border-style: none
-   
+    border-style: none 
 }
+
 .btnSend:hover{
     background: #26325a;
     color: white;
@@ -89,4 +88,5 @@
     #contact {
         font-size: 40px;
     }
+    
 }

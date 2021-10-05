@@ -13,7 +13,6 @@
     min-height: 70rem;
 }
 
-
 #profile {
     font-size:60px;
     letter-spacing: 4px;
@@ -49,7 +48,6 @@
     left:20px;
     display: inline-block;
     padding: 15px 32px;
-    /* margin: 40px 0; */
     margin-top: 20px;
     margin-bottom: 40px;
     color: #fdfdfd;
@@ -60,9 +58,9 @@
     overflow: hidden;
     margin-right: 50px;
     border-radius: 1rem;
-    border-style: none;
-   
+    border-style: none; 
 }
+
 .btnprofile:hover{
     background: #26325a;
     color: white;
@@ -88,4 +86,5 @@
     width: 300px;
     padding: 15px 20px;
     }
+    
 }

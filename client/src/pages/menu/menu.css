@@ -35,7 +35,7 @@
                 0 0 50px #26325a,
                 0 0 200px #26325a;
     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-    }
+}
 
 #menu-header {
     display:flex;
@@ -63,8 +63,6 @@
     background-image: url("../../assets/slate\ background.jpeg");
     width: 100%;
 }
-
-
 
 .item {
     padding:2%;
@@ -139,7 +137,7 @@ box-shadow: 0 0 5px #26325a,
     border-radius: 1rem;
     border-style: none;
    font-size: medium;
-  }
+}
 
 @media screen and (max-width:800px) {
 
@@ -174,6 +172,5 @@ box-shadow: 0 0 5px #26325a,
     #goToCheckoutBtn {
         left: 22%;
     }
-
     
 }

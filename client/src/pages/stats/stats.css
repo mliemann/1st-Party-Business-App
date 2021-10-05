@@ -10,11 +10,6 @@
     text-align:center;
 }
 
-#barChartData {
-
-
-
-}
 
 @media screen and (max-width:800px) {
 
@@ -25,7 +20,6 @@
     .chartcontainer {
         width: 650px;
     }
-    
 
 }
 
