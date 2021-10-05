@@ -1,61 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ResponsiveContainer, XAxis, YAxis, CartesianGrid, Legend, Tooltip, BarChart, Bar} from "recharts";
 import './stats.css';
-// const { Dish, Like } = require("../../../../models");
+import API from "../../utils/API";
 
 
-const barChartData = [
-  {
-    dish: "eggplant al vapor",
-    likes: 120
-  },
-  {
-    dish: "au poivre a la mexicana",
-    likes: 20
-  },
-  {
-    dish: "grilled pork chop",
-    likes: 140
-  },
-  {
-    dish: "pescado enacahuatado",
-    likes: 40
+
+// const barChartData = [
+//   {
+//     dish: "eggplant al vapor",
+//     likes: 120
+//   },
+//   {
+//     dish: "au poivre a la mexicana",
+//     likes: 20
+//   },
+//   {
+//     dish: "grilled pork chop",
+//     likes: 140
+//   },
+//   {
+//     dish: "pescado enacahuatado",
+//     likes: 40
   
-  },
-  {
-    dish: "alambre",
-    likes : 150
-  },
-  {
-    dish: "hongo asado",
-    likes: 180
-  },
-  {
-    dish: "esquites en ceniza",
-    likes: 50
-  },
-  {
-    dish: "suadreo tacos",
-    likes: 150
-  }
-];
-function Stats(){
+//   },
+//   {
+//     dish: "alambre",
+//     likes : 150
+//   },
+//   {
+//     dish: "hongo asado",
+//     likes: 180
+//   },
+//   {
+//     dish: "esquites en ceniza",
+//     likes: 50
+//   },
+//   {
+//     dish: "suadreo tacos",
+//     likes: 150
+//   }
+// ];
 
-//   router.get(':id/like/:user_id', async (req,res) => {
-//     const likeCount = await Like.count({
-//         where: {
-//           dish_id: req.params.id,
-//         }
-//       });
-//       var userCount = 0;
-//       if(req.user_id){
-//         userCount = await Like.count({
-//           where: {[Op.and]:[{dish_id: req.params.id}, {user_id: req.params.user_id}]}
-//         });
-//       }
-//       res.status(200).json({likeCount: likeCount, userLiked: userCount >= 1})
-//     console.log(likeCount)
-// })
+const Stats= () => {
+const [barChartData, setBarChartData] = useState({});
+
+useEffect(() => {
+  API.getLike().then((res) => {
+    setBarChartData(res.data);
+  });
+}, []);
+
+console.log(barChartData)
+
+
     return (
     <div className="chartcontainer" > 
       <React.Fragment>

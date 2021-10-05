@@ -12,5 +12,8 @@ export default {
     },
     doLike: function(dish_id, user_id, action) {
         return backend.post("/api/dish/" + dish_id + "/like/" + user_id, action)
+    },
+    getLike: function() {
+        return backend.get("/like")
     }
 }

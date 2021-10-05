@@ -81,4 +81,16 @@ router.get(':id/like/:user_id', async (req,res) => {
       res.status(200).json({likeCount: likeCount, userLiked: userCount >= 1})
 })
 
+router.get('/like', async (req,res) => {
+   try {
+    const likeCount = await Like.findAll({
+      include: [{ model: Like }],
+    });
+    res.status(200).json(likeCount);
+    console.log(likeCount)
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 module.exports = router;
