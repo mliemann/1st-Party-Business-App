@@ -63,25 +63,23 @@ function Header() {
         {state.isLoggedIn ? (
           <div>
             {" "}
-            <div id="pleasework">
+            <div id="loggedIn">
              
               <button
-                className="btnHeaderLogin pleaseWorkBtn"
-                id="cartbtn"
-                onClick={pageRoute2}
-              >
+                className="btnHeaderLogin loggedInBtn"
+                onClick={pageRoute2}>
                 menu
               </button>
          
-              <button onClick={pageRoute5} className="btnHeaderLogin pleaseWorkBtn">
+              <button 
+                onClick={pageRoute5} 
+                className="btnHeaderLogin loggedInBtn">
                 dashboard
               </button>
 
               <button
-                className="btnHeaderLogin pleaseWorkBtn"
-                id="logoutbtn"
-                onClick={logUserOut}
-              >
+                className="btnHeaderLogin loggedInBtn"
+                onClick={logUserOut}>
                 sign out
               </button>
 
@@ -91,31 +89,28 @@ function Header() {
               src={state.userData.profileUrl}
               alt="user"
               width="auto"
-              height="175"
-            ></img>
+              height="175">
+              </img>
           
             </div>
             
           </div>
         ) : (
           <div>
-            <div id="idkWork">
+            <div id="notLoggedIn">
               <button
-                className="btnHeaderLogin idkWorkBtn"
-                id="idkWorkBtn"
-                onClick={pageRoute1}
-              >
+                className="btnHeaderLogin notLoggedInBtn"
+                onClick={pageRoute1}>
                 log in
               </button>
+
               <button
-                className="btnHeaderLogin idkWorkBtn"
-                id=""
-                onClick={pageRoute2}
-              >
+                className="btnHeaderLogin notLoggedInBtn"
+                onClick={pageRoute2}>
                 menu
               </button>
-            </div>
-            
+
+            </div> 
           </div>
         )}
       </div>

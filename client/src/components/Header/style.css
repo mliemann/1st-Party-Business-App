@@ -80,7 +80,7 @@
 
 @media screen and (max-width:800px) {
   
-  #pleasework {
+  #loggedIn {
     flex-direction: column;
   }
 
@@ -88,7 +88,7 @@
     display:none;
   }
 
-  .pleaseWorkBtn {
+  .loggedInBtn {
     width: 200px;
     margin-left: 80px;
   }
@@ -111,17 +111,17 @@
     left: -21px;
   }
 
-  #idkWork {
+  #notLoggedIn {
     position: relative;
     left: -23px;
   }
 
-  .idkWorkBtn {
+  .notLoggedInBtn {
     width: 150px;
   }
 
 
-  .pleaseWorkBtn {
+  .loggedInBtn {
     position: relative;
     left: 12px;
     margin-left: 0px;
@@ -132,7 +132,7 @@
     display:none;
   } 
 
-  #pleasework {
+  #loggedIn {
     position: relative;
     left: -20px;
   } 
