@@ -101,15 +101,15 @@ function Header() {
           <div>
             <div id="idkWork">
               <button
-                className="btnHeaderLogin"
-                id="loginbtn idkWorkBtn"
+                className="btnHeaderLogin idkWorkBtn"
+                id="idkWorkBtn"
                 onClick={pageRoute1}
               >
                 log in
               </button>
               <button
-                className="btnHeaderLogin"
-                id="cartbtn idkWorkBtn"
+                className="btnHeaderLogin idkWorkBtn"
+                id=""
                 onClick={pageRoute2}
               >
                 menu
