@@ -1,7 +1,6 @@
 
   body {
-    font-family: 'Ubuntu', sans-serif;
-    
+    font-family: 'Ubuntu', sans-serif; 
   }
   
   #profilepic{
@@ -26,32 +25,6 @@
     margin-top: 3%;
     cursor: pointer;
   }
-
-  /* #whitespace {
-    padding-left:20px;
-    flex:2;
-    text-align: center;
-    align-self: center;
-    flex-direction: row;
-  } */
-
-  
-
-  /* #whitespace2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 363px;
-    top: 84px;
-  } */
-
-  /* #idkwork {
-    display: flex;
-    position: relative;
-    top: 79px;
-    left: 571px;
-  } */
 
   .btnHeader {
     font-family: 'Ubuntu', sans-serif;
@@ -107,85 +80,6 @@
    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
-/* @media screen and (max-width:1250px) {
-
-  .btnHeader {
-    left:5px;
-    margin-right: 10px;
-  }
-
-} */
-
-@media screen and (min-width: 1200px) and (max-width:1350px) {
-
-  /* #pleasework{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 144px;
-    left: 370px;
-  }
-
-  #profilepic{
-    position: relative;
-    left: 649px;
-    top: -60px;
-    height: 125px;
-    cursor: pointer;
-  } */
-
-}
-
-/* @media screen and (min-width: 1051px) and (max-width: 1199px) {
-
-
-  /* #idkwork {
-    left: 315px;
-  }
-
-  #profilepic {
-    left: 525px;
-  }  */
-
-  /* #whitespace {
-    padding-left:20px;
-    flex:2;
-    text-align: center;
-    align-self: center;
-    flex-direction: row;
-  } */
-
-  /* #pleasework {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 10px;
-    left: 350px; 
-  } */
-
-
-
-@media screen and (max-width:1049px) and (min-width: 801px) {
-
-  /* #idkwork {
-    left: 175px;
-  }
-
-  #pleasework {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 10px;
-    left: 262px; 
-  }
-
-  #profilepic {
-    left: 470px;
-    top: -160px;
-  }  */
-
-}
-
 @media screen and (max-width:800px) {
   
   #pleasework {
@@ -196,18 +90,10 @@
     display:none;
   }
 
-
   .pleaseWorkBtn {
     width: 200px;
     margin-left: 80px;
   }
-
-
-  /* #idkwork {
-
-    top: 67px;
-    left: 89px;
-  }  */
 
 }
 
@@ -215,26 +101,9 @@
 
 @media screen and (max-width:530px) {
 
-  
-  
-  /* #idkwork {
-    display: flex;
-    position: none;
-    flex-direction: column;
-    top: 0px;
-    left: 0px;
-  } */
-
   .header{
     height:300px;
   }
-
-  /* .whitespace {
-    display:flex;
-    flex-direction: column;
-    padding-left: 0px;
-    height:600px;
-  } */
   
   #logo {
     height: 108px;
@@ -242,32 +111,7 @@
     position: relative;
     top: -4px;
     left: -21px;
-
-   
   }
-
-  /* .btnHeaderLogin {
-    position: none;
-    display: column;
-    padding: 10px 15px;
-    margin: 3% 1%;
-    height:auto;
-    width:300px;
-  } */
-
-  /* #profilepic {
-    align-self: center;
-    height: 130px;
-    padding-left: 25px;
-    float:none;
-    padding-right: 0%;
-  } */
-
-  /* .whitespace2 {
-    display:flex;
-    flex-direction: column;
-    padding-left: 50px;
-  } */
 
   #idkWork {
     position: relative;
