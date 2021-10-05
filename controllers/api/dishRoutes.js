@@ -83,7 +83,7 @@ router.get(':id/like/:user_id', async (req,res) => {
 
 router.get('/like', async (req,res) => {
    try {
-    const likeCount = await Like.findAll({
+    const likeCount = await Like.findAndCountAll({
       include: [{ model: Like }],
     });
     res.status(200).json(likeCount);
