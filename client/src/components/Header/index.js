@@ -98,18 +98,18 @@ function Header() {
             
           </div>
         ) : (
-          <div className="whitespace2">
-            <div id="idkwork">
+          <div>
+            <div id="idkWork">
               <button
                 className="btnHeaderLogin"
-                id="loginbtn"
+                id="loginbtn idkWorkBtn"
                 onClick={pageRoute1}
               >
                 log in
               </button>
               <button
                 className="btnHeaderLogin"
-                id="cartbtn"
+                id="cartbtn idkWorkBtn"
                 onClick={pageRoute2}
               >
                 menu
