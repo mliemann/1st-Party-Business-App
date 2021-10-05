@@ -55,7 +55,7 @@ console.log(test)
         console.log("fail");
       }
     });
-    window.localStorage.setItem("user data", state);
+    window.localStorage.setItem("user data", JSON.stringify({user: state.userData}));
   };
 
   return (
