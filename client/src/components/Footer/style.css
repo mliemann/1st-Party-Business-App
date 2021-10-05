@@ -51,6 +51,7 @@
   border-style: none;
  
 }
+
 .btnfooter:hover{
   background: #26325a;
   color: white;
@@ -72,6 +73,7 @@
   #address {
     font-size:20px;
   }
+
 }
 
 @media screen and (max-width:530px) {
@@ -96,5 +98,4 @@
    font-size: 20px;
   }
 
- 
 }

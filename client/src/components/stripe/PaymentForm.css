@@ -68,7 +68,6 @@
 
 #buttonPay:active {
 	background-color: aliceblue;
-	
 	transform: scale(0.99);
 }
 
@@ -95,7 +94,6 @@
 	letter-spacing:4px;
 }
 
-
 .successful {
 	display: flex;
     flex-direction: column;
@@ -111,8 +109,7 @@
 }
 
 #successPayment {
-	padding-top: 10%;
-	
+	padding-top: 10%;	
 } 
 
 #preparingOrder {
@@ -120,7 +117,6 @@
 }
 
 #orderReady {
-
 	padding: 5%;
 }
 
@@ -139,6 +135,7 @@
 	50%{
 		transform:scale(1);
 	}
+	
 }
 
 .loadingDots{
