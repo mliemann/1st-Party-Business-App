@@ -5,8 +5,6 @@ import { useUserContext } from "../../providers/user";
 import Login from "../login/login"
 
 
-
-
 function Profile() {
 
   const emailUpdate = async (e, userid) => {
@@ -66,8 +64,10 @@ function Profile() {
 
   return (
     <div>
+
     {state.isLoggedIn ? (
     <div id="profilecontainer">
+
       <div>
         <h2 id="profile">profile</h2>
       </div>
@@ -78,25 +78,25 @@ function Profile() {
           className="inputProfile"
           type="text"
           id="email-change"
-          placeholder="enter new email"
-        />
+          placeholder="enter new email"/>
+
         <button className="btnprofile" type="submit" onClick={(e) => emailUpdate(e, state.userData.id)}>
           change email
         </button>
-
 
         <input
           className="inputProfile"
           type="password"
           id="password-change"
-          placeholder="enter new password"
-        ></input>
+          placeholder="enter new password">
+        </input>
+
         <button className="btnprofile" type="submit" onClick={(e) => passwordUpdate(e, state.userData.id)}>
           change password
         </button>
 
-  
       </form>
+
       <Upload />
     </div>
     ) : (
