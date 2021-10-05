@@ -55,6 +55,7 @@ console.log(test)
         console.log("fail");
       }
     });
+    window.localStorage.setItem("user data", state);
   };
 
   return (
