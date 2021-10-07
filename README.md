@@ -33,7 +33,7 @@ For restaurant owners: upload your business so customers can order from you onli
 Technologies used: React.js, JavaScript, MySQL, Express, Sequalize, HTML, CSS, Node.js, MySQL, AWS S3, Cloudinary, Rechart.js, Heroku, Cloudflare, Google Domains, Stripe, Bcrypt, Crypto
 
 ## License
-License: None
+License: Propietary License -- No Redistribution Allowed
 
 ## Contact
 Contact: 
