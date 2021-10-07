@@ -27,7 +27,7 @@ function Footer() {
           register
         </button>
 
-        <h3 id="copyright">© 2021 the best group, llc</h3>
+        <h3 id="copyright">© 2021 the developer group, llc</h3>
 
       </div>
       
